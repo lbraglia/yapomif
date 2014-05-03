@@ -1,0 +1,41 @@
+show_col <- function(package=c("graphics","grid"), 
+                      bg="white",
+                      cex = 0.75, 
+                      srt.rot=30
+                      ){
+   
+    ## require("grid")
+    ## require("graphics")
+
+    package <- match.arg(package)
+    
+    showCols.graphics <- function(bg = NULL, cex = NULL, srt = NULL){
+        m <- ceiling(sqrt(n <- length(cl <- colors())))
+        length(cl) <- m*m; cm <- matrix(cl, m)
+        op <- par(mar=rep(0,4), ann=FALSE, bg = bg); on.exit(par(op))
+        plot(1:m,1:m, type="n", axes=FALSE)
+        text(col(cm), rev(row(cm)), cm,  col = cl, cex=cex, srt=srt)
+    }
+
+    showCols.grid <- function(bg=NULL, cex = NULL, rot = NULL) {
+        m <- ceiling(sqrt(n <- length(cl <- colors())))
+        length(cl) <- m*m; cm <- matrix(cl, m)
+        grid.newpage()
+        vp <- viewport(width = .92, height = .92)
+        grid.rect(gp=gpar(fill=bg))
+        grid.text(cm, x = col(cm)/m, y = rev(row(cm))/m, rot = rot,
+                  vp=vp, gp=gpar(cex = cex, col = cm))
+    }
+
+    if (package =="graphics") {
+        showCols.graphics(bg = bg, cex = cex, srt = srt.rot)
+    } else if (package =="grid") {
+        showCols.grid(bg = bg, cex = cex, rot = srt.rot)
+    }
+    
+    ## win.graph()
+    ## ShowCols("graphics",bg="gray")
+    ## win.graph()
+    ## ShowCols("grid",bg="black")
+
+}

@@ -1,0 +1,34 @@
+export("%nin%","Class","Table", "bmi", "bmi_class", "dummy",
+"add_grid", "avg_surv", "censor_at", "cramer_v", "da",
+"da_at_cutoff", "dadb", "date_mdy", "Days", "days_to_months",
+"days_to_weeks", "days_to_years", "dir.clean", "duplicated",
+"enSummary", "encapsulate", "getAccessTable", "getExcelSheet",
+"graph", "Hours", "inches", "km", "make_path", "Minutes",
+"Months", "pairs_with_lowess", "pretty_pval", "quick_roc",
+"recode", "show_col", "show_pch", "tteep", "univTable", "xtile",
+"Years")
+
+## methods
+S3method("Class","data.frame")
+S3method("avg_surv" , "coxph")
+S3method("avg_surv" , "survreg")
+S3method("cramer_v" , "table")
+S3method("Days" , "Date")
+S3method("Days" , "POSIXct")
+S3method("Days" , "POSIXlt")
+S3method("days_to_months" , "numeric")
+S3method("days_to_weeks" , "numeric")
+S3method("days_to_years" , "numeric")
+S3method("Hours" , "POSIXct")
+S3method("Hours" , "POSIXlt")
+S3method("Minutes" , "POSIXct")
+S3method("Minutes" , "POSIXlt")
+S3method("Months" , "Date")
+S3method("Months" , "POSIXct")
+S3method("Months" , "POSIXlt")
+S3method("write" , "delim")
+S3method("write" , "delim2")
+S3method("Years" , "Date")
+S3method("Years" , "POSIXct")
+S3method("Years" , "POSIXlt")
+

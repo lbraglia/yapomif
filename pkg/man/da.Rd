@@ -1,0 +1,56 @@
+\name{da}
+\alias{da}
+%- Also NEED an '\alias' for EACH other topic documented here.
+\title{
+  Calculate diagnostic accuracy measures for binary measures (test,
+  reference standard)
+}
+\description{
+
+  Calculate diagnostic accuracy measures for binary measures (test,
+  reference standard)
+    
+}
+
+\usage{
+
+da(test=NULL, refstd=NULL, alpha=0.05, round.dig=4,
+  positive.first=TRUE, ppv.npv.prev=NULL,  ppv.npv.force.unadj.est=FALSE  )
+ }
+
+ \arguments{
+\item{test}{Test (dichotomic)} 
+\item{refstd}{Reference standard  (dichotomic)}
+\item{alpha}{Type I error (for two sided confidence interval)}
+\item{round.dig}{Rounding digits}
+\item{positive.first}{Display positive test and reference standard in
+  first row column}
+\item{ppv.npv.prev}{Prevalence adopted for ppv and npv confidence
+  interval (if NULL estimated from sample)}
+\item{ppv.npv.force.unadj.est}{Force unadjusted ppv npv estimates (and
+  confidence interval)}
+
+}
+
+\value{
+  Diagnostic accuracy table and statistics with confidence interval.
+}
+
+\examples{
+
+## Example CASS pag 22 Pepe
+db <- dadb(tn=327 , fn=208 ,fp =115 , tp=815)
+with(db, da(test=test, refstd=refstd))
+
+## Example Alzheimer mercaldo
+db <- dadb(tn=288 , fn=178 ,fp =87 , tp=240)
+with(db, da(test=test, refstd=refstd, ppv.npv.prev=.03))
+
+}
+
+
+% Add one or more standard keywords, see file 'KEYWORDS' in the
+% R documentation directory.
+\keyword{ diagnostic }
+\keyword{ accuracy }
+
