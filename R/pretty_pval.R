@@ -9,9 +9,6 @@
 #' @param space Logical specifying whether a space shoud be inserted between
 #' number and operator (= or <, default to FALSE).
 #' @return The function return a string with the pretty printed p-values.
-#' 
-#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
-#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
 #' @keywords pretty print p-value p-values p value values
 #' @export pretty_pval
 pretty_pval <- function(pvalue, space = FALSE) {

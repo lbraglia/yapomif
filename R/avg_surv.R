@@ -21,11 +21,6 @@
 #' 
 #' avg_surv(cfit, var.name, var.values, data, weights, pct=0:99/100)
 #' 
-#' \method{avg_survcoxph}(cfit, var.name, var.values, data, weights,
-#' pct=0:99/100)
-#' 
-#' \method{avg_survsurvreg}(cfit, var.name, var.values, data, weights,
-#' pct=0:99/100)
 #' @param cfit An object of class "coxph", typically produced by the
 #' application of the coxph function.
 #' @param var.name A variable from the model represented in cfit.
@@ -48,8 +43,8 @@
 #' (for avg_surv.survreg), suitable for plotting (see example).
 #' @author
 #' 
-#' \href{http://stat.ubc.ca/~rollin/stats/S/surv.htmlOriginal S code} of
-#' \code{\link{avg_surv.coxph}} by Rollin Brant. R porting and developing by
+#' \href{http://stat.ubc.ca/~rollin/stats/S/surv.html}{Original S code} of
+#' \code{\link{avg_surv.coxph}} by Rollin Brant. R porting and development by
 #' Luca Braglia.
 #' 
 #' @seealso \code{\link{survfit.coxph}}
@@ -95,6 +90,7 @@ avg_surv <- function(cfit, var.name, var.values,
     UseMethod("avg_surv")
 }
 
+#' @S3method avg_surv coxph
 avg_surv.coxph <- function(cfit, var.name, var.values, data,
                            weights, pct=0:99/100){
     if(missing(data)) {
@@ -125,7 +121,7 @@ avg_surv.coxph <- function(cfit, var.name, var.values, data,
     fits
 }
 
-
+#' @S3method avg_surv survreg
 avg_surv.survreg <- function(cfit, var.name, var.values,
                              data, weights, pct=0:99/100)
 {

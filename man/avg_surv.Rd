@@ -5,12 +5,6 @@
 \title{Model-based adjusted survival curves.}
 \usage{
 avg_surv(cfit, var.name, var.values, data, weights, pct=0:99/100)
-
-\method{avg_survcoxph}(cfit, var.name, var.values, data, weights,
-pct=0:99/100)
-
-\method{avg_survsurvreg}(cfit, var.name, var.values, data, weights,
-pct=0:99/100)
 }
 \arguments{
   \item{cfit}{An object of class "coxph", typically
@@ -94,9 +88,9 @@ legend("topright",
        col=c(1,2,1,2,1,2))
 }
 \author{
-\href{http://stat.ubc.ca/~rollin/stats/S/surv.htmlOriginal
+\href{http://stat.ubc.ca/~rollin/stats/S/surv.html}{Original
 S code} of \code{\link{avg_surv.coxph}} by Rollin Brant. R
-porting and developing by Luca Braglia.
+porting and development by Luca Braglia.
 }
 \references{
 Nieto, F.J., Coresh, J. (1996), Adjusting survival curves

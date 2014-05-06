@@ -10,9 +10,6 @@
 #' @param sheet sheet name
 #' @param ... other arguments passed to sqlFetch)
 #' @return The function return a data.frame with data from the specified sheet.
-#' 
-#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
-#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
 #' @keywords Excel sheet get
 #' @export getExcelSheet
 getExcelSheet <- function(file=NULL, sheet=NULL, ...) {

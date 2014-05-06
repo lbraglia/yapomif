@@ -4,8 +4,6 @@
 \title{Trivial function that converts number of days in number of years.}
 \usage{
 days_to_years(days)
-
-\method{days_to_yearsnumeric}(days)
 }
 \arguments{
   \item{days}{Numeric vector of days}

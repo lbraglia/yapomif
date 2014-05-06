@@ -6,8 +6,6 @@
 #' 
 #' @aliases days_to_weeks days_to_weeks.numeric
 #' @usage days_to_weeks(days)
-#' 
-#' \method{days_to_weeksnumeric}(days)
 #' @param days Numeric vector of days
 #' @return A numeric vector of weeks.
 #' @keywords day days week weeks
@@ -22,6 +20,7 @@ days_to_weeks <- function(days) {
     UseMethod("days_to_weeks")
 }
 
+#' @S3method days_to_weeks numeric
 days_to_weeks.numeric <- function(days) {
     days / 7
     

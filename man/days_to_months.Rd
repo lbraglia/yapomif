@@ -4,8 +4,6 @@
 \title{Trivial function that converts number of days in number of months.}
 \usage{
 days_to_months(days)
-
-\method{days_to_monthsnumeric}(days)
 }
 \arguments{
   \item{days}{Numeric vector of days}

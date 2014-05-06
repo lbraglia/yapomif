@@ -4,8 +4,6 @@
 \title{Trivial function that converts number of days in number of weeks.}
 \usage{
 days_to_weeks(days)
-
-\method{days_to_weeksnumeric}(days)
 }
 \arguments{
   \item{days}{Numeric vector of days}

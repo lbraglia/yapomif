@@ -4,8 +4,6 @@
 \title{Cramer's V calculator.}
 \usage{
 cramer_v(x)
-
-\method{cramer_vtable}(x)
 }
 \arguments{
   \item{x}{an R object. Currently implemented only for

@@ -5,10 +5,6 @@
 \title{Extract numeric hours of month from a POSIXct or POSIXlt vector.}
 \usage{
 Hours(x)
-
-\method{HoursPOSIXct}(x)
-
-\method{HoursPOSIXlt}(x)
 }
 \arguments{
   \item{x}{POSIXct or POSIXlt vector}

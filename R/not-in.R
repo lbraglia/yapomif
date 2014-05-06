@@ -13,7 +13,7 @@
 #' @keywords not in
 #' @examples
 #'                         
-#'   1:10 %nin% c(1,3,5,9)  
+#' 1:10 %nin% c(1,3,5,9)  
 #' 
 `%nin%` <- function(x,table) {
     !(`%in%`(x,table))

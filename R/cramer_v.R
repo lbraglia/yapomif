@@ -7,8 +7,6 @@
 #' 
 #' @aliases cramer_v cramer_v.table
 #' @usage cramer_v(x)
-#' 
-#' \method{cramer_vtable}(x)
 #' @param x an R object. Currently implemented only for tables.
 #' @return A scalar with Cramer's V
 #' @keywords Cramer V Phi
@@ -24,6 +22,7 @@ cramer_v <- function(x) {
     UseMethod("cramer_v")
 }
 
+#' @S3method cramer_v table
 cramer_v.table <- function(x) {
     N <- sum(x)
     k <- min(dim(x))

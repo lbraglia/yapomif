@@ -9,6 +9,7 @@
 #' 
 #' write.delim(x=NULL, file="", row.names=FALSE, col.names=TRUE, quote=TRUE,
 #' append=FALSE, na="", dec=".")
+#'
 #' @param x Matrix or data.frame to be exported
 #' @param file file parameter of write.table
 #' @param row.names row names
@@ -17,10 +18,6 @@
 #' @param append append
 #' @param na NA string
 #' @param dec Decimal separator
-#' @return Nothing returned??
-#' 
-#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
-#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
 #' @keywords tab delimited format file output
 write.delim <- function(x=NULL,
                         file="",

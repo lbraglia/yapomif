@@ -12,9 +12,6 @@
 #' @param lty line type
 #' @param lwd line width
 #' @return The function adds a grid to a plot using abline.
-#' 
-#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
-#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
 #' @keywords add grid plot
 #' @export add_grid
 add_grid <- function(at.y, at.x,

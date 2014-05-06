@@ -7,15 +7,13 @@
 #' 
 #' @aliases Class Class.data.frame
 #' @usage Class(x)
-#' 
-#' \method{Classdata.frame}(x)
 #' @param x an R object
 #' @return A vector of classes
 #' @keywords class typeof
 #' @examples
 #' 
-#' data(Indometh)
-#' Class(Indometh)
+#' data(airquality)
+#' Class(airquality)
 #' 
 #' 
 #' @export Class
@@ -24,6 +22,7 @@ Class <- function(x) {
     UseMethod("Class")
 }
 
+#' @S3method Class data.frame
 Class.data.frame <- function(x) {
     unlist(sapply(x,class))
 }

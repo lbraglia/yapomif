@@ -6,12 +6,6 @@
 #' 
 #' @aliases Years Years.Date Years.POSIXct Years.POSIXlt
 #' @usage Years(x)
-#' 
-#' \method{YearsDate}(x)
-#' 
-#' \method{YearsPOSIXct}(x)
-#' 
-#' \method{YearsPOSIXlt}(x)
 #' @param x Date, POSIXct or POSIXlt vector
 #' @return A numeric vector.
 #' @keywords year Year years Years date Date
@@ -33,15 +27,17 @@ Years <- function(x) {
  
 }
 
-
+#' @S3method Years Date
 Years.Date <- function(x) {
     as.numeric(format(x, "%Y"))
 }
 
+#' @S3method Years POSIXct
 Years.POSIXct <- function(x) {
     as.numeric(format(x, "%Y"))
 }
 
+#' @S3method Years POSIXlt
 Years.POSIXlt <- function(x) {
     as.numeric(format(x, "%Y"))
 }

@@ -14,10 +14,6 @@ pretty_pval(pvalue, space)
 \value{
 The function return a string with the pretty printed
 p-values.
-
-%% ~Describe the value returned %% If it is a LIST, use %%
-\item{comp1 }{Description of 'comp1'} %% \item{comp2
-}{Description of 'comp2'}
 }
 \description{
 Pretty print for p-values.

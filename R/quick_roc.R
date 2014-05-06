@@ -14,9 +14,6 @@
 #' @param plot.roc Logical. Plot roc curve?
 #' @param main Graph main title
 #' @return The function plot the graph and return a list with roc statistics
-#' 
-#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
-#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
 #' @keywords ROC roc
 #' @export quick_roc
 quick_roc <- function(test, refstd,

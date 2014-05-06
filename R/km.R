@@ -27,9 +27,6 @@
 #' @param gr.legend Graph command to add legend, as string
 #' @param ... Further lines.survfit params
 #' @return The function plot the graph and return a list with km statistics
-#' 
-#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
-#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
 #' @keywords Kaplan Meier survival
 #' @export km
 km <- function(time=NULL,

@@ -5,11 +5,17 @@
 #' survival, Progression free survival, time to relapse).
 #' 
 #' 
-#' @usage tteep(prog =!is.na(prog.date), # Progression Indicator
-#' prog.date=NULL, # Progression Date death = !is.na(death.date), # Death
-#' indicator death.date=NULL, # Death date start.date=NULL, # Start date
-#' last.fup=NULL, # Last fup OS=TRUE, # Calculate OS?  PFS=TRUE, # Calculate
-#' PFS?  TTP=TRUE, # Calculate TTP?  visual.check=FALSE)
+#' @usage
+#' tteep(prog =!is.na(prog.date),
+#' prog.date=NULL,
+#' death = !is.na(death.date),
+#' death.date=NULL,
+#' start.date=NULL,
+#' last.fup=NULL,
+#' OS=TRUE,
+#' PFS=TRUE,
+#' TTP=TRUE,
+#' visual.check=FALSE) 
 #' @param prog Progression Indicator
 #' @param prog.date Progression Date
 #' @param death Death indicator
@@ -21,9 +27,6 @@
 #' @param TTP Calculate Time To Progression?
 #' @param visual.check View results
 #' @return A data frame to be cbinded.
-#' 
-#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
-#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
 #' @keywords time event end-point outcome survival overall progression-free
 #' disease-free time to progression death oncology
 #' @export tteep

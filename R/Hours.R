@@ -6,10 +6,6 @@
 #' 
 #' @aliases Hours Hours.POSIXct Hours.POSIXlt
 #' @usage Hours(x)
-#' 
-#' \method{HoursPOSIXct}(x)
-#' 
-#' \method{HoursPOSIXlt}(x)
 #' @param x POSIXct or POSIXlt vector
 #' @return A numeric vector.
 #' @keywords hour Hour hours Hours date Date
@@ -30,11 +26,12 @@ Hours <- function(x) {
  
 }
 
-
+#' @S3method Hours POSIXct
 Hours.POSIXct <- function(x) {
     as.numeric(format(x, "%H"))
 }
 
+#' @S3method Hours POSIXlt 
 Hours.POSIXlt <- function(x) {
     as.numeric(format(x, "%H"))
 }

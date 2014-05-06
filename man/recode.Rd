@@ -12,10 +12,6 @@ recode(from=NULL, rec.direct=NULL)
 }
 \value{
 A vector with new codes (if/where modified).
-
-%% ~Describe the value returned %% If it is a LIST, use %%
-\item{comp1 }{Description of 'comp1'} %% \item{comp2
-}{Description of 'comp2'}
 }
 \description{
 Yet another recode utility

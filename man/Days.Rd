@@ -6,12 +6,6 @@
 \title{Extract numeric days of month from a Date, POSIXct or POSIXlt vector.}
 \usage{
 Days(x)
-
-\method{DaysDate}(x)
-
-\method{DaysPOSIXct}(x)
-
-\method{DaysPOSIXlt}(x)
 }
 \arguments{
   \item{x}{Date, POSIXct or POSIXlt vector}

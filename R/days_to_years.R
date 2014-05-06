@@ -6,8 +6,6 @@
 #' 
 #' @aliases days_to_years days_to_years.numeric
 #' @usage days_to_years(days)
-#' 
-#' \method{days_to_yearsnumeric}(days)
 #' @param days Numeric vector of days
 #' @return A numeric vector of years.
 #' @keywords day days year years
@@ -22,6 +20,7 @@ days_to_years <- function(days) {
     UseMethod("days_to_years")
 }
 
+#' @S3method days_to_years numeric
 days_to_years.numeric <- function(days) {
     days / 365.25
     ## mean(c(365,365,365,366))

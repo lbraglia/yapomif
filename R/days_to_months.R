@@ -6,8 +6,6 @@
 #' 
 #' @aliases days_to_months days_to_months.numeric
 #' @usage days_to_months(days)
-#' 
-#' \method{days_to_monthsnumeric}(days)
 #' @param days Numeric vector of days
 #' @return A numeric vector of months.
 #' @keywords day days month months
@@ -22,6 +20,7 @@ days_to_months <- function(days) {
     UseMethod("days_to_months")
 }
 
+#' @S3method days_to_months numeric
 days_to_months.numeric <- function(days) {
     days / 30.43
     ## 30.43 comes from mean(

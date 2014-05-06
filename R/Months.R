@@ -6,10 +6,6 @@
 #' 
 #' @aliases Months Months.default Months.POSIXct Months.POSIXlt
 #' @usage Months(x, string = TRUE, abbreviate = FALSE )
-#' 
-#' \method{MonthsPOSIXct}(x, string, abbreviate)
-#' 
-#' \method{MonthsPOSIXlt}(x, string, abbreviate)
 #' @param x Date, POSIXct or POSIXlt vector
 #' @param string Logical, if TRUE months string is returned, otherwise numeric
 #' @param abbreviate logical. Should the months in string format be
@@ -38,7 +34,7 @@ Months <- function(x, string = TRUE, abbreviate = FALSE) {
  
 }
 
-
+#' @S3method Months Date
 Months.Date <- function( x, string = TRUE, abbreviate = FALSE ) {
     if (!string) {
         return(as.numeric(format(x=x, "%m")))
@@ -48,6 +44,7 @@ Months.Date <- function( x, string = TRUE, abbreviate = FALSE ) {
     
 }
 
+#' @S3method Months POSIXct
 Months.POSIXct <- function( x, string = TRUE, abbreviate = FALSE ) {
     if (!string) {
         return(as.numeric(format(x=x, "%m")))
@@ -57,6 +54,7 @@ Months.POSIXct <- function( x, string = TRUE, abbreviate = FALSE ) {
     
 }
 
+#' @S3method Months POSIXlt
 Months.POSIXlt <- function( x, string = TRUE, abbreviate = FALSE ) {
     if (!string) {
         return(as.numeric(format(x=x, "%m")))

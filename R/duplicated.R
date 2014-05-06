@@ -18,9 +18,6 @@
 #' duplicated observation).
 #' @param ... Other arguments passed to base::duplicated.
 #' @return A logical vector with duplicated marked as TRUE.
-#' 
-#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
-#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
 #' @keywords duplicated
 #' @export duplicated
 duplicated <- function( x, all.dup = FALSE, ...) {

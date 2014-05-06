@@ -6,10 +6,6 @@
 \title{Extract numeric months of the year from a Date, POSIXct or POSIXlt vector.}
 \usage{
 Months(x, string = TRUE, abbreviate = FALSE )
-
-\method{MonthsPOSIXct}(x, string, abbreviate)
-
-\method{MonthsPOSIXlt}(x, string, abbreviate)
 }
 \arguments{
   \item{x}{Date, POSIXct or POSIXlt vector}

@@ -18,10 +18,6 @@ getAccessTable(file=NULL, table=NULL, user="admin", pw=NULL, ...)
 \value{
 The function return a data.frame with data from the
 specified table.
-
-%% ~Describe the value returned %% If it is a LIST, use %%
-\item{comp1 }{Description of 'comp1'} %% \item{comp2
-}{Description of 'comp2'}
 }
 \description{
 This function is a wrapper around RODBC function to get a

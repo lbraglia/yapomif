@@ -45,10 +45,6 @@ test=c("logr","hr","both","no"), plot.n.at.risk=TRUE, gr.legend=NULL, ...  )
 \value{
 The function plot the graph and return a list with km
 statistics
-
-%% ~Describe the value returned %% If it is a LIST, use %%
-\item{comp1 }{Description of 'comp1'} %% \item{comp2
-}{Description of 'comp2'}
 }
 \description{
 This function plots a Kaplan-Meier plot.

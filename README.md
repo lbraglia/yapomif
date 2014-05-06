@@ -8,9 +8,8 @@ utilities etc).
 
 ## Install
 
-### Development version
-Development version can be installed via GitHub. Before that, you
-need to setup `devtools` via
+You can install this package via GitHub. Before that, you
+need to setup `devtools` 
 
 ```R
 install.packages("devtools", dependencies=TRUE)

@@ -44,16 +44,6 @@ append=FALSE, na="", dec=",")
 }
 \value{
 Nothing returned??
-
-%% ~Describe the value returned %% If it is a LIST, use %%
-\item{comp1 }{Description of 'comp1'} %% \item{comp2
-}{Description of 'comp2'}
-
-Nothing returned??
-
-%% ~Describe the value returned %% If it is a LIST, use %%
-\item{comp1 }{Description of 'comp1'} %% \item{comp2
-}{Description of 'comp2'}
 }
 \description{
 This function is a wrapper around read.table to write tab

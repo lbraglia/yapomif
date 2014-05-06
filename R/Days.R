@@ -6,12 +6,6 @@
 #' 
 #' @aliases Days Days.Date Days.POSIXct Days.POSIXlt
 #' @usage Days(x)
-#' 
-#' \method{DaysDate}(x)
-#' 
-#' \method{DaysPOSIXct}(x)
-#' 
-#' \method{DaysPOSIXlt}(x)
 #' @param x Date, POSIXct or POSIXlt vector
 #' @return A numeric vector.
 #' @keywords day Day days Days date Date
@@ -34,14 +28,17 @@ Days <- function(x) {
 }
 
 
+#' @S3method Days Date
 Days.Date <- function(x) {
     as.numeric(format(x, "%d"))
 }
 
+#' @S3method Days POSIXct
 Days.POSIXct <- function(x) {
     as.numeric(format(x, "%d"))
 }
 
+#' @S3method Days POSIXlt
 Days.POSIXlt <- function(x) {
     as.numeric(format(x, "%d"))
 }

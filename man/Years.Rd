@@ -6,12 +6,6 @@
 \title{Extract numeric years from a Date, POSIXct or POSIXlt vector.}
 \usage{
 Years(x)
-
-\method{YearsDate}(x)
-
-\method{YearsPOSIXct}(x)
-
-\method{YearsPOSIXlt}(x)
 }
 \arguments{
   \item{x}{Date, POSIXct or POSIXlt vector}

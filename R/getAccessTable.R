@@ -12,9 +12,6 @@
 #' @param pw password (login to the file)
 #' @param ... other arguments passed to sqlFetch)
 #' @return The function return a data.frame with data from the specified table.
-#' 
-#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
-#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
 #' @keywords Access table get
 #' @export getAccessTable
 getAccessTable <- function(file=NULL, table=NULL, user="admin", pw=NULL, ...) {

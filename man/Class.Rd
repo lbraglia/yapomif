@@ -5,8 +5,6 @@
 vector (eg data.frame) in a handy way}
 \usage{
 Class(x)
-
-\method{Classdata.frame}(x)
 }
 \arguments{
   \item{x}{an R object}
@@ -19,8 +17,8 @@ Extract numeric hours of month from a POSIXct or POSIXlt
 vector.
 }
 \examples{
-data(Indometh)
-Class(Indometh)
+data(airquality)
+Class(airquality)
 }
 \keyword{class}
 \keyword{typeof}

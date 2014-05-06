@@ -9,9 +9,6 @@
 #' @param rec.direct matrix containing 2 columns; first is "from", second is
 #' "to".
 #' @return A vector with new codes (if/where modified).
-#' 
-#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
-#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
 #' @keywords recode replace
 #' @export recode
 recode <- function(from=NULL, rec.direct=NULL) {

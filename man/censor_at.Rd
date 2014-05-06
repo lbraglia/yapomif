@@ -13,10 +13,6 @@ censor_at(time, status, censor.time)
 }
 \value{
 A data frame to be cbinded.
-
-%% ~Describe the value returned %% If it is a LIST, use %%
-\item{comp1 }{Description of 'comp1'} %% \item{comp2
-}{Description of 'comp2'}
 }
 \description{
 Censore time to event end point at a certain time.
