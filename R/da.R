@@ -1,4 +1,43 @@
 ## diagnostic accuracy common indicators
+
+
+#' Calculate diagnostic accuracy measures for binary measures (test, reference
+#' standard)
+#' 
+#' 
+#' Calculate diagnostic accuracy measures for binary measures (test, reference
+#' standard)
+#' 
+#' 
+#' @usage
+#' 
+#' da(test=NULL, refstd=NULL, alpha=0.05, round.dig=4, positive.first=TRUE,
+#' ppv.npv.prev=NULL, ppv.npv.force.unadj.est=FALSE )
+#' @param test Test (dichotomic)
+#' @param refstd Reference standard (dichotomic)
+#' @param alpha Type I error (for two sided confidence interval)
+#' @param round.dig Rounding digits
+#' @param positive.first Display positive test and reference standard in first
+#' row column
+#' @param ppv.npv.prev Prevalence adopted for ppv and npv confidence interval
+#' (if NULL estimated from sample)
+#' @param ppv.npv.force.unadj.est Force unadjusted ppv npv estimates (and
+#' confidence interval)
+#' @return Diagnostic accuracy table and statistics with confidence interval.
+#' @keywords diagnostic accuracy
+#' @examples
+#' 
+#' 
+#' ## Example CASS pag 22 Pepe
+#' db <- dadb(tn=327 , fn=208 ,fp =115 , tp=815)
+#' with(db, da(test=test, refstd=refstd))
+#' 
+#' ## Example Alzheimer mercaldo
+#' db <- dadb(tn=288 , fn=178 ,fp =87 , tp=240)
+#' with(db, da(test=test, refstd=refstd, ppv.npv.prev=.03))
+#' 
+#' 
+#' @export da
 da <- function(test=NULL, refstd=NULL,
                alpha=.05, round.dig=4,
                ## the table print, should put + before - 

@@ -1,3 +1,24 @@
+#' 
+#' Show R colors for graphics and grid package
+#' 
+#' 
+#' Show R colors for graphics and grid package (simple wrapper around functions
+#' from demo(colors).
+#' 
+#' 
+#' @usage show_col(package=c("graphics","grid"), bg="white", cex = 0.75,
+#' srt.rot=30)
+#' @param package charachter. Which package's color to show
+#' @param bg charachter. Background color
+#' @param cex numeric. cex
+#' @param srt.rot degree inclination
+#' @return Nothing. As a side effect the plot of colors.
+#' @keywords colors color
+#' @examples
+#' 
+#' show_col()
+#' 
+#' @export show_col
 show_col <- function(package=c("graphics","grid"), 
                       bg="white",
                       cex = 0.75, 

@@ -1,3 +1,95 @@
+#' 
+#' Model-based adjusted survival curves.
+#' 
+#' 
+#' This function calculates adjusted survival curves following the "corrected
+#' group prognosis" (average of individual survival curve) method.  Based on a
+#' fitted Cox proportional hazards model (via \code{\link{coxph}}) or a
+#' parametric model (via \code{\link{survreg}}), for each specified value of a
+#' given variable, the function returns the mean of the family of fitted
+#' survival curves relative to the specified variable value and a set of
+#' "reference" values for the remaining covariates.
+#' 
+#' The function organizes a sequence of calls to survfit.coxph which does the
+#' real work.  The function returns curves which are the averages of covariate
+#' specific survival curves, NOT a fitted survival curve at the mean of the
+#' covariate values.
+#' 
+#' 
+#' @aliases avg_surv avg_surv.coxph avg_surv.survreg
+#' @usage
+#' 
+#' avg_surv(cfit, var.name, var.values, data, weights, pct=0:99/100)
+#' 
+#' \method{avg_survcoxph}(cfit, var.name, var.values, data, weights,
+#' pct=0:99/100)
+#' 
+#' \method{avg_survsurvreg}(cfit, var.name, var.values, data, weights,
+#' pct=0:99/100)
+#' @param cfit An object of class "coxph", typically produced by the
+#' application of the coxph function.
+#' @param var.name A variable from the model represented in cfit.
+#' @param var.values Values of the variable defining strata for which mean
+#' survival curves are to be calculated.
+#' @param data A dataframe with variables corresponding to those represented in
+#' cfit.  The values for the covariates (i.e. model variables setting aside the
+#' response and the variable specified in var.name) define the reference
+#' population.  If data is not specified, the function looks first to see if
+#' cfit has a model component (from selecting model=T in the original
+#' application of coxph) to use as the data, and failing that, tries to
+#' construct a dataframe using model.frame and the parent frame.
+#' @param weights An optional vector of weights of length equal to the number
+#' of rows of data, used to weight the mean survival curve over the set of
+#' reference covariate values.
+#' @param pct percentiles of survival curves predicted for
+#' \code{\link{survreg}} objects only
+#' @param ... other parameters (for future use).
+#' @return An object of class "survfit" (for avg_surv.coxph) or a data.frame
+#' (for avg_surv.survreg), suitable for plotting (see example).
+#' @author
+#' 
+#' \href{http://stat.ubc.ca/~rollin/stats/S/surv.htmlOriginal S code} of
+#' \code{\link{avg_surv.coxph}} by Rollin Brant. R porting and developing by
+#' Luca Braglia.
+#' 
+#' @seealso \code{\link{survfit.coxph}}
+#' @references Nieto, F.J., Coresh, J. (1996), Adjusting survival curves for
+#' confounders: a review and a new method, American Journal of Epidemiology,
+#' 143:10, 1059-1068.
+#' @keywords average survival corrected group prognosis
+#' @examples
+#' 
+#' ## Variables for fit should be defined prior to application of coxph
+#' ## so that model formula contains only already defined variables, i.e. no
+#' ## "transformations" of variables, such as Surv or log.
+#' 
+#' ## Cox PH model
+#' lung$os <- Surv(lung$time, lung$status)
+#' cfit <- coxph(os ~ age + sex + ph.karno + meal.cal+ wt.loss, data=lung)
+#' afits <- avg_surv(cfit, "sex", c(1,2))
+#' kmfit <- survfit(os ~ sex, data=lung)
+#' plot(kmfit, xscale=365.25, col=1:2, lty=2,
+#'      main="Kaplan Meier vs \n'Corrected group prognosis' approach")
+#' lines(afits, col=1:2, mark.time=FALSE, xscale=365.25)
+#' 
+#' ## Parametric model
+#' pfit <- survreg(os ~ age + sex + ph.karno + meal.cal+ wt.loss,
+#'                 data=lung, dist = "exponential")
+#' afits2 <- avg_surv(pfit, "sex", c(1,2))
+#' lines(afits2$sex_1/365.25, afits2$survival, lty=3, col=1)
+#' lines(afits2$sex_2/365.25, afits2$survival, lty=3, col=2)
+#' 
+#' legend("topright",
+#'        legend=c("KM male", "KM female","CGP male (Cox)",
+#'        "CGP female  (Cox)", "CGP male (Exp)",
+#'        "CGP female  (Exp)" ), 
+#'        lty=c(2,2,1,1,3,3),
+#'        col=c(1,2,1,2,1,2))
+#' 
+#' 
+#' 
+#' 
+#' @export avg_surv
 avg_surv <- function(cfit, var.name, var.values,
                              data, weights, pct=0:99/100) {
     UseMethod("avg_surv")

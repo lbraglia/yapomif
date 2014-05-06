@@ -1,33 +1,20 @@
 \name{pairs_with_lowess}
 \alias{pairs_with_lowess}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{
-  Scatterplot Matrices with a lowess smoother
-}
-\description{
-
-  A Matrix of Scatterplot with a lowess smoother is produced.
-    
-}
-
+\title{Scatterplot Matrices with a lowess smoother}
 \usage{
 pairs_with_lowess(data)
 }
-
 \arguments{
-
-  \item{data}{data.frame} 
-
+  \item{data}{data.frame}
 }
-
 \value{
-  Plot 
+Plot
 }
-
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ pairs }
-\keyword{ lowess }
-\keyword{ scatterplot }
-\keyword{ matrix }
+\description{
+A Matrix of Scatterplot with a lowess smoother is produced.
+}
+\keyword{lowess}
+\keyword{matrix}
+\keyword{pairs}
+\keyword{scatterplot}
 

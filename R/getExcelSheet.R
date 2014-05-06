@@ -1,3 +1,20 @@
+#' Retrieve an MS Excel (R) sheet from an xls or xlsx file.
+#' 
+#' 
+#' This function is a wrapper around RODBC function to get a sheet from an xls
+#' or xlsx file.
+#' 
+#' 
+#' @usage getExcelSheet(file=NULL, sheet=NULL, ...)
+#' @param file path to the xls/xlsx file
+#' @param sheet sheet name
+#' @param ... other arguments passed to sqlFetch)
+#' @return The function return a data.frame with data from the specified sheet.
+#' 
+#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
+#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
+#' @keywords Excel sheet get
+#' @export getExcelSheet
 getExcelSheet <- function(file=NULL, sheet=NULL, ...) {
     ## Funzione per semplificare l'accesso a dati di un sheet di un file di excel
     ## require(RODBC)

@@ -1,3 +1,19 @@
+#' Univariate table with absolute, relative, cumulative frequencies.
+#' 
+#' 
+#' Univariate table with absolute, relative, cumulative frequencies.
+#' 
+#' 
+#' @usage univTable(var=NULL, totals=TRUE, useNA="ifany", round.digits=3,
+#' sorting=NULL)
+#' @param var vector
+#' @param totals print totals?
+#' @param useNA print NA?
+#' @param round.digits number of rounding digits
+#' @param sorting sorting can be "asc" or "desc"
+#' @return A matrix with frequencies.
+#' @keywords univariate table frequencies
+#' @export univTable
 univTable <- function(var=NULL,
                       totals=TRUE,
                       useNA="ifany",

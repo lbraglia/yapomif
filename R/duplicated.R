@@ -1,3 +1,28 @@
+#' Determine all duplicate elements
+#' 
+#' 
+#' base::duplicated determines which elements of a vector or data frame are
+#' duplicates of elements with smaller subscripts, and returns a logical vector
+#' indicating which elements (rows) are duplicates.
+#' 
+#' This wrapper allows to find all duplicated obs.
+#' 
+#' 
+#' @usage
+#' 
+#' duplicated( x, all.dup = FALSE, ...)
+#' @param x Numeric vector of centimeter.
+#' @param all.dup Logical: if TRUE considers duplicated each observation
+#' present more than one time in the oject, otherwise implement
+#' base::duplicated algorithm (considers duplicated the second, third and so on
+#' duplicated observation).
+#' @param ... Other arguments passed to base::duplicated.
+#' @return A logical vector with duplicated marked as TRUE.
+#' 
+#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
+#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
+#' @keywords duplicated
+#' @export duplicated
 duplicated <- function( x, all.dup = FALSE, ...) {
     if (all.dup) {
         base::duplicated(x, ...)| base::duplicated(x, fromLast = TRUE)

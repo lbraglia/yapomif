@@ -1,3 +1,37 @@
+#' Plots an 'enhanced' Kaplan-Meier plot, with base graphics package.
+#' 
+#' 
+#' This function plots a Kaplan-Meier plot.
+#' 
+#' 
+#' @usage km(time=NULL, status=NULL, strata=NULL,
+#' time.unit=c("days","weeks","months","years"), time.by=NULL, main="",
+#' ylab=NULL, xlab=NULL, xlim=NULL, conf.int=NULL,
+#' test=c("logr","hr","both","no"), plot.n.at.risk=TRUE, gr.legend=NULL, ...  )
+#' @param time survival time variable
+#' @param status survival indicator variable
+#' @param strata Stratifying variable (optional)
+#' @param time.unit Time unit of x axis
+#' @param time.by Time step x axis (in days)
+#' @param main Graph main title
+#' @param ylab Y-axis label.
+#' @param xlab X-axis label. If NULL a suitable default based on time.unit will
+#' be provided
+#' @param xlim X-axis limit. If NULL a suitable default based on time.unit will
+#' be provided
+#' @param conf.int logical ... Plot confidence intervall? If NULL confidence
+#' interval are plotted only if strata has two or more levels
+#' @param test tests: 'no'=don't plot tests, 'logr'=logranktest, 'hr'=hazratio,
+#' 'both'=both
+#' @param plot.n.at.risk Logical value: plot number at risk?
+#' @param gr.legend Graph command to add legend, as string
+#' @param ... Further lines.survfit params
+#' @return The function plot the graph and return a list with km statistics
+#' 
+#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
+#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
+#' @keywords Kaplan Meier survival
+#' @export km
 km <- function(time=NULL,
                status=NULL,
                ## NULL = non stratified, otherwise stratifying variable

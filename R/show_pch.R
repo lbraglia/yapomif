@@ -1,3 +1,26 @@
+#' 
+#' Show pch
+#' 
+#' 
+#' Show pch values.
+#' 
+#' 
+#' @usage
+#' 
+#' show_pch(extras = c("*",".","0","+","#"), cex = 3, col = "red3", bg =
+#' "gold", cextext = 1.2)
+#' @param extras charachter. Further symbols to be plotted
+#' @param cex numeric. cex
+#' @param col color
+#' @param bg charachter. Background color
+#' @param cextext cex for text
+#' @return Nothing. As a side effect the plot of pch.
+#' @keywords point
+#' @examples
+#' 
+#' show_pch()
+#' 
+#' @export show_pch
 show_pch <-  function(extras = c("*",".","0","+","#"),
                       cex = 3, ## good for both .Device=="postscript" and "x11"
                       col = "red3", bg = "gold", cextext = 1.2 

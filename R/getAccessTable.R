@@ -1,3 +1,22 @@
+#' Retrieve an MS Access (R) table from an mdb or accdb file.
+#' 
+#' 
+#' This function is a wrapper around RODBC function to get a table from an mdb
+#' or accdb file.
+#' 
+#' 
+#' @usage getAccessTable(file=NULL, table=NULL, user="admin", pw=NULL, ...)
+#' @param file path to the mdb/accdb file
+#' @param table table name
+#' @param user username (login to the file)
+#' @param pw password (login to the file)
+#' @param ... other arguments passed to sqlFetch)
+#' @return The function return a data.frame with data from the specified table.
+#' 
+#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
+#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
+#' @keywords Access table get
+#' @export getAccessTable
 getAccessTable <- function(file=NULL, table=NULL, user="admin", pw=NULL, ...) {
     ## Funzione per semplificare l'accesso a dati access
     ## require(RODBC)

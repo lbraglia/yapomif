@@ -1,3 +1,42 @@
+#' Censore time to event end point at a certain time.
+#' 
+#' 
+#' Censore time to event end point at a certain time.
+#' 
+#' 
+#' @usage censor_at(time, status, censor.time)
+#' @param time Progression Indicator
+#' @param status Progression Date
+#' @param censor.time Death indicator
+#' @return A data frame to be cbinded.
+#' 
+#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
+#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
+#' @keywords time event end-point censor cut censoring overall progression-free
+#' disease-free time to progression death oncology
+#' @examples
+#' 
+#' 
+#'     time   <- c(100,150)
+#'     status <- c(  0,  1)
+#'     censor.time <- 120
+#'     (original <- data.frame(time, status))
+#'     censor_at(time=time, status=status, censor.time = 160)
+#'     censor_at(time=time, status=status, censor.time = 150)
+#'     censor_at(time=time, status=status, censor.time = 125)
+#'     censor_at(time=time, status=status, censor.time = 75)
+#' 
+#'     time   <- c(100,150)
+#'     status <- c(  1,  0)
+#'     censor.time <- 120
+#'     (original <- data.frame(time, status))
+#'     censor_at(time=time, status=status, censor.time = 160)
+#'     censor_at(time=time, status=status, censor.time = 150)
+#'     censor_at(time=time, status=status, censor.time = 125)
+#'     censor_at(time=time, status=status, censor.time = 75)
+#' 
+#' 
+#' @export censor_at
 censor_at <- function(time=NULL, status=NULL, censor.time=NULL) {
     ## Funzione per tagliare un tempo all'evento ad un certo momento
     if (sum(sapply(list(time, status, censor.time), is.null))>0) {

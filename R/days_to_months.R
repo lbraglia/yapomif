@@ -1,3 +1,22 @@
+#' Trivial function that converts number of days in number of months.
+#' 
+#' 
+#' Trivial function that converts number of days in number of months.
+#' 
+#' 
+#' @aliases days_to_months days_to_months.numeric
+#' @usage days_to_months(days)
+#' 
+#' \method{days_to_monthsnumeric}(days)
+#' @param days Numeric vector of days
+#' @return A numeric vector of months.
+#' @keywords day days month months
+#' @examples
+#' 
+#' days <- 1:30
+#' days_to_months(days)
+#' 
+#' @export days_to_months
 days_to_months <- function(days) {
 
     UseMethod("days_to_months")

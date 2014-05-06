@@ -1,3 +1,23 @@
+#' Calculate diagnostic accuracy measures for several cutoffs of a quantitative
+#' marker.
+#' 
+#' 
+#' Calculate diagnostic accuracy measures for several cutoffs of a quantitative
+#' marker.
+#' 
+#' 
+#' @usage
+#' 
+#' da_at_cutoff(cutoffs=NULL, test=NULL, refstd=NULL, round.dig=4, ...  )
+#' 
+#' @param cutoffs Cutoffs considered
+#' @param test Test
+#' @param refstd Reference standard
+#' @param round.dig Rounding digits
+#' @param ... parameters passed to da
+#' @return A data.frame for diagnostic accuracy studies.
+#' @keywords diagnostic accuracy cutoff
+#' @export da_at_cutoff
 da_at_cutoff <- function(cutoffs=NULL, 
                          test=NULL,
                          refstd=NULL,

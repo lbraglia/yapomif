@@ -1,3 +1,32 @@
+#' Common time to event end-points calculator.
+#' 
+#' 
+#' This function calculates common oncology time to event end-points (Overall
+#' survival, Progression free survival, time to relapse).
+#' 
+#' 
+#' @usage tteep(prog =!is.na(prog.date), # Progression Indicator
+#' prog.date=NULL, # Progression Date death = !is.na(death.date), # Death
+#' indicator death.date=NULL, # Death date start.date=NULL, # Start date
+#' last.fup=NULL, # Last fup OS=TRUE, # Calculate OS?  PFS=TRUE, # Calculate
+#' PFS?  TTP=TRUE, # Calculate TTP?  visual.check=FALSE)
+#' @param prog Progression Indicator
+#' @param prog.date Progression Date
+#' @param death Death indicator
+#' @param death.date Death date
+#' @param start.date Start date
+#' @param last.fup Last fup
+#' @param OS Calculate Overall Survival?
+#' @param PFS Calculate Progression Free Survival?
+#' @param TTP Calculate Time To Progression?
+#' @param visual.check View results
+#' @return A data frame to be cbinded.
+#' 
+#' %% ~Describe the value returned %% If it is a LIST, use %% \item{comp1
+#' }{Description of 'comp1'} %% \item{comp2 }{Description of 'comp2'}
+#' @keywords time event end-point outcome survival overall progression-free
+#' disease-free time to progression death oncology
+#' @export tteep
 tteep <- function(prog =!is.na(prog.date), # Progression Indicator
                   prog.date=NULL, # Progression Date
                   death = !is.na(death.date), # Death indicator
