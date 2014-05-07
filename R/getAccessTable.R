@@ -13,13 +13,17 @@
 #' @param ... other arguments passed to sqlFetch)
 #' @return The function return a data.frame with data from the specified table.
 #' @keywords Access table get
+#' @examples   \dontrun{
+#'  getAccessTable(file="C:/prova.accdb", table="Tabella1")
+#' }
+#' 
 #' @export getAccessTable
 getAccessTable <- function(file=NULL, table=NULL, user="admin", pw=NULL, ...) {
     ## Funzione per semplificare l'accesso a dati access
     ## require(RODBC)
 	
     on.exit( if (exists("con")) {
-        odbcClose(con)
+        RODBC::odbcClose(con)
         rm(con) 
     })
     
@@ -34,17 +38,15 @@ getAccessTable <- function(file=NULL, table=NULL, user="admin", pw=NULL, ...) {
     file.format <- file.format[length(file.format)]
     
     if (tolower(file.format)=="mdb") {
-        connect.func <- odbcConnectAccess
+        connect.func <- RODBC::odbcConnectAccess
     } else if (tolower(file.format)=="accdb") {
-        connect.func <- odbcConnectAccess2007
+        connect.func <- RODBC::odbcConnectAccess2007
     } else {
         stop(sprintf("Not an '.mdb' or '.accdb': aborted.", file.format))
     }
     
     ## Otherwise connect
     con <- connect.func(file, uid=user, pwd=pw )
-    sqlFetch(con, table, ...)
-    
-    ## Example: getAccessTable(file="C:/prova.accdb", table="Tabella1")
-    
+    RODBC::sqlFetch(con, table, ...)
+       
 }

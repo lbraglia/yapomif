@@ -65,16 +65,17 @@ covariate values.
 ## "transformations" of variables, such as Surv or log.
 
 ## Cox PH model
-lung$os <- Surv(lung$time, lung$status)
-cfit <- coxph(os ~ age + sex + ph.karno + meal.cal+ wt.loss, data=lung)
+data(lung, package = "survival")
+lung$os <- survival::Surv(lung$time, lung$status)
+cfit <- survival::coxph(os ~ age + sex + ph.karno + meal.cal+ wt.loss, data=lung)
 afits <- avg_surv(cfit, "sex", c(1,2))
-kmfit <- survfit(os ~ sex, data=lung)
+kmfit <- survival::survfit(os ~ sex, data=lung)
 plot(kmfit, xscale=365.25, col=1:2, lty=2,
      main="Kaplan Meier vs \\n'Corrected group prognosis' approach")
 lines(afits, col=1:2, mark.time=FALSE, xscale=365.25)
 
 ## Parametric model
-pfit <- survreg(os ~ age + sex + ph.karno + meal.cal+ wt.loss,
+pfit <- survival::survreg(os ~ age + sex + ph.karno + meal.cal+ wt.loss,
                 data=lung, dist = "exponential")
 afits2 <- avg_surv(pfit, "sex", c(1,2))
 lines(afits2$sex_1/365.25, afits2$survival, lty=3, col=1)

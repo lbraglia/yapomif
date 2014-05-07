@@ -23,6 +23,11 @@ specified table.
 This function is a wrapper around RODBC function to get a
 table from an mdb or accdb file.
 }
+\examples{
+\dontrun{
+ getAccessTable(file="C:/prova.accdb", table="Tabella1")
+}
+}
 \keyword{Access}
 \keyword{get}
 \keyword{table}

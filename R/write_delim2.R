@@ -4,7 +4,7 @@
 #' This function is a wrapper around read.table to write tab separated files
 #' with "." as decimal separator.
 #' 
-#' @rdname write_delim
+#' @rdname write_delim2
 #' @usage
 #' 
 #' write.delim2(x=NULL, file="", row.names=FALSE, col.names=TRUE, quote=TRUE,
@@ -17,8 +17,9 @@
 #' @param append append
 #' @param na NA string
 #' @param dec Decimal separator
-#' @return Nothing returned??
+#' @return Returnet write.table stuff
 #' @keywords tab delimited format file output
+#' @export write.delim2
 write.delim2 <- function(x=NULL,
                         file="",
                         row.names=FALSE,

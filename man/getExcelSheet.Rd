@@ -19,6 +19,11 @@ specified sheet.
 This function is a wrapper around RODBC function to get a
 sheet from an xls or xlsx file.
 }
+\examples{
+\dontrun{
+getExcelSheet(file="C:/foo.xls", sheet="es_ps")
+}
+}
 \keyword{Excel}
 \keyword{get}
 \keyword{sheet}

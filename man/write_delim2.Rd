@@ -1,9 +1,9 @@
-\name{write.delim}
-\alias{write.delim}
-\title{Write a tab separated file with "." as decimal separator.}
+\name{write.delim2}
+\alias{write.delim2}
+\title{Write a tab separated file with "," as decimal separator.}
 \usage{
-write.delim(x=NULL, file="", row.names=FALSE, col.names=TRUE, quote=TRUE,
-append=FALSE, na="", dec=".")
+write.delim2(x=NULL, file="", row.names=FALSE, col.names=TRUE, quote=TRUE,
+append=FALSE, na="", dec=",")
 }
 \arguments{
   \item{x}{Matrix or data.frame to be exported}
@@ -21,6 +21,9 @@ append=FALSE, na="", dec=".")
   \item{na}{NA string}
 
   \item{dec}{Decimal separator}
+}
+\value{
+Returnet write.table stuff
 }
 \description{
 This function is a wrapper around read.table to write tab

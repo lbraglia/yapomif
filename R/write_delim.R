@@ -19,6 +19,7 @@
 #' @param na NA string
 #' @param dec Decimal separator
 #' @keywords tab delimited format file output
+#' @export write.delim
 write.delim <- function(x=NULL,
                         file="",
                         row.names=FALSE,

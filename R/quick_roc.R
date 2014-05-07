@@ -32,7 +32,7 @@ quick_roc <- function(test, refstd,
                           specificities - 1)
     uc.roc$best.thresh <- uc.roc$thresholds[uc.roc$youden ==
                                             max(uc.roc$youden)] 
-    my.ci.auc <- as.numeric(as.character(ci.auc(my.roc)))
+    my.ci.auc <- as.numeric(as.character(pROC::ci.auc(my.roc)))
     uc.roc$auc.ci <- my.ci.auc[c(1,3) ]
 
     if (plot.roc) {

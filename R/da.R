@@ -200,7 +200,7 @@ da <- function(test=NULL, refstd=NULL,
         ## PPV NPV adjusted logit estimates (mercaldo)
         xmat <- unname(as.matrix(tab.positive.first))
         class(xmat) <- "matrix"
-        pv.tmp <- BDtest(xmat = xmat, 
+        pv.tmp <- bdpv::BDtest(xmat = xmat, 
                          pr=prev, 
                          conf.level = 1 - alpha)[["PPVNPVDAT"]]
         ppv.row <- row.names(pv.tmp) %in% "PPV"

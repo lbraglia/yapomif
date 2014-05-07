@@ -11,13 +11,16 @@
 #' @param ... other arguments passed to sqlFetch)
 #' @return The function return a data.frame with data from the specified sheet.
 #' @keywords Excel sheet get
+#' @examples
+#' 
+#'    \dontrun{
+#' getExcelSheet(file="C:/foo.xls", sheet="es_ps")
+#' }
+#' 
 #' @export getExcelSheet
 getExcelSheet <- function(file=NULL, sheet=NULL, ...) {
-    ## Funzione per semplificare l'accesso a dati di un sheet di un file di excel
-    ## require(RODBC)
-    
     on.exit( if (exists("con")) {
-        odbcClose(con)
+        RODBC::odbcClose(con)
         rm(con) 
     })
 
@@ -32,16 +35,13 @@ getExcelSheet <- function(file=NULL, sheet=NULL, ...) {
     file.format <- file.format[length(file.format)]
     
     if (tolower(file.format)=="xls") {
-        connect.func <- odbcConnectExcel
+        connect.func <- RODBC::odbcConnectExcel
     } else if (tolower(file.format)=="xlsx") {
-        connect.func <- odbcConnectExcel2007
+        connect.func <- RODBC::odbcConnectExcel2007
     } else {
         stop(sprintf("Not an '.xls' or '.xlsx': aborted.", file.format))
     }
     
     con <- connect.func(file)
-    sqlFetch(con, sheet, ...)
-    
-    ## Example: getExcelSheet(file="C:/ps1.tab", sheet="es_ps")
-    
+    RODBC::sqlFetch(con, sheet, ...)
 }

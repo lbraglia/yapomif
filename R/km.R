@@ -163,14 +163,14 @@ km <- function(time=NULL,
         stratified <- FALSE
         n.strata <- 1
         strata.labels <- c("All")
-        my.formula <- Surv(time, status) ~ 1
+        my.formula <- survival::Surv(time, status) ~ 1
     } else {
         univariate <- FALSE
         stratified <- TRUE
         stopifnot(all( ! is.na(strata)) )
         n.strata <- nlevels(as.factor(strata))
         strata.labels <- levels(as.factor(strata))
-        my.formula <- Surv(time, status) ~ strata
+        my.formula <- survival::Surv(time, status) ~ strata
     }
 
     ## Default conf.int if NULL is provided
@@ -196,12 +196,12 @@ km <- function(time=NULL,
     ## -------------------------------------
 
     ## Kaplan-Meyer survival estimate
-    fit <- survfit(my.formula)
+    fit <- survival::survfit(my.formula)
     sfit <- summary(fit)
     
     if(stratified) {
         ## Log-rank test
-        logr <- survdiff(my.formula)
+        logr <- survival::survdiff(my.formula)
         logr$df <- n.strata-1
         logr$p <- pchisq( q=logr$chisq, df=logr$df, lower.tail=FALSE )
         logr.string <- sprintf("Log-rank Test=%.2f, df=%d, p%s",	
@@ -209,7 +209,7 @@ km <- function(time=NULL,
                                logr$df, 
                                pretty_pval(logr$p) )
         ## Cox Model (and summary
-        cox <- coxph(my.formula)
+        cox <- survival::coxph(my.formula)
         scox <- summary(cox)
         hr.string  <- sprintf("HR=%.2f (95%% CI, %.2f-%.2f)",
                               coefficients(scox)[2],
