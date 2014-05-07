@@ -2,10 +2,12 @@
 \alias{dummy}
 \title{Generate a data.frame of dummy variables given a vector}
 \usage{
-dummy(x)
+dummy(x, prefix="x_")
 }
 \arguments{
   \item{x}{a vector}
+
+  \item{prefix}{name prefix of returned data.frame columns}
 }
 \value{
 a data.frame to be cbinded

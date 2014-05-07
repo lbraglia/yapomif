@@ -43,15 +43,9 @@ pretty_pval <- function(pvalue, space = FALSE) {
             }
         } else if (x < 1) {
             char <- as.character(round(x,4))
-            if(char=="1") {
-                return(paste("=",char,sep=ifelse(space, " ",""))) 
-            } else {
-                return(paste("=",
-                             char,
-                             sep=ifelse(space, " ","")))
-            }
+            return(paste0(ifelse(space, " ",""),char)) 
         } else {
-            return(paste("=","1", sep=ifelse(space, " ",""))  )
+            return(paste0(ifelse(space, " ",""),"1"))
         }
 
     }
