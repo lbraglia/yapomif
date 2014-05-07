@@ -10,6 +10,15 @@
 #' number and operator (= or <, default to FALSE).
 #' @return The function return a string with the pretty printed p-values.
 #' @keywords pretty print p-value p-values p value values
+#' @examples
+#'
+#' pretty_pval(0.3)
+#' 
+#' pval1 <- c(3, NA, 1e-01, 1e-02, 1e-03, 1e-04, 1e-05)
+#' pretty_pval(pval1, space = TRUE)
+#'
+#' 
+#' 
 #' @export pretty_pval
 pretty_pval <- function(pvalue, space = FALSE) {
 
@@ -18,11 +27,15 @@ pretty_pval <- function(pvalue, space = FALSE) {
     options("scipen"= 999) 
     
     ## Pretty printing for p-value 
-    if (any(pvalue> 1 | pvalue <0) & !is.na(pvalue))
-        stop("p-value must be in [0,1], or NA")
-
+    if (any(wrong <- (pvalue> 1 | pvalue <0), na.rm = TRUE)) {
+        warning("Not all p-values in [0,1], ")
+        pvalue[wrong] <- NA
+    }
+    
     worker <- function(x, space) {
-        if (x < 0.0001) {
+        if (is.na(x)) {
+            return(NA_character_)
+        } else if (x < 0.0001) {
             if (space) {
                 return("< 0.0001")
             } else {
@@ -43,14 +56,6 @@ pretty_pval <- function(pvalue, space = FALSE) {
 
     }
 
-    ## Vectorized
-    vec.worker <- Vectorize(worker)
-    vec.worker(pvalue, space = space)
-    
-    ## Unvectorized
-    ## worker(x = pvalue, space = space)
+    unlist(lapply(pvalue, worker, space = space))
     
 }
-
-## debug(pretty_pval)
-## pretty_pval(0.00056)
