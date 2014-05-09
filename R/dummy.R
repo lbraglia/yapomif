@@ -6,7 +6,7 @@
 #'
 #' @usage
 #'
-#' dummy(x, prefix="x_")
+#' dummy(x, prefix="")
 #' @param x a vector
 #' @param prefix name prefix of returned data.frame columns
 #' @return a data.frame to be cbinded

@@ -6,7 +6,7 @@
 #' 
 #' @usage km(time=NULL, status=NULL, strata=NULL,
 #' time.unit=c("days","weeks","months","years"), time.by=NULL, main="",
-#' ylab=NULL, xlab=NULL, xlim=NULL, conf.int=NULL,
+#' ylab=NULL, xlab=NULL, xlim=NULL, ylim=c(0,1), conf.int=NULL,
 #' test=c("logr","hr","both","no"), plot.n.at.risk=TRUE, gr.legend=NULL, ...  )
 #' @param time survival time variable
 #' @param status survival indicator variable
@@ -18,6 +18,8 @@
 #' @param xlab X-axis label. If NULL a suitable default based on time.unit will
 #' be provided
 #' @param xlim X-axis limit. If NULL a suitable default based on time.unit will
+#' be provided
+#' @param ylim Y-axis limit. Default to c(0,1)
 #' be provided
 #' @param conf.int logical ... Plot confidence intervall? If NULL confidence
 #' interval are plotted only if strata has two or more levels
@@ -45,6 +47,8 @@ km <- function(time=NULL,
                xlab=NULL,
                ## X axis limits
                xlim=NULL,
+               ## Y axis limits
+               ylim=c(0,1),
                ## PLot Confidence interval
                conf.int=NULL,
                ## Test: no=don't plot tests, logr=logranktest,
@@ -108,6 +112,10 @@ km <- function(time=NULL,
     ## xlim (NULL or numeric vector of length 2)
     if (! (is.null(xlim) | (is.numeric(xlim) & (length(xlim)==2))))
         stop("'xlim' must be NULL or numeric vector of 2 elements")
+
+    ## xlim (NULL or numeric vector of length 2)
+    if (! (is.null(ylim) | (is.numeric(ylim) & (length(ylim)==2))))
+        stop("'ylim' must be NULL or numeric vector of 2 elements")
     
     ## Argument matching, ... 'handling'
     time.unit <- match.arg(time.unit)
@@ -204,14 +212,14 @@ km <- function(time=NULL,
         logr <- survival::survdiff(my.formula)
         logr$df <- n.strata-1
         logr$p <- pchisq( q=logr$chisq, df=logr$df, lower.tail=FALSE )
-        logr.string <- sprintf("Log-rank Test=%.2f, df=%d, p%s",	
+        logr.string <- sprintf("Log-rank Test=%.2f, df=%d, p %s",	
                                logr$chisq, 
                                logr$df, 
                                pretty_pval(logr$p) )
         ## Cox Model (and summary
         cox <- survival::coxph(my.formula)
         scox <- summary(cox)
-        hr.string  <- sprintf("HR=%.2f (95%% CI, %.2f-%.2f)",
+        hr.string  <- sprintf("HR=%.3f (95%% CI, %.3f-%.3f)",
                               coefficients(scox)[2],
                               scox$conf.int[3],
                               scox$conf.int[4])
@@ -263,7 +271,7 @@ km <- function(time=NULL,
     ## Main plotting section
     plot(NA,NA, 
          xlim=c(xlim.inf, xlim.sup), 
-         ylim=c(0,1),
+         ylim=ylim,
          axes=F,
          ylab=ylab,
          xlab=xlab,

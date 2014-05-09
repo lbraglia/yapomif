@@ -4,7 +4,7 @@
 \usage{
 km(time=NULL, status=NULL, strata=NULL,
 time.unit=c("days","weeks","months","years"), time.by=NULL, main="",
-ylab=NULL, xlab=NULL, xlim=NULL, conf.int=NULL,
+ylab=NULL, xlab=NULL, xlim=NULL, ylim=c(0,1), conf.int=NULL,
 test=c("logr","hr","both","no"), plot.n.at.risk=TRUE, gr.legend=NULL, ...  )
 }
 \arguments{
@@ -27,6 +27,8 @@ test=c("logr","hr","both","no"), plot.n.at.risk=TRUE, gr.legend=NULL, ...  )
 
   \item{xlim}{X-axis limit. If NULL a suitable default
   based on time.unit will be provided}
+
+  \item{ylim}{Y-axis limit. Default to c(0,1) be provided}
 
   \item{conf.int}{logical ... Plot confidence intervall? If
   NULL confidence interval are plotted only if strata has
