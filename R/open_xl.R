@@ -7,7 +7,12 @@
 #' \code{options('yapomif.excel.app')}, used by \code{open_xl}.
 #' @usage chooseExcelApp()
 #' @export chooseExcelApp
-#' 
+#' @examples
+#' \dontrun{
+#' library(openxlsx)
+#' example(writeData)
+#' open_xl("writeDataExample.xlsx")
+#' }
 chooseExcelApp <- function() {
     if (!interactive())
         stop("Cannot choose an Excel file opener non-interactively.\n",
@@ -37,7 +42,7 @@ chooseExcelApp <- function() {
         stop("No application (detected) availables.\n",
              "Set options('yapomif.excel.app'), instead." )
     } else if (1 == n.apps) {
-        cat("Only ", names(avail.prog), "found; I'll use it")
+        cat("Only ", names(avail.prog), "found; I'll use it.\n")
         unnprog <- unname(avail.prog)
         options(yapomif.excel.app = unnprog)
         invisible(unnprog)
@@ -68,7 +73,7 @@ open_xl <- function(file = NULL){
     ## interpreter
     this.system <- Sys.info()["sysname"]
     if ("Linux" == this.system ) {
-        if (is.null(app <- options('yapomif.excel.app'))) {
+        if (is.null(app <- unlist(options('yapomif.excel.app')))) {
             app <- chooseExcelApp()
         }
         my.command <- paste(app, file, "&", sep = " ")

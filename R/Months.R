@@ -34,7 +34,7 @@ Months <- function(x, string = TRUE, abbreviate = FALSE) {
  
 }
 
-#' @S3method Months Date
+#' @export Months Date
 Months.Date <- function( x, string = TRUE, abbreviate = FALSE ) {
     if (!string) {
         return(as.numeric(format(x=x, "%m")))
@@ -44,7 +44,7 @@ Months.Date <- function( x, string = TRUE, abbreviate = FALSE ) {
     
 }
 
-#' @S3method Months POSIXct
+#' @export Months POSIXct
 Months.POSIXct <- function( x, string = TRUE, abbreviate = FALSE ) {
     if (!string) {
         return(as.numeric(format(x=x, "%m")))
@@ -54,7 +54,7 @@ Months.POSIXct <- function( x, string = TRUE, abbreviate = FALSE ) {
     
 }
 
-#' @S3method Months POSIXlt
+#' @export Months POSIXlt
 Months.POSIXlt <- function( x, string = TRUE, abbreviate = FALSE ) {
     if (!string) {
         return(as.numeric(format(x=x, "%m")))

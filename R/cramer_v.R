@@ -22,7 +22,7 @@ cramer_v <- function(x) {
     UseMethod("cramer_v")
 }
 
-#' @S3method cramer_v table
+#' @export cramer_v table
 cramer_v.table <- function(x) {
     N <- sum(x)
     k <- min(dim(x))

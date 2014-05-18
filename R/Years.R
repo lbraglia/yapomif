@@ -27,17 +27,17 @@ Years <- function(x) {
  
 }
 
-#' @S3method Years Date
+#' @export Years Date
 Years.Date <- function(x) {
     as.numeric(format(x, "%Y"))
 }
 
-#' @S3method Years POSIXct
+#' @export Years POSIXct
 Years.POSIXct <- function(x) {
     as.numeric(format(x, "%Y"))
 }
 
-#' @S3method Years POSIXlt
+#' @export Years POSIXlt
 Years.POSIXlt <- function(x) {
     as.numeric(format(x, "%Y"))
 }

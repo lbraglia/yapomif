@@ -20,7 +20,7 @@ days_to_months <- function(days) {
     UseMethod("days_to_months")
 }
 
-#' @S3method days_to_months numeric
+#' @export days_to_months numeric
 days_to_months.numeric <- function(days) {
     days / 30.43
     ## 30.43 comes from mean(

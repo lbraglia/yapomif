@@ -6,6 +6,10 @@ Aka "Yet another package of misc functions": an
 miscellaneous function (wrappers for data input, data analysis
 utilities etc).
 
+It's mainly intended for personal use (aka backward compatibility
+is not an issue).
+
+
 ## Install
 
 You can install this package via GitHub. Before that, you

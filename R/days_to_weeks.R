@@ -20,7 +20,7 @@ days_to_weeks <- function(days) {
     UseMethod("days_to_weeks")
 }
 
-#' @S3method days_to_weeks numeric
+#' @export days_to_weeks numeric
 days_to_weeks.numeric <- function(days) {
     days / 7
     

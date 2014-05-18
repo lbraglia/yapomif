@@ -26,12 +26,12 @@ Minutes <- function(x) {
  
 }
 
-#' @S3method Minutes POSIXct
+#' @export Minutes POSIXct
 Minutes.POSIXct <- function(x) {
     as.numeric(format(x, "%M"))
 }
 
-#' @S3method Minutes POSIXlt
+#' @export Minutes POSIXlt
 Minutes.POSIXlt <- function(x) {
     as.numeric(format(x, "%M"))
 }
