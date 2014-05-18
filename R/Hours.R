@@ -26,12 +26,12 @@ Hours <- function(x) {
  
 }
 
-#' @export Hours POSIXct
+#' @export Hours.POSIXct
 Hours.POSIXct <- function(x) {
     as.numeric(format(x, "%H"))
 }
 
-#' @export Hours POSIXlt 
+#' @export Hours.POSIXlt 
 Hours.POSIXlt <- function(x) {
     as.numeric(format(x, "%H"))
 }

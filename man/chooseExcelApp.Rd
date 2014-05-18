@@ -11,13 +11,6 @@ This function search for available xls/xlsx
 reader application. If it founds anything, sets
 \code{options('yapomif.excel.app')}, used by \code{open_xl}.
 }
-\examples{
-\dontrun{
-library(openxlsx)
-example(writeData)
-open_xl("writeDataExample.xlsx")
-}
-}
 \author{
 Luca Braglia
 }

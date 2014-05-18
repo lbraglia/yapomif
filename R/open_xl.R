@@ -1,3 +1,42 @@
+#' @name open_xl
+#' @title Open an xlsx file
+#' @author Luca Braglia
+#' @description This function tries to open an xlsx file with the
+#' proper application, in a portable manner.
+#' @param file path to the Excel (xls/xlsx) file
+#' @usage open_xl(file=NULL)
+#' @export open_xl
+#' @examples
+#' require(openxlsx)
+#' example(writeData)
+#' open_xl("writeDataExample.xlsx")
+#' 
+open_xl <- function(file = NULL){
+
+    if (is.null(file)) stop("a file have to be specified")
+
+    ## execution should be in background in order to not block R
+    ## interpreter
+    this.system <- Sys.info()["sysname"]
+    if ("Linux" == this.system ) {
+        if (is.null(app <- unlist(options('yapomif.excel.app')))) {
+            app <- chooseExcelApp()
+        }
+        my.command <- paste(app, file, "&", sep = " ")
+        system(command = my.command)
+    } else if ("Windows" == this.system ){
+        shell(shQuote(string = file)) 
+    } else if ("Darwin" == this.system){
+        my.command <- paste0("open ", file)
+        system(command = my.command)
+    } else {
+        warning("Operative system not handled.")
+    }
+    
+}
+
+
+
 #' @name chooseExcelApp
 #' @title Search for available xls/xlsx reader application in a
 #' UNIX like (mainly Linux) environment. 
@@ -7,12 +46,6 @@
 #' \code{options('yapomif.excel.app')}, used by \code{open_xl}.
 #' @usage chooseExcelApp()
 #' @export chooseExcelApp
-#' @examples
-#' \dontrun{
-#' library(openxlsx)
-#' example(writeData)
-#' open_xl("writeDataExample.xlsx")
-#' }
 chooseExcelApp <- function() {
     if (!interactive())
         stop("Cannot choose an Excel file opener non-interactively.\n",
@@ -57,34 +90,3 @@ chooseExcelApp <- function() {
 }
 
 
-#' @name open_xl
-#' @title Open an xlsx file
-#' @author Luca Braglia
-#' @description This function tries to open an xlsx file with the
-#' proper application, in a portable manner.
-#' @param file path to the Excel (xls/xlsx) file
-#' @usage open_xl(file=NULL)
-#' @export open_xl
-open_xl <- function(file = NULL){
-
-    if (is.null(file)) stop("a file have to be specified")
-
-    ## execution should be in background in order to not block R
-    ## interpreter
-    this.system <- Sys.info()["sysname"]
-    if ("Linux" == this.system ) {
-        if (is.null(app <- unlist(options('yapomif.excel.app')))) {
-            app <- chooseExcelApp()
-        }
-        my.command <- paste(app, file, "&", sep = " ")
-        system(command = my.command)
-    } else if ("Windows" == this.system ){
-        shell(shQuote(string = file)) 
-    } else if ("Darwin" == this.system){
-        my.command <- paste0("open ", file)
-        system(command = my.command)
-    } else {
-        warning("Operative system not handled.")
-    }
-    
-}

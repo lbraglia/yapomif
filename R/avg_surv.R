@@ -91,7 +91,7 @@ avg_surv <- function(cfit, var.name, var.values,
     UseMethod("avg_surv")
 }
 
-#' @export avg_surv coxph
+#' @export avg_surv.coxph
 avg_surv.coxph <- function(cfit, var.name, var.values, data,
                            weights, pct=0:99/100){
     if(missing(data)) {
@@ -122,7 +122,7 @@ avg_surv.coxph <- function(cfit, var.name, var.values, data,
     fits
 }
 
-#' @export avg_surv survreg
+#' @export avg_surv.survreg
 avg_surv.survreg <- function(cfit, var.name, var.values,
                              data, weights, pct=0:99/100)
 {

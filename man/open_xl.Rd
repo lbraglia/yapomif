@@ -12,6 +12,11 @@ open_xl(file=NULL)
 This function tries to open an xlsx file with the
 proper application, in a portable manner.
 }
+\examples{
+require(openxlsx)
+example(writeData)
+open_xl("writeDataExample.xlsx")
+}
 \author{
 Luca Braglia
 }

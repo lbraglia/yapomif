@@ -22,7 +22,7 @@ Class <- function(x) {
     UseMethod("Class")
 }
 
-#' @export Class data.frame
+#' @export Class.data.frame
 Class.data.frame <- function(x) {
     unlist(sapply(x,class))
 }

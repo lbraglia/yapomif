@@ -28,17 +28,17 @@ Days <- function(x) {
 }
 
 
-#' @export Days Date
+#' @export Days.Date
 Days.Date <- function(x) {
     as.numeric(format(x, "%d"))
 }
 
-#' @export Days POSIXct
+#' @export Days.POSIXct
 Days.POSIXct <- function(x) {
     as.numeric(format(x, "%d"))
 }
 
-#' @export Days POSIXlt
+#' @export Days.POSIXlt
 Days.POSIXlt <- function(x) {
     as.numeric(format(x, "%d"))
 }
