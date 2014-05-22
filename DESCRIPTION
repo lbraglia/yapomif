@@ -13,5 +13,5 @@ Imports:
     grid
 Description: Useful functions of different kinds
 License: GPL (>=2)
-URL: http://lbraglia.openedhost.com/fs.php#yapomif
+URL: http://github.com/lbraglia/yapomif
 LazyLoad: yes
