@@ -4,7 +4,6 @@
 #' Extract numeric minutes of month from a POSIXct or POSIXlt vector.
 #' 
 #' 
-#' @aliases Minutes Minutes.POSIXct Minutes.POSIXlt
 #' @usage Minutes(x)
 #' @param x POSIXct or POSIXlt vector
 #' @return A numeric vector.
@@ -26,12 +25,12 @@ Minutes <- function(x) {
  
 }
 
-#' @export Minutes.POSIXct
+#' @export 
 Minutes.POSIXct <- function(x) {
     as.numeric(format(x, "%M"))
 }
 
-#' @export Minutes.POSIXlt
+#' @export 
 Minutes.POSIXlt <- function(x) {
     as.numeric(format(x, "%M"))
 }

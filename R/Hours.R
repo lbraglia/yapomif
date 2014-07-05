@@ -4,7 +4,6 @@
 #' Extract numeric hours of month from a POSIXct or POSIXlt vector.
 #' 
 #' 
-#' @aliases Hours Hours.POSIXct Hours.POSIXlt
 #' @usage Hours(x)
 #' @param x POSIXct or POSIXlt vector
 #' @return A numeric vector.
@@ -26,12 +25,12 @@ Hours <- function(x) {
  
 }
 
-#' @export Hours.POSIXct
+#' @export
 Hours.POSIXct <- function(x) {
     as.numeric(format(x, "%H"))
 }
 
-#' @export Hours.POSIXlt 
+#' @export
 Hours.POSIXlt <- function(x) {
     as.numeric(format(x, "%H"))
 }

@@ -8,7 +8,6 @@
 #' typing. See example for usage.
 #' 
 #' 
-#' @aliases make_path make_path.coxph make_path.survreg
 #' @usage
 #' 
 #' make_path(path)

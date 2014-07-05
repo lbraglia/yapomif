@@ -4,7 +4,6 @@
 #' Trivial function that converts number of days in number of weeks.
 #' 
 #' 
-#' @aliases days_to_weeks days_to_weeks.numeric
 #' @usage days_to_weeks(days)
 #' @param days Numeric vector of days
 #' @return A numeric vector of weeks.
@@ -20,7 +19,7 @@ days_to_weeks <- function(days) {
     UseMethod("days_to_weeks")
 }
 
-#' @export days_to_weeks.numeric
+#' @export 
 days_to_weeks.numeric <- function(days) {
     days / 7
     

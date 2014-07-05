@@ -4,7 +4,6 @@
 #' Extract numeric days of month from a Date, POSIXct or POSIXlt vector.
 #' 
 #' 
-#' @aliases Days Days.Date Days.POSIXct Days.POSIXlt
 #' @usage Days(x)
 #' @param x Date, POSIXct or POSIXlt vector
 #' @return A numeric vector.
@@ -33,12 +32,12 @@ Days.Date <- function(x) {
     as.numeric(format(x, "%d"))
 }
 
-#' @export Days.POSIXct
+#' @export 
 Days.POSIXct <- function(x) {
     as.numeric(format(x, "%d"))
 }
 
-#' @export Days.POSIXlt
+#' @export 
 Days.POSIXlt <- function(x) {
     as.numeric(format(x, "%d"))
 }

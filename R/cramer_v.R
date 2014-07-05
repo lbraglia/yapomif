@@ -5,7 +5,6 @@
 #' Cramer's V calculator.
 #' 
 #' 
-#' @aliases cramer_v cramer_v.table
 #' @usage cramer_v(x)
 #' @param x an R object. Currently implemented only for tables.
 #' @return A scalar with Cramer's V
@@ -22,7 +21,7 @@ cramer_v <- function(x) {
     UseMethod("cramer_v")
 }
 
-#' @export cramer_v.table
+#' @export 
 cramer_v.table <- function(x) {
     N <- sum(x)
     k <- min(dim(x))

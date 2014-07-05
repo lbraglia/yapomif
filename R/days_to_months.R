@@ -4,7 +4,6 @@
 #' Trivial function that converts number of days in number of months.
 #' 
 #' 
-#' @aliases days_to_months days_to_months.numeric
 #' @usage days_to_months(days)
 #' @param days Numeric vector of days
 #' @return A numeric vector of months.
@@ -20,7 +19,7 @@ days_to_months <- function(days) {
     UseMethod("days_to_months")
 }
 
-#' @export days_to_months.numeric
+#' @export
 days_to_months.numeric <- function(days) {
     days / 30.43
     ## 30.43 comes from mean(

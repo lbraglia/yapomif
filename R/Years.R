@@ -4,7 +4,6 @@
 #' Extract numeric years from a Date, POSIXct or POSIXlt vector.
 #' 
 #' 
-#' @aliases Years Years.Date Years.POSIXct Years.POSIXlt
 #' @usage Years(x)
 #' @param x Date, POSIXct or POSIXlt vector
 #' @return A numeric vector.
@@ -27,17 +26,17 @@ Years <- function(x) {
  
 }
 
-#' @export Years.Date
+#' @export 
 Years.Date <- function(x) {
     as.numeric(format(x, "%Y"))
 }
 
-#' @export Years.POSIXct
+#' @export 
 Years.POSIXct <- function(x) {
     as.numeric(format(x, "%Y"))
 }
 
-#' @export Years.POSIXlt
+#' @export 
 Years.POSIXlt <- function(x) {
     as.numeric(format(x, "%Y"))
 }
