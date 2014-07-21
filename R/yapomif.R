@@ -8,4 +8,8 @@
 #' @name yapomif
 #' @docType package
 #' @import RODBC survival bdpv pROC grid openxlsx
+#' @importFrom Rcpp evalCpp
+#' @useDynLib yapomif
 NULL
+
+

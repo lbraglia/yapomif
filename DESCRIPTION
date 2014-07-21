@@ -11,8 +11,10 @@ Imports:
     bdpv,
     pROC,
     grid,
-    openxlsx
+    openxlsx,
+    Rcpp
 Description: Useful functions of different kinds
 License: GPL (>=2)
 URL: http://github.com/lbraglia/yapomif
 LazyLoad: yes
+LinkingTo: Rcpp
