@@ -3,8 +3,8 @@
 \alias{univTable}
 \title{Univariate table with absolute, relative, cumulative frequencies.}
 \usage{
-univTable(var=NULL, totals=TRUE, useNA="ifany", round.digits=3,
-sorting=NULL)
+univTable(var=NULL, totals=TRUE, useNA="ifany",
+NA.string = "NA", round.digits=3, sorting=NULL)
 }
 \arguments{
 \item{var}{vector}
@@ -12,6 +12,8 @@ sorting=NULL)
 \item{totals}{print totals?}
 
 \item{useNA}{print NA?}
+
+\item{NA.string}{character used for NA's columns title}
 
 \item{round.digits}{number of rounding digits}
 

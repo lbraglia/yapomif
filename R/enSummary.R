@@ -1,12 +1,21 @@
-#' summary with sd
-#' 
+#' Enhanced summary
 #' 
 #' This is a wrapper around summary which adds sd by default.
 #' 
-#' 
-#' @usage enSummary(var)
-#' @param var Vector to be passed to summary.
-#' @return The function return same results of summary adding sd.
+#' @usage enSummary(x, ...)
+#' @param x Vector to be passed to summary.
+#' @param ... Further arguments
 #' @keywords summary
 #' @export enSummary
-enSummary <- function(var) c(summary(var), "Sd"=sd(var, na.rm=TRUE))
+enSummary <- function(x, ...) UseMethod("enSummary")
+
+#' @export
+enSummary.numeric <- function(x, ...) {
+  res <- c(summary(x), sd(x, na.rm=TRUE))
+  res <- matrix(res, ncol=1)
+  rownames(res) <- c(names(summary(x)), "Sd")
+  res
+}
+
+#' @export
+enSummary.default <- function(x, ...) base::summary(x, ...)

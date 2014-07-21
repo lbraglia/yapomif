@@ -27,7 +27,7 @@ of rows of data, used to weight the mean survival curve over the set of
 reference covariate values.}
 
 \item{pct}{percentiles of survival curves predicted for
-\code{\link{survreg}} objects only}
+\code{\link[survival]{survreg}} objects only}
 
 \item{...}{other parameters (for future use).}
 }
@@ -36,19 +36,21 @@ An object of class "survfit" (for avg_surv.coxph) or a data.frame
 (for avg_surv.survreg), suitable for plotting (see example).
 }
 \description{
-This function calculates adjusted survival curves following the "corrected
-group prognosis" (average of individual survival curve) method.  Based on a
-fitted Cox proportional hazards model (via \code{\link{coxph}}) or a
-parametric model (via \code{\link{survreg}}), for each specified value of a
-given variable, the function returns the mean of the family of fitted
-survival curves relative to the specified variable value and a set of
-"reference" values for the remaining covariates.
+This function calculates adjusted survival curves following
+the "corrected group prognosis" (average of individual
+survival curve) method.  Based on a fitted Cox proportional
+hazards model (via \code{\link[survival]{coxph}}) or a
+parametric model (via \code{\link[survival]{survreg}}), for each
+specified value of a given variable, the function returns the
+mean of the family of fitted survival curves relative to the
+specified variable value and a set of "reference" values for
+the remaining covariates.
 }
 \details{
-The function organizes a sequence of calls to survfit.coxph which does the
-real work.  The function returns curves which are the averages of covariate
-specific survival curves, NOT a fitted survival curve at the mean of the
-covariate values.
+The function organizes a sequence of calls to survfit.coxph
+which does the real work.  The function returns curves which
+are the averages of covariate specific survival curves, NOT a
+fitted survival curve at the mean of the covariate values.
 }
 \examples{
 ## Variables for fit should be defined prior to application of coxph
@@ -81,7 +83,7 @@ legend("topright",
 }
 \author{
 \href{http://stat.ubc.ca/~rollin/stats/S/surv.html}{Original S code} of
-\code{\link{avg_surv.coxph}} by Rollin Brant. R porting and development by
+\code{avg_surv.coxph} by Rollin Brant. R porting and development by
 Luca Braglia.
 }
 \references{
@@ -90,7 +92,7 @@ confounders: a review and a new method, American Journal of Epidemiology,
 143:10, 1059-1068.
 }
 \seealso{
-\code{\link{survfit.coxph}}
+\code{\link[survival]{survfit.coxph}}
 }
 \keyword{average}
 \keyword{corrected}

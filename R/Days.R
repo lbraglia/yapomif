@@ -27,7 +27,7 @@ Days <- function(x) {
 }
 
 
-#' @export Days.Date
+#' @export
 Days.Date <- function(x) {
     as.numeric(format(x, "%d"))
 }

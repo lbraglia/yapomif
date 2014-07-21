@@ -4,11 +4,12 @@
 #' Univariate table with absolute, relative, cumulative frequencies.
 #' 
 #' 
-#' @usage univTable(var=NULL, totals=TRUE, useNA="ifany", round.digits=3,
-#' sorting=NULL)
+#' @usage univTable(var=NULL, totals=TRUE, useNA="ifany",
+#' NA.string = "NA", round.digits=3, sorting=NULL)
 #' @param var vector
 #' @param totals print totals?
 #' @param useNA print NA?
+#' @param NA.string character used for NA's columns title
 #' @param round.digits number of rounding digits
 #' @param sorting sorting can be "asc" or "desc"
 #' @return A matrix with frequencies.
@@ -17,6 +18,7 @@
 univTable <- function(var=NULL,
                       totals=TRUE,
                       useNA="ifany",
+                      NA.string = "NA",
                       round.digits=3,
                       ## sorting can be "asc" or "desc"
                       sorting=NULL			
@@ -47,7 +49,10 @@ univTable <- function(var=NULL,
         Sum <- c(colSums(result)[1:2], NA)
         result <- rbind(result, Sum)
     }
-	
+
+    ## NA
+    rownames(result)[is.na(rownames(result))] <- NA.string 
+        
     ## Formatting
     round(result, round.digits)
 }
