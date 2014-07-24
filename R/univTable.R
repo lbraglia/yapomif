@@ -11,7 +11,7 @@
 #' @param useNA print NA?
 #' @param NA.string character used for NA's columns title
 #' @param round.digits number of rounding digits
-#' @param sorting sorting can be "asc" or "desc"
+#' @param sorting sorting can be "\code{asc} or "\code{desc}"
 #' @return A matrix with frequencies.
 #' @keywords univariate table frequencies
 #' @export univTable

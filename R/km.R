@@ -27,8 +27,9 @@
 #' 'both'=both
 #' @param plot.n.at.risk Logical value: plot number at risk?
 #' @param gr.legend Graph command to add legend, as string
-#' @param ... Further lines.survfit params
-#' @return The function plot the graph and return a list with km statistics
+#' @param ... Further \link{\code{lines.survfit}} parameters
+#' @return The function plot the graph and return a list with
+#' Laplan-Meier statistics
 #' @keywords Kaplan Meier survival
 #' @export km
 km <- function(time=NULL,

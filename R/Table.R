@@ -1,7 +1,8 @@
 #' Cross tabulation and table creation
 #' 
 #' 
-#' This is a wrapper around which adds margins and useNA="if" by default.
+#' This is a wrapper around which adds margins and
+#' \code{useNA="if"} by default. 
 #' 
 #' 
 #' @usage Table(...)

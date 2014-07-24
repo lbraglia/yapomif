@@ -1,14 +1,12 @@
-#' Retrieve an MS Excel (R) sheet from an xls or xlsx file.
+#' Retrieve an MS Excel (R) sheet from an \code{xls} or \code{xlsx} file.
 #' 
-#' 
-#' This function is a wrapper around RODBC function to get a sheet from an xls
-#' or xlsx file.
-#' 
+#' This function is a wrapper around \code{RODBC} function to get a
+#' sheet from an \code{xls} or \code{xlsx} file.
 #' 
 #' @usage getExcelSheet(file=NULL, sheet=NULL, ...)
-#' @param file path to the xls/xlsx file
+#' @param file path to the \code{xls} \code{xlsx} file
 #' @param sheet sheet name
-#' @param ... other arguments passed to sqlFetch)
+#' @param ... other arguments passed to \link{\code{sqlFetch}}
 #' @return The function return a data.frame with data from the specified sheet.
 #' @keywords Excel sheet get
 #' @examples

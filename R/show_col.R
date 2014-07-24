@@ -10,7 +10,7 @@
 #' srt.rot=30)
 #' @param package charachter. Which package's color to show
 #' @param bg charachter. Background color
-#' @param cex numeric. cex
+#' @param cex numeric \code{cex}
 #' @param srt.rot degree inclination
 #' @return Nothing. As a side effect the plot of colors.
 #' @keywords colors color

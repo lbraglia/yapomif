@@ -8,7 +8,7 @@ pretty_pval(pvalue, space)
 \arguments{
 \item{pvalue}{A numeric vector of p-values.}
 
-\item{space}{Logical specifying whether a space shoud be inserted between
+\item{space}{Logical specifying whether a space should be inserted between
 number and operator (= or <, default to FALSE).}
 }
 \value{

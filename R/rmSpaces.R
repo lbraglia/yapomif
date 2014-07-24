@@ -1,7 +1,7 @@
 #' Remove spaces from a character vector
 #'
 #' This function removes spaces (all leading and trailing ones,
-#' and uniques in-between) from a character vector.
+#' and unique in-between) from a character vector.
 #'
 #' @param string a character vector 
 #' @export

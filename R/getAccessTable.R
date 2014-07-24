@@ -1,16 +1,16 @@
-#' Retrieve an MS Access (R) table from an mdb or accdb file.
+#' Retrieve an MS Access (R) table from an \code{mdb} or \code{accdb} file.
 #' 
 #' 
-#' This function is a wrapper around RODBC function to get a table from an mdb
-#' or accdb file.
+#' This function is a wrapper around \code{RODBC} function to get a
+#' table from an \code{mdb} or \code{accdb} file. 
 #' 
 #' 
 #' @usage getAccessTable(file=NULL, table=NULL, user="admin", pw=NULL, ...)
-#' @param file path to the mdb/accdb file
+#' @param file path to the \code{mdb} or \code{accdb} file
 #' @param table table name
 #' @param user username (login to the file)
 #' @param pw password (login to the file)
-#' @param ... other arguments passed to sqlFetch)
+#' @param ... other arguments passed to \link{\code{sqlFetch}}
 #' @return The function return a data.frame with data from the specified table.
 #' @keywords Access table get
 #' @examples   \dontrun{

@@ -1,6 +1,7 @@
-#' convert a pdf to emf with pstoedit and fig2emf (in Linux)
+#' Convert a \code{pdf} to \code{emf} with \code{pstoedit} and
+#' \code{fig2emf} (in Linux)
 #'
-#' convert a pdf to emf with pstoedit and fig2emf
+#' Convert a \code{pdf} to \code{emf} with \code{pstoedit} and \code{fig2emf}
 #' @param files pdf files path vector
 #' @export
 pdf2emf <- function(files) {

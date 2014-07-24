@@ -6,7 +6,7 @@
 #' 
 #' @usage pretty_pval(pvalue, space)
 #' @param pvalue A numeric vector of p-values.
-#' @param space Logical specifying whether a space shoud be inserted between
+#' @param space Logical specifying whether a space should be inserted between
 #' number and operator (= or <, default to FALSE).
 #' @return The function return a string with the pretty printed p-values.
 #' @keywords pretty print p-value p-values p value values

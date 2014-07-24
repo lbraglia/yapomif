@@ -12,7 +12,7 @@ preprocessVarnames(varnames, trim = NULL)
 (default) trimming is disabled.}
 }
 \description{
-Function to preprocess varaible names useful for a data.frame.
+Function to preprocess variable names useful for a data.frame.
 This function was created to make automatic variable name
 creation from Excel files obtained by other.
 }

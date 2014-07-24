@@ -9,7 +9,7 @@ duplicated( x, all.dup = FALSE, ...)
 \item{x}{Numeric vector of centimeter.}
 
 \item{all.dup}{Logical: if TRUE considers duplicated each observation
-present more than one time in the oject, otherwise implement
+present more than one time in the object, otherwise implement
 base::duplicated algorithm (considers duplicated the second, third and so on
 duplicated observation).}
 

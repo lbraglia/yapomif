@@ -12,10 +12,11 @@
 #' specified variable value and a set of "reference" values for
 #' the remaining covariates.
 #' 
-#' The function organizes a sequence of calls to survfit.coxph
-#' which does the real work.  The function returns curves which
-#' are the averages of covariate specific survival curves, NOT a
-#' fitted survival curve at the mean of the covariate values.
+#' The function organizes a sequence of calls to
+#' \link{\code{survfit.coxph}} which does the real work.  The
+#' function returns curves which are the averages of covariate
+#' specific survival curves, NOT a fitted survival curve at the
+#' mean of the covariate values.
 #' 
 #' 
 #' @usage
@@ -40,8 +41,9 @@
 #' @param pct percentiles of survival curves predicted for
 #' \code{\link[survival]{survreg}} objects only
 #' @param ... other parameters (for future use).
-#' @return An object of class "survfit" (for avg_surv.coxph) or a data.frame
-#' (for avg_surv.survreg), suitable for plotting (see example).
+#' @return An object of class \link{\code{survfit}} (for
+#' \code{avg_surv.coxph}) or a \link{\code{data.frame}}
+#' (for \code{avg_surv.survreg}), suitable for plotting (see example).
 #' @author
 #' 
 #' \href{http://stat.ubc.ca/~rollin/stats/S/surv.html}{Original S code} of

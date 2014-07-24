@@ -1,14 +1,14 @@
-#' Censore time to event end point at a certain time.
+#' Censor time to event end point at a certain time.
 #' 
 #' 
-#' Censore time to event end point at a certain time.
+#' Censor time to event end point at a certain time.
 #' 
 #' 
 #' @usage censor_at(time, status, censor.time)
 #' @param time Progression Indicator
 #' @param status Progression Date
 #' @param censor.time Death indicator
-#' @return A data frame to be cbinded.
+#' @return A data frame to be used with \link{\code{cbind}}
 #' @keywords time event end-point censor cut censoring overall progression-free
 #' disease-free time to progression death oncology
 #' @examples

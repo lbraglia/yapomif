@@ -11,7 +11,7 @@ srt.rot=30)
 
 \item{bg}{charachter. Background color}
 
-\item{cex}{numeric. cex}
+\item{cex}{numeric \code{cex}}
 
 \item{srt.rot}{degree inclination}
 }

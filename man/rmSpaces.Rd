@@ -10,7 +10,7 @@ rmSpaces(string)
 }
 \description{
 This function removes spaces (all leading and trailing ones,
-and uniques in-between) from a character vector.
+and unique in-between) from a character vector.
 }
 \examples{
 test <- c("  test ", "  mediterranean  sea  ")

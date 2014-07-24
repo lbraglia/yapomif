@@ -17,7 +17,7 @@
 #' @param append append
 #' @param na NA string
 #' @param dec Decimal separator
-#' @return Returnet write.table stuff
+#' @return Return write.table stuff
 #' @keywords tab delimited format file output
 #' @export write.delim2
 write.delim2 <- function(x=NULL,

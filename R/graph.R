@@ -1,8 +1,8 @@
-#' Open a vectorial device file in a portable way.
+#' Open a vector graphic device file in a portable way.
 #' 
 #' 
-#' Portable function which choose what (vectorial) device to open looking at
-#' the system.
+#' Portable function which choose which (vector graphic) device
+#' to open looking at the system.
 #' 
 #' 
 #' @usage graph(file, width, height, ...)
@@ -12,7 +12,7 @@
 #' @param ... other arguments passed to \code{\link{pdf}} or
 #' \code{\link[grDevices]{win.metafile}}
 #' @return Values returned by pdf or win.metafile?
-#' @keywords pdf win.metafile vectorial graph
+#' @keywords pdf win.metafile vector graphics graph
 #' @export graph
 graph <- function(file="", width = 7,
                   height = 7,  ...) {

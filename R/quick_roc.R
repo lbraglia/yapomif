@@ -1,7 +1,7 @@
-#' A quick roc plot.
+#' A quick ROC plot.
 #' 
 #' 
-#' A quick roc plot. It's a simple wrapper around pROC::roc
+#' A quick ROC plot. It's a simple wrapper around \code{pROC::roc}
 #' 
 #' 
 #' @usage
@@ -10,10 +10,10 @@
 #' main="")
 #' @param test Marker
 #' @param refstd Reference standard (binary variable)
-#' @param direction Charachter. Direction passed to pROC::roc
-#' @param plot.roc Logical. Plot roc curve?
+#' @param direction Charachter. Direction passed to \code{pROC::roc}
+#' @param plot.roc Logical. Plot ROC curve?
 #' @param main Graph main title
-#' @return The function plot the graph and return a list with roc statistics
+#' @return The function plot the graph and return a list with ROC statistics
 #' @keywords ROC roc
 #' @export quick_roc
 quick_roc <- function(test, refstd,

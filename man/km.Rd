@@ -42,10 +42,11 @@ interval are plotted only if strata has two or more levels}
 
 \item{gr.legend}{Graph command to add legend, as string}
 
-\item{...}{Further lines.survfit params}
+\item{...}{Further \link{\code{lines.survfit}} parameters}
 }
 \value{
-The function plot the graph and return a list with km statistics
+The function plot the graph and return a list with
+Laplan-Meier statistics
 }
 \description{
 This function plots a Kaplan-Meier plot.

@@ -24,7 +24,7 @@ append=FALSE, na="", dec=",")
 \item{dec}{Decimal separator}
 }
 \value{
-Returnet write.table stuff
+Return write.table stuff
 }
 \description{
 This function is a wrapper around read.table to write tab separated files

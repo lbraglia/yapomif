@@ -14,6 +14,6 @@ categories given in x will be used (in alphabetic order)}
 \description{
 This function split a variable containing Smarty's output for
 a multiple response question in a dummy data.frame, to be
-cbinded.
+used with \link{\code{cbind}}.
 }
 

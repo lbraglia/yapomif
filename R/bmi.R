@@ -1,7 +1,7 @@
-#' Calculate BMI
+#' Calculate Body Mass Index
 #'
 #'
-#' Calculate bmi
+#' Calculate Body Mass Index
 #'
 #'
 #' @usage
@@ -10,12 +10,12 @@
 #'     categ = FALSE, labels = FALSE) 
 #' @param weight.kg weight in kg
 #' @param height.m height in m
-#' @param bmi bmi already computed
+#' @param bmi body mass index already computed
 #' @param categ logical indicating whether to return a factor
 #' (who classification) 
-#' @param labels if categ == TRUE, logical indicating whether to
+#' @param labels if \code{categ == TRUE}, logical indicating whether to
 #' return factor with labels (who classification)
-#' @return a vector of bmi
+#' @return a vector of body mass index
 #' @examples
 #'
 #' ## Simple calculation

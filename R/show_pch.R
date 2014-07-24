@@ -1,8 +1,8 @@
 #' 
-#' Show pch
+#' Show \code{pch}
 #' 
 #' 
-#' Show pch values.
+#' Show \code{pch} values.
 #' 
 #' 
 #' @usage
@@ -10,11 +10,11 @@
 #' show_pch(extras = c("*",".","0","+","#"), cex = 3, col = "red3", bg =
 #' "gold", cextext = 1.2)
 #' @param extras charachter. Further symbols to be plotted
-#' @param cex numeric. cex
+#' @param cex numeric \code{cex}
 #' @param col color
-#' @param bg charachter. Background color
-#' @param cextext cex for text
-#' @return Nothing. As a side effect the plot of pch.
+#' @param bg character. Background color
+#' @param cextext \code{cex} for text
+#' @return Nothing. As a side effect the plot of \code{pch}.
 #' @keywords point
 #' @examples
 #' 

@@ -17,7 +17,7 @@ NA.string = "NA", round.digits=3, sorting=NULL)
 
 \item{round.digits}{number of rounding digits}
 
-\item{sorting}{sorting can be "asc" or "desc"}
+\item{sorting}{sorting can be "\code{asc} or "\code{desc}"}
 }
 \value{
 A matrix with frequencies.

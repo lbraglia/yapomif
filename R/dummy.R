@@ -8,8 +8,8 @@
 #'
 #' dummy(x, prefix="")
 #' @param x a vector
-#' @param prefix name prefix of returned data.frame columns
-#' @return a data.frame to be cbinded
+#' @param prefix name prefix of returned \link{\code{data.frame}} columns
+#' @return a \link{\code{data.frame}} to be used with \link{\code{cbind}}
 #' @examples
 #'
 #' rep(1:3, 4)

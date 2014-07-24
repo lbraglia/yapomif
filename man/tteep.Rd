@@ -36,7 +36,7 @@ visual.check=FALSE)
 \item{visual.check}{View results}
 }
 \value{
-A data frame to be cbinded.
+A data frame to be used with \link{\code{cbind}}.
 }
 \description{
 This function calculates common oncology time to event end-points (Overall
