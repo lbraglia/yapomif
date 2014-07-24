@@ -32,8 +32,8 @@ reference covariate values.}
 \item{...}{other parameters (for future use).}
 }
 \value{
-An object of class \link{\code{survfit}} (for
-\code{avg_surv.coxph}) or a \link{\code{data.frame}}
+An object of class \code{\link{survfit}} (for
+\code{avg_surv.coxph}) or a \code{\link{data.frame}}
 (for \code{avg_surv.survreg}), suitable for plotting (see example).
 }
 \description{
@@ -49,7 +49,7 @@ the remaining covariates.
 }
 \details{
 The function organizes a sequence of calls to
-\link{\code{survfit.coxph}} which does the real work.  The
+\code{\link{survfit.coxph}} which does the real work.  The
 function returns curves which are the averages of covariate
 specific survival curves, NOT a fitted survival curve at the
 mean of the covariate values.

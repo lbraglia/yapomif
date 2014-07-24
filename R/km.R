@@ -27,7 +27,7 @@
 #' 'both'=both
 #' @param plot.n.at.risk Logical value: plot number at risk?
 #' @param gr.legend Graph command to add legend, as string
-#' @param ... Further \link{\code{lines.survfit}} parameters
+#' @param ... Further \code{\link{lines.survfit}} parameters
 #' @return The function plot the graph and return a list with
 #' Laplan-Meier statistics
 #' @keywords Kaplan Meier survival

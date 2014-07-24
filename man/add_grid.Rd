@@ -18,10 +18,10 @@ par("lwd"))
 \item{lwd}{line width}
 }
 \value{
-The function adds a grid to a plot using \link{\code{abline}}.
+The function adds a grid to a plot using \code{\link{abline}}.
 }
 \description{
-Add grid to a plot using \link{\code{abline}}.
+Add grid to a plot using \code{\link{abline}}.
 }
 \keyword{add}
 \keyword{grid}

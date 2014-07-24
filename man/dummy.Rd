@@ -8,10 +8,10 @@ dummy(x, prefix="")
 \arguments{
 \item{x}{a vector}
 
-\item{prefix}{name prefix of returned \link{\code{data.frame}} columns}
+\item{prefix}{name prefix of returned \code{\link{data.frame}} columns}
 }
 \value{
-a \link{\code{data.frame}} to be used with \link{\code{cbind}}
+a \code{\link{data.frame}} to be used with \code{\link{cbind}}
 }
 \description{
 Generate a data.frame of dummy variables given a vector

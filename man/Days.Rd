@@ -7,15 +7,15 @@
 Days(x)
 }
 \arguments{
-\item{x}{Date, \link{\code{POSIXct}} or \link{\code{POSIXlt}}
+\item{x}{Date, \code{\link{POSIXct}} or \code{\link{POSIXlt}}
 vector}
 }
 \value{
 A numeric vector.
 }
 \description{
-Extract numeric days of month from a \link{\code{Date}},
-\link{\code{POSIXct}} or \link{\code{POSIXlt}} vector.
+Extract numeric days of month from a \code{Date},
+\code{\link{POSIXct}} or \code{\link{POSIXlt}} vector.
 }
 \examples{
 Sys.Date()

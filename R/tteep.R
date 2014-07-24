@@ -26,7 +26,7 @@
 #' @param PFS Calculate Progression Free Survival?
 #' @param TTP Calculate Time To Progression?
 #' @param visual.check View results
-#' @return A data frame to be used with \link{\code{cbind}}.
+#' @return A data frame to be used with \code{\link{cbind}}.
 #' @keywords time event end-point outcome survival overall progression-free
 #' disease-free time to progression death oncology
 #' @export tteep

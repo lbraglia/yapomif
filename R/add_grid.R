@@ -1,7 +1,7 @@
 #' Add grid to a plot
 #' 
 #' 
-#' Add grid to a plot using \link{\code{abline}}.
+#' Add grid to a plot using \code{\link{abline}}.
 #' 
 #' 
 #' @usage add_grid(at.y, at.x, col = "lightgray", lty = "dotted", lwd =
@@ -11,7 +11,7 @@
 #' @param col grid color
 #' @param lty line type
 #' @param lwd line width
-#' @return The function adds a grid to a plot using \link{\code{abline}}.
+#' @return The function adds a grid to a plot using \code{\link{abline}}.
 #' @keywords add grid plot
 #' @export add_grid
 add_grid <- function(at.y, at.x,

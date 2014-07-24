@@ -10,7 +10,7 @@
 #' @param table table name
 #' @param user username (login to the file)
 #' @param pw password (login to the file)
-#' @param ... other arguments passed to \link{\code{sqlFetch}}
+#' @param ... other arguments passed to \code{\link{sqlFetch}}
 #' @return The function return a data.frame with data from the specified table.
 #' @keywords Access table get
 #' @examples   \dontrun{

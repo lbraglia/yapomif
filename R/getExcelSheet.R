@@ -6,7 +6,7 @@
 #' @usage getExcelSheet(file=NULL, sheet=NULL, ...)
 #' @param file path to the \code{xls} \code{xlsx} file
 #' @param sheet sheet name
-#' @param ... other arguments passed to \link{\code{sqlFetch}}
+#' @param ... other arguments passed to \code{\link{sqlFetch}}
 #' @return The function return a data.frame with data from the specified sheet.
 #' @keywords Excel sheet get
 #' @examples

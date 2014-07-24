@@ -14,7 +14,7 @@ getAccessTable(file=NULL, table=NULL, user="admin", pw=NULL, ...)
 
 \item{pw}{password (login to the file)}
 
-\item{...}{other arguments passed to \link{\code{sqlFetch}}}
+\item{...}{other arguments passed to \code{\link{sqlFetch}}}
 }
 \value{
 The function return a data.frame with data from the specified table.

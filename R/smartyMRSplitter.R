@@ -2,7 +2,7 @@
 #'
 #' This function split a variable containing Smarty's output for
 #' a multiple response question in a dummy data.frame, to be
-#' used with \link{\code{cbind}}.
+#' used with \code{\link{cbind}}.
 #'
 #' @param x variable to be splitted
 #' @param categories character vector with, if NULL all

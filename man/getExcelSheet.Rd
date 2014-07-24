@@ -10,7 +10,7 @@ getExcelSheet(file=NULL, sheet=NULL, ...)
 
 \item{sheet}{sheet name}
 
-\item{...}{other arguments passed to \link{\code{sqlFetch}}}
+\item{...}{other arguments passed to \code{\link{sqlFetch}}}
 }
 \value{
 The function return a data.frame with data from the specified sheet.

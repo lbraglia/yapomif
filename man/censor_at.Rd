@@ -13,7 +13,7 @@ censor_at(time, status, censor.time)
 \item{censor.time}{Death indicator}
 }
 \value{
-A data frame to be used with \link{\code{cbind}}
+A data frame to be used with \code{\link{cbind}}
 }
 \description{
 Censor time to event end point at a certain time.
