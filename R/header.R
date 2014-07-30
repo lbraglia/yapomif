@@ -10,7 +10,7 @@ header <- function(msg = "" , char = "-") {
     my.head <- paste(c(rep(char, nchar(msg)), "\n"),
                      collapse = "")
 
-    cat(my.head)
+    cat("\n", my.head, sep="")
     cat(msg, "\n")
-    cat(my.head)    
+    cat(my.head, "\n")    
 }
