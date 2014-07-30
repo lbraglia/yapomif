@@ -13,7 +13,7 @@ pdf2emf <- function(files) {
     noext <- gsub("\\.[[:alnum:]]+$", "",file)
     path <- paste(noext, c("pdf","emf"), sep = ".")
     tmp.file <- tempfile()
-    pdf2fig <- paste(pstoedit, "-f fig", path[1], tmp.file, sep = " ")
+    pdf2fig <- paste(pstoedit, "-pta -f fig", path[1], tmp.file, sep = " ")
     system(command = pdf2fig)
     fig2emf <- paste(fig2dev, "-L emf", tmp.file, path[2], sep = " ")
     system(command = fig2emf)
