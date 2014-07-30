@@ -1,7 +1,7 @@
 Package: yapomif
 Type: Package
 Title: Yet another package of misc functions
-Version: 1.2
+Version: 1.2.1
 Date: 2014-07-21
 Author: Luca Braglia
 Maintainer: Luca Braglia <lbraglia@gmail.com>
