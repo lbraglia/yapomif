@@ -9,14 +9,20 @@ groupProgID2(group)
 \item{group}{a group vector}
 }
 \description{
-Starting from a vector of group id (that have to be ordered),
-this function creates a progressive id inside each group.
+Starting from a vector of group id (that have to be ordered,
+aka multiple elements from the same group must be in adjacent
+rows, the group label is irrilevant), this function creates a
+progressive id inside each group.
 }
 \examples{
 set.seed(1)
 ## One factor id
 x <- c("A", rep("C",3), rep("B",2))
 cbind(x, groupProgID2(x) )
+## example of sorting
+db <- data.frame("group" = sample(gl(2,5)), "b" = Sys.Date() + 1:10)
+(db <- db[order(- as.numeric(db$group), db$b),])
+cbind(db, "seq" = groupProgID2(db$group))
 }
 \keyword{group}
 \keyword{id}
