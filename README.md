@@ -1,5 +1,6 @@
 yapomif
 =======
+[![Build Status](https://travis-ci.org/lbraglia/yapomif.svg)](https://travis-ci.org/lbraglia/yapomif)
 
 Aka "Yet another package of misc functions": an
 [R](http://www.r-project.org/) package with 
