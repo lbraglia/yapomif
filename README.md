@@ -1,4 +1,4 @@
-yapomif [![Build Status](https://travis-ci.org/lbraglia/yapomif.svg)](https://travis-ci.org/lbraglia/yapomif)[![Build status](https://ci.appveyor.com/api/projects/status/0eho7pv20bdgisue)](https://ci.appveyor.com/project/lbraglia/yapomif)
+yapomif [![Build Status](https://travis-ci.org/lbraglia/yapomif.svg)](https://travis-ci.org/lbraglia/yapomif)<!-- [![Build status](https://ci.appveyor.com/api/projects/status/0eho7pv20bdgisue)](https://ci.appveyor.com/project/lbraglia/yapomif) -->
 =======
 
 
