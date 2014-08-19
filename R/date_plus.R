@@ -10,7 +10,10 @@
 #' date_plus(today, years = 1, months = 1, days = 1)
 #' @export
 date_plus <- function(x, years = 0, months = 0, days = 0){
-  date_mdy(Months(x, string = FALSE) + months,
-           Days(x) + days,
-           Years(x) + years )
+  x <- as.POSIXlt(x)
+  x$year <- x$year + years
+  x$mon <- x$mon + months
+  x$day <- x$day + days
+  as.Date(x)
+  
 }
