@@ -8,17 +8,9 @@ dir.clean(directory)
 \arguments{
 \item{directory}{Character. A path to directory to be cleaned}
 }
-\value{
-Logical. Operation successful or no files in the directory.
-}
 \description{
-Remove all files in a directory.
-}
-\examples{
-tmp.dir <- tempdir()
-file.create(paste(tmp.dir,"foo", sep = "/"))
-dir.clean(tmp.dir)
-dir(tmp.dir)
+Remove all files in a directory, by deleting the directory and creating
+a new one with the same name.
 }
 \keyword{clean}
 \keyword{directory}

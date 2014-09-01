@@ -24,7 +24,7 @@ Comment <- function(... ,
     border <- paste(c(rep(border, nchar(msg)), "\n"), collapse = "")
   }
 
-  cat("\n", border, sep="")
+  cat("\n", border, "\n", sep="")
   cat(msg, "\n")
   cat(border, "\n")
 
