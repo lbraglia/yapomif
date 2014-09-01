@@ -1,36 +1,29 @@
-#' Print a message inside an ascii border
+#' Print a message inside an Ascii border
 #'
-#' Print a message inside an ascii border; useful for working
+#' Print a message inside an Ascii border; useful for working
 #' with \code{\link{sink}}, to leave messages in the output.
 #'
-#' @param ... character vectors (pasted) forming the message to
+#' @param msg character vectors (pasted) forming the message to
 #' be printed 
 #' @param border character used for header printing
 #' @param wrap where to wrap
 #' @export 
-Comment <- function(... ,
+Comment <- function(msg ,
                     border = "-",
-                    wrap = options()$width
+                    wrap = 0.9 * getOption("width")
                     ) {
 
-  msg <- do.call( paste, list(...) )
-  
-  if (nchar(msg) > wrap) {
-    ## wrap it
-    msg <- paste(strwrap(msg, width = wrap), collapse = "\n")
-    border <- paste(rep(border, wrap),  collapse = "")
-  }
-  else {
-    border <- paste(c(rep(border, nchar(msg)), "\n"), collapse = "")
-  }
+
+  msg <- strwrap(msg, wrap)
+  maxLen <- max(nchar(msg))
+  msg <- paste(msg , collapse = "\n")
+  border <- paste(rep(border, maxLen),  collapse = "")
 
   cat("\n", border, "\n", sep="")
-  cat(msg, "\n")
-  cat(border, "\n")
+  cat(msg)
+  cat("\n", border, "\n", sep="")
 
 }
-
-
 
   
 
