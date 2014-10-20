@@ -6,6 +6,8 @@
 #' @param db a data.frame with ordered columns
 #' @param operator comparison operator
 #' @param row.id an optional row id
+#' @param report.only logical, whether to include only a report or a matrix
+#' with all comparisons results 
 #' @return a list with raw results and a report
 #' @examples
 #' 
@@ -13,12 +15,13 @@
 #'                row.id = letters[1:3])
 #' 
 #' @export
-compareColumns <- function(db, operator = "<", row.id = NULL) {
+compareColumns <- function(db, operator = "<",
+                           row.id = NULL, report.only = TRUE) {
 
   ## data should be a data.frame with no characters
   stopifnot( (is.data.frame(db)) & (!any(sapply(db, is.character))) )
-  first <- db[, -ncol(db)]
-  second <- db[, -1]
+  first <- db[, -ncol(db), drop = FALSE]
+  second <- db[, -1, drop = FALSE]
 
   ## matrix results
   res <- Reduce(operator, list(first, second ))
@@ -31,5 +34,8 @@ compareColumns <- function(db, operator = "<", row.id = NULL) {
   report <- apply(res, 1, function(x) names(x)[x %in% FALSE])
   select <- unlist(lapply(report, function(x) length(x)>0))
 
-  list("results" = res, "report" = report[select])
+  if (report.only)
+    return(report[select])
+  else
+    return(list("results" = res, "report" = return(report[select])))
 } 

@@ -3,7 +3,7 @@
 \alias{compareColumns}
 \title{Compare columns progressively}
 \usage{
-compareColumns(db, operator = "<", row.id = NULL)
+compareColumns(db, operator = "<", row.id = NULL, report.only = TRUE)
 }
 \arguments{
 \item{db}{a data.frame with ordered columns}
@@ -11,6 +11,9 @@ compareColumns(db, operator = "<", row.id = NULL)
 \item{operator}{comparison operator}
 
 \item{row.id}{an optional row id}
+
+\item{report.only}{logical, whether to include only a report or a matrix
+with all comparisons results}
 }
 \value{
 a list with raw results and a report
