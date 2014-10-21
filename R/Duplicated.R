@@ -10,7 +10,7 @@
 #' 
 #' @usage
 #' 
-#' duplicated( x, all.dup = FALSE, ...)
+#' Duplicated( x, all.dup = TRUE, ...)
 #' @param x Numeric vector of centimeter.
 #' @param all.dup Logical: if TRUE considers duplicated each observation
 #' present more than one time in the object, otherwise implement
@@ -19,8 +19,8 @@
 #' @param ... Other arguments passed to base::duplicated.
 #' @return A logical vector with duplicated marked as TRUE.
 #' @keywords duplicated
-#' @export duplicated
-duplicated <- function( x, all.dup = FALSE, ...) {
+#' @export Duplicated
+Duplicated <- function( x, all.dup = TRUE, ...) {
     if (all.dup) {
         base::duplicated(x, ...)| base::duplicated(x, fromLast = TRUE)
     } else
