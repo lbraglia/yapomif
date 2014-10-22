@@ -3,7 +3,7 @@
 \alias{NAreport}
 \title{Report NA variables per case}
 \usage{
-NAreport(x, idvar)
+NAreport(x, idvar = NULL)
 }
 \arguments{
 \item{x}{data.frame to be analyzed}
@@ -19,7 +19,14 @@ test <- data.frame(
  x = c(1,NA,NA),
  y = c(NA,1,1),
  z = c(1,1,NA))
+test2 <- test
+test2$surname <- c("doe", "foo", "bar")
+test2 <- test2[c("name","surname","x","y","z")]
 
-NAreport(test, idvar = "name")
+test
+NAreport(test, "name")
+
+test2
+NAreport(test2, c("name", "surname"))
 }
 
