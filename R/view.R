@@ -12,22 +12,13 @@
 view <- function(...)  {
   wb <- openxlsx::createWorkbook()
   objList <- list(...)
-  objNames <- lapply(as.list(match.call(expand.dots = TRUE))[-1],
-                     as.character)
-  mapply(addWorksheet,
+  objNames <- as.character(match.call(expand.dots = TRUE))[-1]
+  mapply(openxlsx::addWorksheet,
          sheetName = objNames,
          MoreArgs = list(wb = wb))
-  mapply(writeData,
+  mapply(openxlsx::writeData,
          sheet = objNames,
          x = objList,
          MoreArgs = list(wb = wb)) 
   openxlsx::openXL(wb)
 }
-
-
-
-
-
-
-
-  
