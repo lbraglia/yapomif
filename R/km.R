@@ -213,7 +213,7 @@ km <- function(time=NULL,
         logr <- survival::survdiff(my.formula)
         logr$df <- n.strata-1
         logr$p <- pchisq( q=logr$chisq, df=logr$df, lower.tail=FALSE )
-        logr.string <- sprintf("Log-rank Test=%.2f, df=%d, p %s",	
+        logr.string <- sprintf("Log-rank Test=%.2f, df=%d, p%s",	
                                logr$chisq, 
                                logr$df, 
                                pretty_pval(logr$p) )
