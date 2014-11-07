@@ -3,16 +3,10 @@
 \alias{tteep}
 \title{Common time to event end-points calculator.}
 \usage{
-tteep(prog =!is.na(prog.date),
-prog.date=NULL,
-death = !is.na(death.date),
-death.date=NULL,
-start.date=NULL,
-last.fup=NULL,
-OS=TRUE,
-PFS=TRUE,
-TTP=TRUE,
-visual.check=FALSE)
+tteep(prog = !is.na(prog.date), prog.date = NULL,
+  death = !is.na(death.date), death.date = NULL, start.date = NULL,
+  last.fup = NULL, OS = TRUE, PFS = TRUE, TTP = TRUE,
+  visual.check = FALSE)
 }
 \arguments{
 \item{prog}{Progression Indicator}
