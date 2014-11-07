@@ -3,13 +3,15 @@
 \alias{pretty_pval}
 \title{Pretty print for p-values}
 \usage{
-pretty_pval(pvalue, space)
+pretty_pval(pvalue, space = FALSE, equal = TRUE)
 }
 \arguments{
 \item{pvalue}{A numeric vector of p-values.}
 
 \item{space}{Logical specifying whether a space should be inserted between
 number and operator (= or <, default to FALSE).}
+
+\item{equal}{add = where needed?}
 }
 \value{
 The function return a string with the pretty printed p-values.

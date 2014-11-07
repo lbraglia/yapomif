@@ -4,10 +4,10 @@
 #' Pretty print for p-values.
 #' 
 #' 
-#' @usage pretty_pval(pvalue, space)
 #' @param pvalue A numeric vector of p-values.
 #' @param space Logical specifying whether a space should be inserted between
 #' number and operator (= or <, default to FALSE).
+#' @param equal add = where needed?
 #' @return The function return a string with the pretty printed p-values.
 #' @keywords pretty print p-value p-values p value values
 #' @examples
@@ -20,7 +20,7 @@
 #' 
 #' 
 #' @export pretty_pval
-pretty_pval <- function(pvalue, space = FALSE) {
+pretty_pval <- function(pvalue, space = FALSE, equal = TRUE) {
 
     old.scipen <- options("scipen")
     on.exit( options("scipen" = old.scipen) )
@@ -31,25 +31,27 @@ pretty_pval <- function(pvalue, space = FALSE) {
         warning("Not all p-values in [0,1], ")
         pvalue[wrong] <- NA
     }
-    
-    worker <- function(x, space) {
+
+    ## implement this in C?
+    worker <- function(x, space, equal) {
         if (is.na(x)) {
             return(NA_character_)
         } else if (x < 0.0001) {
-            if (space) {
-                return("< 0.0001")
-            } else {
-                return("<0.0001")
-            }
+          return(paste0("<", ifelse(space, " ",""), "0.0001"))
+          ## if (space) {
+          ##       return("< 0.0001")
+          ##   } else {
+          ##       return("<0.0001")
+          ##   }
         } else if (x < 1) {
             char <- as.character(round(x,4))
-            return(paste0(ifelse(space, " ",""),char)) 
+            return(paste0(ifelse(equal, "=",""), ifelse(space, " ",""), char)) 
         } else {
-            return(paste0(ifelse(space, " ",""),"1"))
+            return(paste0(ifelse(equal, "=",""), ifelse(space, " ",""),"1"))
         }
 
     }
 
-    unlist(lapply(pvalue, worker, space = space))
+    unlist(lapply(pvalue, worker, space = space, equal = equal))
     
 }
