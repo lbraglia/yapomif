@@ -79,7 +79,7 @@ km <- function(time=NULL,
     ##   stringhe molto lunghe (il nome dei gruppi, se lunghi) 
     ##   non vengano tagliate negli at risk 
     ## - inserire il parametro data come specificabile
-
+  
     ## ## Libraries required
     ## require(survival)
     ## require(graphics)
@@ -346,9 +346,9 @@ km <- function(time=NULL,
 
     ## Return Stats wheter or not plot has been done
     if (univariate) {
-        return(list("km"=fit))
+        invisible(list("km"=fit))
     } else {
-        return(list("km"=fit,"logrank"=logr, "cox"=cox, "scox"=scox))
+        invisible(list("km"=fit,"logrank"=logr, "cox"=cox, "scox"=scox))
     }
     
 }
