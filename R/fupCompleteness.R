@@ -15,8 +15,8 @@
 #' @keywords time event follow up completeness
 #' @examples
 #'
-#' time   <- c(180, 12, 240)
-#' status <- c(  0,  1,   0)
+#' time   <- c(180, 12, 240, 250 )
+#' status <- c(  0,  1,   0, 1   )
 #' 
 #' ## example: 
 #' ## quantify fup completeness to 200 days (eg minimum potential
