@@ -9,6 +9,7 @@
 #' @docType package
 #' @import RODBC survival bdpv pROC grid openxlsx
 #' @importFrom Rcpp evalCpp
+#' @importFrom knitr engine_output
 #' @useDynLib yapomif
 NULL
 
