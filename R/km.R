@@ -4,10 +4,6 @@
 #' This function plots a Kaplan-Meier plot.
 #' 
 #' 
-#' @usage km(time=NULL, status=NULL, strata=NULL,
-#' time.unit=c("days","weeks","months","years"), time.by=NULL, main="",
-#' ylab=NULL, xlab=NULL, xlim=NULL, ylim=c(0,1), conf.int=NULL,
-#' test=c("logr","hr","both","no"), plot.n.at.risk=TRUE, gr.legend=NULL, ...  )
 #' @param time survival time variable
 #' @param status survival indicator variable
 #' @param strata Stratifying variable (optional)
@@ -21,6 +17,7 @@
 #' be provided
 #' @param ylim Y-axis limit. Default to c(0,1)
 #' be provided
+#' @param reverse plot cumulative events
 #' @param conf.int logical ... Plot confidence intervall? If NULL confidence
 #' interval are plotted only if strata has two or more levels
 #' @param test tests: 'no'=don't plot tests, 'logr'=logranktest, 'hr'=hazratio,
@@ -50,6 +47,8 @@ km <- function(time=NULL,
                xlim=NULL,
                ## Y axis limits
                ylim=c(0,1),
+               ## plot cumulative events?
+               reverse = FALSE,
                ## PLot Confidence interval
                conf.int=NULL,
                ## Test: no=don't plot tests, logr=logranktest,
@@ -282,8 +281,12 @@ km <- function(time=NULL,
     axis(1, at=times, labels=times/time.divisor)
     add_grid(at.y=axTicks(2), at.x=times)
     box()
-    lines(fit, conf.int=conf.int, ...)
-
+    if (reverse) {
+      lines(fit, fun = "event", conf.int=conf.int,  ...)
+    } else {
+      lines(fit, conf.int=conf.int, ...)
+    }
+    
     ## Add legend
     if (!is.null(gr.legend)) {
         eval(parse(text=gr.legend))

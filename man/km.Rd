@@ -3,10 +3,11 @@
 \alias{km}
 \title{Plots an 'enhanced' Kaplan-Meier plot, with base graphics package.}
 \usage{
-km(time=NULL, status=NULL, strata=NULL,
-time.unit=c("days","weeks","months","years"), time.by=NULL, main="",
-ylab=NULL, xlab=NULL, xlim=NULL, ylim=c(0,1), conf.int=NULL,
-test=c("logr","hr","both","no"), plot.n.at.risk=TRUE, gr.legend=NULL, ...  )
+km(time = NULL, status = NULL, strata = NULL, time.unit = c("days",
+  "weeks", "months", "years"), time.by = NULL, main = "", ylab = NULL,
+  xlab = NULL, xlim = NULL, ylim = c(0, 1), reverse = FALSE,
+  conf.int = NULL, test = c("logr", "hr", "both", "no"),
+  plot.n.at.risk = TRUE, gr.legend = NULL, ...)
 }
 \arguments{
 \item{time}{survival time variable}
@@ -31,6 +32,8 @@ be provided}
 
 \item{ylim}{Y-axis limit. Default to c(0,1)
 be provided}
+
+\item{reverse}{plot cumulative events}
 
 \item{conf.int}{logical ... Plot confidence intervall? If NULL confidence
 interval are plotted only if strata has two or more levels}

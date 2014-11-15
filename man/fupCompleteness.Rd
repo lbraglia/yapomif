@@ -3,7 +3,8 @@
 \alias{fupCompleteness}
 \title{Calculate C index of of follow up completenes}
 \usage{
-fupCompleteness(time = NULL, status = NULL, cutoff = NULL)
+fupCompleteness(time = NULL, status = NULL, cutoff = NULL,
+  strata = NULL)
 }
 \arguments{
 \item{time}{Follow up (in days?)}
@@ -11,10 +12,12 @@ fupCompleteness(time = NULL, status = NULL, cutoff = NULL)
 \item{status}{event indicator}
 
 \item{cutoff}{(in days?)}
+
+\item{strata}{group}
 }
 \value{
-A list with individual follow up completeness and the
-C index
+A list with individual global C-index, strata C-indexes
+(optional), and individual C-indexes
 }
 \description{
 Calculate C index of of follow up completenes.
@@ -22,12 +25,13 @@ Calculate C index of of follow up completenes.
 \examples{
 time   <- c(180, 12, 240, 250 )
 status <- c(  0,  1,   0, 1   )
+group  <- c("A","A", "B", "B" )
 
 ## example:
 ## quantify fup completeness to 200 days (eg minimum potential
 ## follow up in a hypotethic prospective trial)
 
-fupCompleteness(time = time, status = status, cutoff = 200)
+fupCompleteness(time = time, status = status, cutoff = 200, strata = group)
 }
 \references{
 Clark T., Altman D., De Stavola B. (2002),
