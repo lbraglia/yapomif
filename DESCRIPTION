@@ -11,7 +11,8 @@ Imports:
     bdpv,
     pROC,
     openxlsx,
-    Rcpp
+    Rcpp,
+    knitr
 Description: Useful functions of different kinds
 License: GPL (>=2)
 URL: http://github.com/lbraglia/yapomif
