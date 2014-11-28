@@ -1,10 +1,9 @@
 #' Censor time to event end point at a certain time.
-#' 
+#'
 #' 
 #' Censor time to event end point at a certain time.
+#'
 #' 
-#' 
-#' @usage censor_at(time, status, censor.time)
 #' @param time Progression Indicator
 #' @param status Progression Date
 #' @param censor.time Death indicator

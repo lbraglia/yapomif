@@ -18,11 +18,6 @@
 #' specific survival curves, NOT a fitted survival curve at the
 #' mean of the covariate values.
 #' 
-#' 
-#' @usage
-#' 
-#' avg_surv(cfit, var.name, var.values, data, weights, pct=0:99/100)
-#' 
 #' @param cfit An object of class "coxph", typically produced by the
 #' application of the coxph function.
 #' @param var.name A variable from the model represented in cfit.

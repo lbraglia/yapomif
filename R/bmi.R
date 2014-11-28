@@ -1,13 +1,9 @@
 #' Calculate Body Mass Index
 #'
-#'
+#' 
 #' Calculate Body Mass Index
 #'
-#'
-#' @usage
-#'
-#' bmi(weight.kg = NULL, height.m = NULL, bmi = NULL,
-#'     categ = FALSE, labels = FALSE) 
+#' 
 #' @param weight.kg weight in kg
 #' @param height.m height in m
 #' @param bmi body mass index already computed

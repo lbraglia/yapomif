@@ -1,11 +1,9 @@
 #' Add grid to a plot
-#' 
+#'
 #' 
 #' Add grid to a plot using \code{\link{abline}}.
+#'
 #' 
-#' 
-#' @usage add_grid(at.y, at.x, col = "lightgray", lty = "dotted", lwd =
-#' par("lwd"))
 #' @param at.x x axis grid values
 #' @param at.y y axis grid values
 #' @param col grid color
