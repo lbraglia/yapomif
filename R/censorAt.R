@@ -17,23 +17,23 @@
 #'     status <- c(  0,  1)
 #'     censor.time <- 120
 #'     (original <- data.frame(time, status))
-#'     censor_at(time=time, status=status, censor.time = 160)
-#'     censor_at(time=time, status=status, censor.time = 150)
-#'     censor_at(time=time, status=status, censor.time = 125)
-#'     censor_at(time=time, status=status, censor.time = 75)
+#'     censorAt(time=time, status=status, censor.time = 160)
+#'     censorAt(time=time, status=status, censor.time = 150)
+#'     censorAt(time=time, status=status, censor.time = 125)
+#'     censorAt(time=time, status=status, censor.time = 75)
 #' 
 #'     time   <- c(100,150)
 #'     status <- c(  1,  0)
 #'     censor.time <- 120
 #'     (original <- data.frame(time, status))
-#'     censor_at(time=time, status=status, censor.time = 160)
-#'     censor_at(time=time, status=status, censor.time = 150)
-#'     censor_at(time=time, status=status, censor.time = 125)
-#'     censor_at(time=time, status=status, censor.time = 75)
+#'     censorAt(time=time, status=status, censor.time = 160)
+#'     censorAt(time=time, status=status, censor.time = 150)
+#'     censorAt(time=time, status=status, censor.time = 125)
+#'     censorAt(time=time, status=status, censor.time = 75)
 #' 
 #' 
-#' @export censor_at
-censor_at <- function(time=NULL, status=NULL, censor.time=NULL) {
+#' @export
+censorAt <- function(time=NULL, status=NULL, censor.time=NULL) {
     ## Funzione per tagliare un tempo all'evento ad un certo momento
     if (sum(sapply(list(time, status, censor.time), is.null))>0) {
         stop("time, status and censor.time needed")

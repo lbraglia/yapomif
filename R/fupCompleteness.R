@@ -38,7 +38,7 @@ fupCompleteness <- function(time = NULL,
     }
 
     ## censoring to cutoff ...
-    db <- censor_at(time = time,
+    db <- censorAt(time = time,
                     status = status,
                     censor.time = cutoff)
     names(db) <- c("time","status")

@@ -279,7 +279,7 @@ km <- function(time=NULL,
          )
     axis(2)		
     axis(1, at=times, labels=times/time.divisor)
-    add_grid(at.y=axTicks(2), at.x=times)
+    addGrid(at.y=axTicks(2), at.x=times)
     box()
     if (reverse) {
       lines(fit, fun = "event", conf.int=conf.int,  ...)

@@ -37,8 +37,8 @@
 #' \code{\link[survival]{survreg}} objects only
 #' @param ... other parameters (for future use).
 #' @return An object of class \code{\link{survfit}} (for
-#' \code{avg_surv.coxph}) or a \code{\link{data.frame}}
-#' (for \code{avg_surv.survreg}), suitable for plotting (see example).
+#' \code{avgSurv.coxph}) or a \code{\link{data.frame}}
+#' (for \code{avgSurv.survreg}), suitable for plotting (see example).
 #' @author
 #' 
 #' \href{http://stat.ubc.ca/~rollin/stats/S/surv.html}{Original S code} of
@@ -60,7 +60,7 @@
 #' data(lung, package = "survival")
 #' lung$os <- survival::Surv(lung$time, lung$status)
 #' cfit <- survival::coxph(os ~ age + sex + ph.karno + meal.cal+ wt.loss, data=lung)
-#' afits <- avg_surv(cfit, "sex", c(1,2))
+#' afits <- avgSurv(cfit, "sex", c(1,2))
 #' kmfit <- survival::survfit(os ~ sex, data=lung)
 #' plot(kmfit, xscale=365.25, col=1:2, lty=2,
 #'      main="Kaplan Meier vs \n'Corrected group prognosis' approach")
@@ -69,7 +69,7 @@
 #' ## Parametric model
 #' pfit <- survival::survreg(os ~ age + sex + ph.karno + meal.cal+ wt.loss,
 #'                 data=lung, dist = "exponential")
-#' afits2 <- avg_surv(pfit, "sex", c(1,2))
+#' afits2 <- avgSurv(pfit, "sex", c(1,2))
 #' lines(afits2$sex_1/365.25, afits2$survival, lty=3, col=1)
 #' lines(afits2$sex_2/365.25, afits2$survival, lty=3, col=2)
 #' 
@@ -83,14 +83,14 @@
 #' 
 #' 
 #' 
-#' @export avg_surv
-avg_surv <- function(cfit, var.name, var.values,
+#' @export
+avgSurv <- function(cfit, var.name, var.values,
                              data, weights, pct=0:99/100) {
-    UseMethod("avg_surv")
+    UseMethod("avgSurv")
 }
 
 #' @export
-avg_surv.coxph <- function(cfit, var.name, var.values, data,
+avgSurv.coxph <- function(cfit, var.name, var.values, data,
                            weights, pct=0:99/100){
     if(missing(data)) {
         if(!is.null(cfit$model))
@@ -121,7 +121,7 @@ avg_surv.coxph <- function(cfit, var.name, var.values, data,
 }
 
 #' @export
-avg_surv.survreg <- function(cfit, var.name, var.values,
+avgSurv.survreg <- function(cfit, var.name, var.values,
                              data, weights, pct=0:99/100)
 {
     if (missing(data)) {
@@ -167,87 +167,3 @@ avg_surv.survreg <- function(cfit, var.name, var.values,
     curve.df <- cbind("survival" = 1 - pct, curve.df)
     curve.df
 }
-
-
-## OLD STUFF
-
-## avg_surv <- function(cfit,  ...) {
-##     UseMethod("avg_surv")
-## }
-
-## avg_surv.coxph <- function(cfit, var.name, var.values, data, weights){
-##     if(missing(data)) {
-##         if(!is.null(cfit$model))
-##             mframe <- cfit$model
-##         else mframe <- model.frame(cfit, sys.parent())
-##     }
-##     else mframe <- model.frame(cfit, data)
-##     var.num <- match(var.name, names(mframe))
-##     data.patterns <- apply(data.matrix(mframe[,  - c(1, var.num)]), 1, 
-##                            paste, collapse = ",")
-##     data.patterns <- factor(data.patterns, levels=unique(data.patterns))
-##     mframe <- mframe[!duplicated(data.patterns),  ]
-##     if(missing(weights))
-##         weights <- table(data.patterns)
-##     else weights <- tapply(weights, data.patterns, sum)
-##     curves <- vector(length = length(var.values), mode = "list")
-##     names(curves) <- var.values
-##     for(value in var.values) {
-##         mframe[, var.name] <- value
-##         fits <- survfit(cfit, newdata = mframe, se.fit = F)
-##         curves[[as.character(value)]] <- (fits$surv %*% weights)/sum(
-##             weights)
-##     }
-##     curve.mat <- matrix(unlist(curves), ncol = length(curves), dimnames = 
-##                         list(NULL, names(curves)))
-##     fits$surv <- curve.mat
-##     fits
-## }
-
-
-## avg_surv.survreg <- function(cfit, var.name, var.values,
-##                              data, weights, pct=0:99/100)
-## {
-##     if (missing(data)) {
-##         if (!is.null(cfit$model))
-##             mframe <- cfit$model
-##         else mframe <- model.frame(cfit, sys.parent())
-##     }
-##     else mframe <- model.frame(cfit, data)
-
-##     var.num <- match(var.name, names(mframe))
-##     data.patterns <- apply(data.matrix(mframe[, -c(1, var.num)]),
-##                            1, paste, collapse = ",")
-##     data.patterns <- factor(data.patterns, levels = unique(data.patterns))
-
-##     mframe <- mframe[!duplicated(data.patterns), ]
-    
-##     if (missing(weights)){
-##         weights <- table(data.patterns)
-##     } else {
-##         weights <- tapply(weights, data.patterns, sum)
-##     }
-
-##     curves <- vector(length = length(var.values), mode =   "list")
-##     names(curves) <- var.values
-
-##     for (value in var.values) {
-##         mframe[, var.name] <- value
-##         fits <- t(predict(cfit, newdata =  mframe,
-##                         type="quantile",
-##                         p = pct,
-##                         se.fit = F))
-##         curves[[as.character(value)]] <-
-##             (fits %*%   weights)/sum(weights)
-        
-##     }
-
-    
-##     curve.mat <- matrix(unlist(curves),
-##                         ncol =length(curves),
-##                         dimnames = list(NULL,  names(curves)))
-##     curve.df <- as.data.frame(curve.mat)
-##     names(curve.df) <- paste(var.name, names(curve.df), sep="_")
-##     curve.df <- cbind("survival" = 1 - pct, curve.df)
-##     curve.df
-## }
