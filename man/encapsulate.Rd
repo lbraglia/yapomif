@@ -3,7 +3,7 @@
 \alias{encapsulate}
 \title{Encapsulate text between margins.}
 \usage{
-encapsulate(s,start="[", last="]",sep="")
+encapsulate(s, start = "[", last = "]", sep = "")
 }
 \arguments{
 \item{s}{string to be encapsulated}

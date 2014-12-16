@@ -3,7 +3,6 @@
 #' This function is a wrapper around \code{RODBC} function to get a
 #' sheet from an \code{xls} or \code{xlsx} file.
 #' 
-#' @usage getExcelSheet(file=NULL, sheet=NULL, ...)
 #' @param file path to the \code{xls} \code{xlsx} file
 #' @param sheet sheet name
 #' @param ... other arguments passed to \code{\link{sqlFetch}}

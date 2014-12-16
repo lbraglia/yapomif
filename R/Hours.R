@@ -4,7 +4,6 @@
 #' Extract numeric hours of month from a POSIXct or POSIXlt vector.
 #' 
 #' 
-#' @usage Hours(x)
 #' @param x POSIXct or POSIXlt vector
 #' @return A numeric vector.
 #' @keywords hour Hour hours Hours date Date

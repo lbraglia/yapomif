@@ -5,10 +5,6 @@
 #' Show \code{pch} values.
 #' 
 #' 
-#' @usage
-#' 
-#' show_pch(extras = c("*",".","0","+","#"), cex = 3, col = "red3", bg =
-#' "gold", cextext = 1.2)
 #' @param extras charachter. Further symbols to be plotted
 #' @param cex numeric \code{cex}
 #' @param col color

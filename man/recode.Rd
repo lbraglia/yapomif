@@ -3,7 +3,7 @@
 \alias{recode}
 \title{Vector recode utility}
 \usage{
-recode(from=NULL, rec.direct=NULL)
+recode(from = NULL, rec.direct = NULL)
 }
 \arguments{
 \item{from}{Vector to be recoded.}

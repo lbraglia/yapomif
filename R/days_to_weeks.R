@@ -4,7 +4,6 @@
 #' Trivial function that converts number of days in number of weeks.
 #' 
 #' 
-#' @usage days_to_weeks(days)
 #' @param days Numeric vector of days
 #' @return A numeric vector of weeks.
 #' @keywords day days week weeks

@@ -4,7 +4,6 @@
 #' Yet another recode utility
 #' 
 #' 
-#' @usage recode(from=NULL, rec.direct=NULL)
 #' @param from Vector to be recoded.
 #' @param rec.direct matrix containing 2 columns; first is "from", second is
 #' "to".

@@ -4,7 +4,6 @@
 #' A Matrix of Scatterplot with a lowess smoother is produced.
 #' 
 #' 
-#' @usage pairs_with_lowess(data)
 #' @param data data.frame
 #' @return Plot
 #' @keywords pairs lowess scatterplot matrix

@@ -8,9 +8,6 @@
 #' This wrapper allows to find all duplicated obs.
 #' 
 #' 
-#' @usage
-#' 
-#' Duplicated( x, all.dup = TRUE, ...)
 #' @param x Numeric vector of centimeter.
 #' @param all.dup Logical: if TRUE considers duplicated each observation
 #' present more than one time in the object, otherwise implement

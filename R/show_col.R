@@ -6,8 +6,6 @@
 #' from demo(colors).
 #' 
 #' 
-#' @usage show_col(package=c("graphics","grid"), bg="white", cex = 0.75,
-#' srt.rot=30)
 #' @param package charachter. Which package's color to show
 #' @param bg charachter. Background color
 #' @param cex numeric \code{cex}

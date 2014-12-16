@@ -4,7 +4,6 @@
 #' Cut numeric x in quantile
 #' 
 #' 
-#' @usage xtile(x,n)
 #' @param x numeric vector
 #' @param n number of quantiles
 #' @return A factor vector.

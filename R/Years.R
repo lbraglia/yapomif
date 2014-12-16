@@ -4,7 +4,6 @@
 #' Extract numeric years from a Date, POSIXct or POSIXlt vector.
 #' 
 #' 
-#' @usage Years(x)
 #' @param x Date, POSIXct or POSIXlt vector
 #' @return A numeric vector.
 #' @keywords year Year years Years date Date

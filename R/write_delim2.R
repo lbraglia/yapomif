@@ -5,10 +5,6 @@
 #' with "." as decimal separator.
 #' 
 #' @rdname write_delim2
-#' @usage
-#' 
-#' write.delim2(x=NULL, file="", row.names=FALSE, col.names=TRUE, quote=TRUE,
-#' append=FALSE, na="", dec=",")
 #' @param x Matrix or data.frame to be exported
 #' @param file file parameter of write.table
 #' @param row.names row names

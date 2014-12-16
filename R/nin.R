@@ -5,7 +5,6 @@
 #' that are not in \code{y}.
 #'
 #' 
-#' @usage x \%nin\% y
 #' @param x a vector
 #' @param y a vector
 #' @export

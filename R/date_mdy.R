@@ -4,7 +4,6 @@
 #' Create a \code{\link{Date}} from month, day and year.
 #' 
 #' 
-#' @usage date_mdy( month, day, year)
 #' @param month Numeric vector of months
 #' @param day Numeric vector of days
 #' @param year Numeric vector of years

@@ -3,8 +3,8 @@
 \alias{univTable}
 \title{Univariate table with absolute, relative, cumulative frequencies.}
 \usage{
-univTable(var=NULL, totals=TRUE, useNA="ifany",
-NA.string = "NA", round.digits=3, sorting=NULL)
+univTable(var = NULL, totals = TRUE, useNA = "ifany", NA.string = "NA",
+  round.digits = 3, sorting = NULL)
 }
 \arguments{
 \item{var}{vector}

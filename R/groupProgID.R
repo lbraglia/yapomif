@@ -6,7 +6,6 @@
 #' 
 #' @note To be implemented in C/C++ 
 #'
-#' @usage groupProgID(group) 
 #' @param group a group vector
 #' @keywords group id
 #' @examples
@@ -47,7 +46,6 @@ groupProgID <- function(group) {
 #' rows, the group label is irrilevant), this function creates a
 #' progressive id inside each group.
 #' 
-#' @usage groupProgID2(group) 
 #' @param group a group vector
 #' @keywords group id
 #' @examples

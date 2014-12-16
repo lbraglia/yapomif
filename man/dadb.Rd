@@ -3,7 +3,7 @@
 \alias{dadb}
 \title{Generate a data.frame of diagnostic accuracy study.}
 \usage{
-dadb(tn,tp,fn,fp)
+dadb(tn, tp, fn, fp)
 }
 \arguments{
 \item{tn}{True negative}

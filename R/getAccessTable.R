@@ -5,7 +5,6 @@
 #' table from an \code{mdb} or \code{accdb} file. 
 #' 
 #' 
-#' @usage getAccessTable(file=NULL, table=NULL, user="admin", pw=NULL, ...)
 #' @param file path to the \code{mdb} or \code{accdb} file
 #' @param table table name
 #' @param user username (login to the file)

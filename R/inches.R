@@ -4,7 +4,6 @@
 #' Translates from cm (centimeters) to inches.
 #' 
 #' 
-#' @usage inches(cm)
 #' @param cm Numeric vector of centimeter.
 #' @return A vector with inches.
 #' @keywords inches cm

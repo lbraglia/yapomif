@@ -3,7 +3,8 @@
 \alias{getAccessTable}
 \title{Retrieve an MS Access (R) table from an \code{mdb} or \code{accdb} file.}
 \usage{
-getAccessTable(file=NULL, table=NULL, user="admin", pw=NULL, ...)
+getAccessTable(file = NULL, table = NULL, user = "admin", pw = NULL,
+  ...)
 }
 \arguments{
 \item{file}{path to the \code{mdb} or \code{accdb} file}

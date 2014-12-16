@@ -3,7 +3,6 @@
 #' Encapsulate text between margins.
 #' 
 #' 
-#' @usage encapsulate(s,start="[", last="]",sep="")
 #' @param s string to be encapsulated
 #' @param start left margin
 #' @param last right margin

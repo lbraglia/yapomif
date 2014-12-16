@@ -3,7 +3,7 @@
 \alias{dummy}
 \title{Generate a data.frame of dummy variables given a vector}
 \usage{
-dummy(x, prefix="")
+dummy(x, prefix = "")
 }
 \arguments{
 \item{x}{a vector}

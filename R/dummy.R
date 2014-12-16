@@ -4,9 +4,6 @@
 #' Generate a data.frame of dummy variables given a vector
 #'
 #'
-#' @usage
-#'
-#' dummy(x, prefix="")
 #' @param x a vector
 #' @param prefix name prefix of returned \code{\link{data.frame}} columns
 #' @return a \code{\link{data.frame}} to be used with \code{\link{cbind}}

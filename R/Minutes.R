@@ -4,7 +4,6 @@
 #' Extract numeric minutes of month from a POSIXct or POSIXlt vector.
 #' 
 #' 
-#' @usage Minutes(x)
 #' @param x POSIXct or POSIXlt vector
 #' @return A numeric vector.
 #' @keywords hour Hour minutes Minutes date Date

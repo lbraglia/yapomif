@@ -3,7 +3,7 @@
 \alias{Duplicated}
 \title{Determine all duplicate elements}
 \usage{
-Duplicated( x, all.dup = TRUE, ...)
+Duplicated(x, all.dup = TRUE, ...)
 }
 \arguments{
 \item{x}{Numeric vector of centimeter.}

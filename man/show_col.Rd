@@ -3,8 +3,8 @@
 \alias{show_col}
 \title{Show R colors for graphics and grid package}
 \usage{
-show_col(package=c("graphics","grid"), bg="white", cex = 0.75,
-srt.rot=30)
+show_col(package = c("graphics", "grid"), bg = "white", cex = 0.75,
+  srt.rot = 30)
 }
 \arguments{
 \item{package}{charachter. Which package's color to show}

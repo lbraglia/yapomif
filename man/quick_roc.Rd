@@ -3,8 +3,8 @@
 \alias{quick_roc}
 \title{A quick ROC plot.}
 \usage{
-quick_roc(test, refstd, direction = c("auto","<",">"), plot.roc=TRUE,
-main="")
+quick_roc(test, refstd, direction = c("auto", "<", ">"), plot.roc = TRUE,
+  main = "")
 }
 \arguments{
 \item{test}{Marker}

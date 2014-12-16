@@ -4,7 +4,6 @@
 #' Extract numeric months of the year from a Date, POSIXct or POSIXlt vector.
 #' 
 #' 
-#' @usage Months(x, string = TRUE, abbreviate = FALSE )
 #' @param x Date, POSIXct or POSIXlt vector
 #' @param string Logical, if TRUE months string is returned, otherwise numeric
 #' @param abbreviate logical. Should the months in string format be

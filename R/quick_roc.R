@@ -4,10 +4,6 @@
 #' A quick ROC plot. It's a simple wrapper around \code{pROC::roc}
 #' 
 #' 
-#' @usage
-#' 
-#' quick_roc(test, refstd, direction = c("auto","<",">"), plot.roc=TRUE,
-#' main="")
 #' @param test Marker
 #' @param refstd Reference standard (binary variable)
 #' @param direction Charachter. Direction passed to \code{pROC::roc}

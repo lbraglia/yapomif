@@ -4,8 +4,9 @@
 \title{Calculate diagnostic accuracy measures for binary measures (test, reference
 standard)}
 \usage{
-da(test=NULL, refstd=NULL, alpha=0.05, round.dig=4, positive.first=TRUE,
-ppv.npv.prev=NULL, ppv.npv.force.unadj.est=FALSE )
+da(test = NULL, refstd = NULL, alpha = 0.05, round.dig = 4,
+  positive.first = TRUE, ppv.npv.prev = NULL,
+  ppv.npv.force.unadj.est = FALSE)
 }
 \arguments{
 \item{test}{Test (dichotomic)}

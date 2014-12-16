@@ -4,7 +4,6 @@
 #' Trivial function that converts number of days in number of years.
 #' 
 #' 
-#' @usage days_to_years(days)
 #' @param days Numeric vector of days
 #' @return A numeric vector of years.
 #' @keywords day days year years

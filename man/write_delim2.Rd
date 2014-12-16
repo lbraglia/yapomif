@@ -3,8 +3,8 @@
 \alias{write.delim2}
 \title{Write a tab separated file with "," as decimal separator.}
 \usage{
-write.delim2(x=NULL, file="", row.names=FALSE, col.names=TRUE, quote=TRUE,
-append=FALSE, na="", dec=",")
+write.delim2(x = NULL, file = "", row.names = FALSE, col.names = TRUE,
+  quote = TRUE, append = FALSE, na = "", dec = ",")
 }
 \arguments{
 \item{x}{Matrix or data.frame to be exported}

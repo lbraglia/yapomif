@@ -5,7 +5,6 @@
 #' Cramer's V calculator.
 #' 
 #' 
-#' @usage cramer_v(x)
 #' @param x an R object. Currently implemented only for tables.
 #' @return A scalar with Cramer's V
 #' @keywords Cramer V Phi

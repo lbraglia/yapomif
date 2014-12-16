@@ -3,7 +3,7 @@
 \alias{xtile}
 \title{Cut numeric x in quantile}
 \usage{
-xtile(x,n)
+xtile(x, n)
 }
 \arguments{
 \item{x}{numeric vector}

@@ -2,7 +2,6 @@
 #' 
 #' This is a wrapper around summary which adds sd by default.
 #' 
-#' @usage enSummary(x, ...)
 #' @param x Vector to be passed to summary.
 #' @param ... Further arguments
 #' @keywords summary

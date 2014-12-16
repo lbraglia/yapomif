@@ -8,9 +8,6 @@
 #' typing. See example for usage.
 #' 
 #' 
-#' @usage
-#' 
-#' makePath(path)
 #' @param path Base path of interest.
 #' @return A function that paste the directory set up in the call to
 #' \code{makePath} to the argument passed in the current call.

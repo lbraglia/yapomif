@@ -3,7 +3,7 @@
 \alias{getExcelSheet}
 \title{Retrieve an MS Excel (R) sheet from an \code{xls} or \code{xlsx} file.}
 \usage{
-getExcelSheet(file=NULL, sheet=NULL, ...)
+getExcelSheet(file = NULL, sheet = NULL, ...)
 }
 \arguments{
 \item{file}{path to the \code{xls} \code{xlsx} file}

@@ -4,7 +4,6 @@
 #' Trivial function that converts number of days in number of months.
 #' 
 #' 
-#' @usage days_to_months(days)
 #' @param days Numeric vector of days
 #' @return A numeric vector of months.
 #' @keywords day days month months

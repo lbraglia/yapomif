@@ -1,14 +1,8 @@
 #' Calculate diagnostic accuracy measures for several cutoffs of a quantitative
 #' marker.
 #' 
-#' 
 #' Calculate diagnostic accuracy measures for several cutoffs of a quantitative
 #' marker.
-#' 
-#' 
-#' @usage
-#' 
-#' da_at_cutoff(cutoffs=NULL, test=NULL, refstd=NULL, round.dig=4, ...  )
 #' 
 #' @param cutoffs Cutoffs considered
 #' @param test Test

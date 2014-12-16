@@ -3,7 +3,7 @@
 \alias{date_mdy}
 \title{Create a \code{\link{Date}} from month, day and year.}
 \usage{
-date_mdy( month, day, year)
+date_mdy(month, day, year)
 }
 \arguments{
 \item{month}{Numeric vector of months}

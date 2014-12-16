@@ -1,6 +1,3 @@
-## diagnostic accuracy common indicators
-
-
 #' Calculate diagnostic accuracy measures for binary measures (test, reference
 #' standard)
 #' 
@@ -9,10 +6,6 @@
 #' standard)
 #' 
 #' 
-#' @usage
-#' 
-#' da(test=NULL, refstd=NULL, alpha=0.05, round.dig=4, positive.first=TRUE,
-#' ppv.npv.prev=NULL, ppv.npv.force.unadj.est=FALSE )
 #' @param test Test (dichotomic)
 #' @param refstd Reference standard (dichotomic)
 #' @param alpha Type I error (for two sided confidence interval)

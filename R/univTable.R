@@ -4,8 +4,6 @@
 #' Univariate table with absolute, relative, cumulative frequencies.
 #' 
 #' 
-#' @usage univTable(var=NULL, totals=TRUE, useNA="ifany",
-#' NA.string = "NA", round.digits=3, sorting=NULL)
 #' @param var vector
 #' @param totals print totals?
 #' @param useNA print NA?

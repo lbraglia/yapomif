@@ -4,7 +4,6 @@
 #' positive, false negative, false positive.
 #' 
 #' 
-#' @usage dadb(tn,tp,fn,fp)
 #' @param tn True negative
 #' @param tp True positive
 #' @param fn False negative

@@ -4,7 +4,6 @@
 #' Extract numeric days of month from a \code{Date},
 #' \code{\link{POSIXct}} or \code{\link{POSIXlt}} vector. 
 #' 
-#' @usage Days(x)
 #' @param x Date, \code{\link{POSIXct}} or \code{\link{POSIXlt}}
 #' vector
 #' @return A numeric vector.
