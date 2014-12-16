@@ -3,10 +3,14 @@
 \alias{view}
 \title{Alternative to View that uses openXL}
 \usage{
-view(...)
+view(..., freezePane = TRUE, autoColWidth = TRUE)
 }
 \arguments{
 \item{...}{writeData handled objects}
+
+\item{freezePane}{apply freezePane at 'A2', for each sheet?}
+
+\item{autoColWidth}{apply auto column widths to all sheets?}
 }
 \description{
 Alternative to \code{\link{View}} that invokes a spreasheet viewer on
