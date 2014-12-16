@@ -3,7 +3,7 @@
 \alias{avg_surv}
 \title{Model-based adjusted survival curves.}
 \usage{
-avg_surv(cfit, var.name, var.values, data, weights, pct=0:99/100)
+avg_surv(cfit, var.name, var.values, data, weights, pct = 0:99/100)
 }
 \arguments{
 \item{cfit}{An object of class "coxph", typically produced by the

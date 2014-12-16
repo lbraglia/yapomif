@@ -3,8 +3,7 @@
 \alias{add_grid}
 \title{Add grid to a plot}
 \usage{
-add_grid(at.y, at.x, col = "lightgray", lty = "dotted", lwd =
-par("lwd"))
+add_grid(at.y, at.x, col = "lightgray", lty = "dotted", lwd = par("lwd"))
 }
 \arguments{
 \item{at.y}{y axis grid values}

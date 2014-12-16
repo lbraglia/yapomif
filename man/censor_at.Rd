@@ -3,7 +3,7 @@
 \alias{censor_at}
 \title{Censor time to event end point at a certain time.}
 \usage{
-censor_at(time, status, censor.time)
+censor_at(time = NULL, status = NULL, censor.time = NULL)
 }
 \arguments{
 \item{time}{Progression Indicator}
