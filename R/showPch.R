@@ -14,10 +14,10 @@
 #' @keywords point
 #' @examples
 #' 
-#' show_pch()
+#' showPch()
 #' 
-#' @export show_pch
-show_pch <-  function(extras = c("*",".","0","+","#"),
+#' @export
+showPch <-  function(extras = c("*",".","0","+","#"),
                       cex = 3, ## good for both .Device=="postscript" and "x11"
                       col = "red3", bg = "gold", cextext = 1.2 
                       ) {

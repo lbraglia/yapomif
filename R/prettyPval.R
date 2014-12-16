@@ -12,15 +12,15 @@
 #' @keywords pretty print p-value p-values p value values
 #' @examples
 #'
-#' pretty_pval(0.3)
+#' prettyPval(0.3)
 #' 
 #' pval1 <- c(3, NA, 1e-01, 1e-02, 1e-03, 1e-04, 1e-05)
-#' pretty_pval(pval1, space = TRUE)
+#' prettyPval(pval1, space = TRUE)
 #'
 #' 
 #' 
-#' @export pretty_pval
-pretty_pval <- function(pvalue, space = FALSE, equal = TRUE) {
+#' @export
+prettyPval <- function(pvalue, space = FALSE, equal = TRUE) {
 
     old.scipen <- options("scipen")
     on.exit( options("scipen" = old.scipen) )

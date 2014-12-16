@@ -12,16 +12,16 @@
 #' 
 #' a <- rnorm(1000) > 0.2
 #' b <- gl(2,500)
-#' cramer_v(table(a,b))
+#' cramerV(table(a,b))
 #' 
 #' 
-#' @export cramer_v
-cramer_v <- function(x) {
-    UseMethod("cramer_v")
+#' @export cramerV
+cramerV <- function(x) {
+    UseMethod("cramerV")
 }
 
 #' @export 
-cramer_v.table <- function(x) {
+cramerV.table <- function(x) {
     N <- sum(x)
     k <- min(dim(x))
     if (k < 2)

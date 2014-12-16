@@ -10,16 +10,16 @@
 #' @examples
 #' 
 #' days <- 1:30
-#' days_to_months(days)
+#' daysToMonths(days)
 #' 
-#' @export days_to_months
-days_to_months <- function(days) {
+#' @export daysToMonths
+daysToMonths <- function(days) {
 
-    UseMethod("days_to_months")
+    UseMethod("daysToMonths")
 }
 
 #' @export
-days_to_months.numeric <- function(days) {
+daysToMonths.numeric <- function(days) {
     days / 30.43
     ## 30.43 comes from mean(
     ## c(c(31,28,31,30,31,30,31,31,30,31,30,31),

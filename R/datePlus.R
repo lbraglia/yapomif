@@ -7,9 +7,9 @@
 #' @param days days to be added
 #' @examples
 #' (today <- Sys.Date())
-#' date_plus(today, years = 1, months = 1, days = 1)
+#' datePlus(today, years = 1, months = 1, days = 1)
 #' @export
-date_plus <- function(x, years = 0, months = 0, days = 0){
+datePlus <- function(x, years = 0, months = 0, days = 0){
   x <- as.POSIXlt(x)
   x$year <- x$year + years
   x$mon <- x$mon + months

@@ -14,10 +14,10 @@
 #' @keywords colors color
 #' @examples
 #' 
-#' show_col()
+#' showCol()
 #' 
-#' @export show_col
-show_col <- function(package=c("graphics","grid"), 
+#' @export
+showCol <- function(package=c("graphics","grid"), 
                       bg="white",
                       cex = 0.75, 
                       srt.rot=30

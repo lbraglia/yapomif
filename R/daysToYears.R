@@ -10,16 +10,16 @@
 #' @examples
 #' 
 #' days <- seq(1, 365.25*3, by = 60)
-#' days_to_years(days)
+#' daysToYears(days)
 #' 
-#' @export days_to_years
-days_to_years <- function(days) {
+#' @export daysToYears
+daysToYears <- function(days) {
 
-    UseMethod("days_to_years")
+    UseMethod("daysToYears")
 }
 
 #' @export 
-days_to_years.numeric <- function(days) {
+daysToYears.numeric <- function(days) {
     days / 365.25
     ## mean(c(365,365,365,366))
     

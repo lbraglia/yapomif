@@ -215,7 +215,7 @@ km <- function(time=NULL,
         logr.string <- sprintf("Log-rank Test=%.2f, df=%d, p%s",	
                                logr$chisq, 
                                logr$df, 
-                               pretty_pval(logr$p) )
+                               prettyPval(logr$p) )
         ## Cox Model (and summary
         cox <- survival::coxph(my.formula)
         scox <- summary(cox)

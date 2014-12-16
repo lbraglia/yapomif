@@ -12,9 +12,9 @@
 #' ## FDK Liddel, "Simple exact analysis of the standardised mortality
 #' ## ratio", Journal of Epidemiology and Community Health 1984, 38, 85-88
 #' x <- data.frame(D = c(8,23,210), E=c(3.59,17.83,180), cl = c(0.9,0.95,0.95))
-#' t(apply(x, 1, function(x) SIR.ci(x[1], x[2], x[3])))
+#' t(apply(x, 1, function(x) sirCI(x[1], x[2], x[3])))
 #' @export
-SIR.ci <- function(O, E, conf.level = 0.95){
+sirCI <- function(O, E, conf.level = 0.95){
   
   res <- poisson.test(x = O, conf.level = conf.level)
   res <- unname(c(res$conf.int[1], res$estimate, res$conf.int[2]))/E
