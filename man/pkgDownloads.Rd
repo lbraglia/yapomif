@@ -3,7 +3,7 @@
 \alias{pkgDownloads}
 \title{Retrieve package download logs from cran-logs.r-studio.com}
 \usage{
-pkgDownloads(from = Sys.Date() - 2, to = Sys.Date() - 1)
+pkgDownloads(from = Sys.Date() - 1, to = Sys.Date() - 1)
 }
 \arguments{
 \item{from}{starting \code{Date} (or something coercible to)}
@@ -15,7 +15,8 @@ Retrieve package download logs from cran-logs.r-studio.com
 }
 \examples{
 \dontrun{
-db <- pkgDownloads(Sys.Date()-4)
+## looking at yesterday's data for aplore3
+db <- pkgDownloads()
 barplot(with(db, tapply(package \%in\% "aplore3", date, sum )), las = 2)
 }
 }

@@ -5,11 +5,12 @@
 #' @param to ending \code{Date} (or something coercible to)
 #' @examples
 #' \dontrun{
-#' db <- pkgDownloads(Sys.Date()-4)
+#' ## looking at yesterday's data for aplore3
+#' db <- pkgDownloads()
 #' barplot(with(db, tapply(package %in% "aplore3", date, sum )), las = 2)
 #' }
 #' @export
-pkgDownloads <- function(from = Sys.Date()-2, to = Sys.Date()-1){
+pkgDownloads <- function(from = Sys.Date()-1, to = Sys.Date()-1){
   from <- as.Date(from)
   to <- as.Date(to)
   days <- seq(from, to, by = 'day')
