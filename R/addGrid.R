@@ -12,7 +12,7 @@
 #' @return The function adds a grid to a plot using \code{\link{abline}}.
 #' @keywords add grid plot
 #' @export
-addGrid <- function(at.y, at.x,
+addGrid <- function(at.x, at.y = at.x,
                     col = "lightgray", 
                     lty = "dotted", 
                     lwd = par("lwd")) {

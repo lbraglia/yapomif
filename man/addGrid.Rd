@@ -3,12 +3,13 @@
 \alias{addGrid}
 \title{Add grid to a plot}
 \usage{
-addGrid(at.y, at.x, col = "lightgray", lty = "dotted", lwd = par("lwd"))
+addGrid(at.x, at.y = at.x, col = "lightgray", lty = "dotted",
+  lwd = par("lwd"))
 }
 \arguments{
-\item{at.y}{y axis grid values}
-
 \item{at.x}{x axis grid values}
+
+\item{at.y}{y axis grid values}
 
 \item{col}{grid color}
 
