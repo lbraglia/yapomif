@@ -8,14 +8,3 @@ utilities etc).
 
 It's mainly intended for personal use (aka backward compatibility
 is not an issue).
-
-
-## Install
-
-You can install this package via GitHub. Before that, you
-need to setup [`devtools` and Rtools](http://www.rstudio.com/products/rpackages/devtools/).
-
-Then:
-```r
-install_github("yapomif", "lbraglia")
-```
