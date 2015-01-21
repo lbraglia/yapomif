@@ -26,7 +26,7 @@ data.frame(group1 = x, group2 = y, id = groupProgID(interaction(x,y)) )
 
 ## example of sorting
 db <- data.frame("group" = sample(gl(2,5)), "b" = Sys.Date() + 1:10)
-(db <- db[order( - as.integer(db$group), db$b),])
+db <- db[order( - as.integer(db$group), db$b),]
 data.frame(db, id = groupProgID(db$group))
 }
 \keyword{group}

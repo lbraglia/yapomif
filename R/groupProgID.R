@@ -1,4 +1,3 @@
-#'
 #' Group progressive id creator
 #'
 #' Starting from a vector of group id, this function creates a progressive
@@ -19,7 +18,7 @@
 #'
 #' ## example of sorting
 #' db <- data.frame("group" = sample(gl(2,5)), "b" = Sys.Date() + 1:10)
-#' (db <- db[order( - as.integer(db$group), db$b),])
+#' db <- db[order( - as.integer(db$group), db$b),]
 #' data.frame(db, id = groupProgID(db$group))
 #' @export
 groupProgID <- function(group) {
@@ -27,10 +26,11 @@ groupProgID <- function(group) {
   ## make NA as a valid level for low-level operations
   group2 <- as.integer(factor(group, exclude = NULL))
   res <- .Call("groupProgID_slave",
-               group,
-               max(group, na.rm=TRUE),
+               group2,
+               max(group2, na.rm=TRUE),
                package = "yapomf")
   ## handling NA
   res[is.na(group)] <- NA
+  res
 
 }
