@@ -10,7 +10,6 @@
 #' @param plot.roc Logical. Plot ROC curve?
 #' @param main Graph main title
 #' @return The function plot the graph and return a list with ROC statistics
-#' @keywords ROC roc
 #' @export
 quickROC <- function(test, refstd,
                      direction =

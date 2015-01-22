@@ -8,14 +8,12 @@
 #' @param last right margin
 #' @param sep separator between string and margins
 #' @return An encapsulated string.
-#' @keywords graph x11 window
 #' @examples
 #' 
 #' encapsulate(letters)
 #' encapsulate(letters, sep=" ")[1:10]
 #' 
-#' 
-#' @export encapsulate
+#' @export
 encapsulate <- function(s,start="[", last="]",sep="")
     sprintf( paste(rep("%s",3), collapse=sep), start, s, last)
 

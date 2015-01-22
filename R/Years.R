@@ -6,7 +6,6 @@
 #' 
 #' @param x Date, POSIXct or POSIXlt vector
 #' @return A numeric vector.
-#' @keywords year Year years Years date Date
 #' @examples
 #' 
 #' Sys.Date()

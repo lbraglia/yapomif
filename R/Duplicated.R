@@ -15,8 +15,7 @@
 #' duplicated observation).
 #' @param ... Other arguments passed to base::duplicated.
 #' @return A logical vector with duplicated marked as TRUE.
-#' @keywords duplicated
-#' @export Duplicated
+#' @export
 Duplicated <- function( x, all.dup = TRUE, ...) {
     if (all.dup) {
         base::duplicated(x, ...)| base::duplicated(x, fromLast = TRUE)

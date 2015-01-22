@@ -17,7 +17,6 @@
 #' @param ppv.npv.force.unadj.est Force unadjusted ppv npv estimates (and
 #' confidence interval)
 #' @return Diagnostic accuracy table and statistics with confidence interval.
-#' @keywords diagnostic accuracy
 #' @examples
 #' 
 #' 
@@ -30,7 +29,7 @@
 #' with(db, da(test=test, refstd=refstd, ppv.npv.prev=.03))
 #' 
 #' 
-#' @export da
+#' @export
 da <- function(test=NULL, refstd=NULL,
                alpha=.05, round.dig=4,
                ## the table print, should put + before - 

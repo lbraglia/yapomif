@@ -4,7 +4,6 @@
 #' id inside each group.  It uses C for efficiency
 #' 
 #' @param group a group vector
-#' @keywords group id
 #' @examples
 #' set.seed(1)
 #'

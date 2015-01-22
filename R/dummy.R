@@ -12,7 +12,7 @@
 #' rep(1:3, 4)
 #' dummy(rep(1:3, 4))
 #'
-#' @export dummy
+#' @export
 dummy <- function(x, prefix=""){
     if ( (xclass <- class(x)) %nin% c("integer", "factor", "ordered"))
         stop("only integer, factor or ordered vectors")

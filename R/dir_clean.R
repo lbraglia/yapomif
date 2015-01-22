@@ -5,7 +5,6 @@
 #' 
 #' @rdname dir_clean
 #' @param directory Character. A path to directory to be cleaned
-#' @keywords directory clean
 #' @export dir.clean
 dir.clean <- function(directory) {
   unlink(directory, recursive = TRUE)

@@ -13,7 +13,6 @@
 #' @references Clark T., Altman D., De Stavola B. (2002),
 #' Quantification of the completeness of follow-up. Lancet 2002;
 #' 359: 1309-10
-#' @keywords time event follow up completeness
 #' @examples
 #'
 #' time   <- c(180, 12, 240, 250 )
@@ -26,7 +25,7 @@
 #' 
 #' fupCompleteness(time = time, status = status, cutoff = 200, strata = group)
 #' 
-#' @export fupCompleteness
+#' @export
 fupCompleteness <- function(time = NULL,
                             status = NULL,
                             cutoff = NULL,

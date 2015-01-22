@@ -24,6 +24,4 @@ The function plot the graph and return a list with ROC statistics
 \description{
 A quick ROC plot. It's a simple wrapper around \code{pROC::roc}
 }
-\keyword{ROC}
-\keyword{roc}
 

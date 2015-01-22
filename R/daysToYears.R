@@ -6,7 +6,6 @@
 #' 
 #' @param days Numeric vector of days
 #' @return A numeric vector of years.
-#' @keywords day days year years
 #' @examples
 #' 
 #' days <- seq(1, 365.25*3, by = 60)

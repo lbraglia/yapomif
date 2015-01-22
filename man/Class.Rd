@@ -20,6 +20,4 @@ vector (eg data.frame, list) in a handy way
 data(airquality)
 Class(airquality)
 }
-\keyword{class}
-\keyword{typeof}
 

@@ -23,12 +23,4 @@ Create a \code{\link{Date}} from month, day and year.
 db <- data.frame(month=10:12, day=15:17, year=1982:1984)
 dateMDY(month = db$month, day= db$day, year=db$year)
 }
-\keyword{Date}
-\keyword{date}
-\keyword{day}
-\keyword{days}
-\keyword{month}
-\keyword{months}
-\keyword{year}
-\keyword{years}
 

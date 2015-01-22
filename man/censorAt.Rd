@@ -38,17 +38,4 @@ time   <- c(100,150)
     censorAt(time=time, status=status, censor.time = 125)
     censorAt(time=time, status=status, censor.time = 75)
 }
-\keyword{censor}
-\keyword{censoring}
-\keyword{cut}
-\keyword{death}
-\keyword{disease-free}
-\keyword{end-point}
-\keyword{event}
-\keyword{oncology}
-\keyword{overall}
-\keyword{progression}
-\keyword{progression-free}
-\keyword{time}
-\keyword{to}
 

@@ -11,7 +11,6 @@
 #' @param path Base path of interest.
 #' @return A function that paste the directory set up in the call to
 #' \code{makePath} to the argument passed in the current call.
-#' @keywords path
 #' @examples
 #' 
 #' res.dir <- makePath("results")
@@ -22,7 +21,7 @@
 #' tmp.dir("graph.pdf")
 #' 
 #' 
-#' @export makePath
+#' @export
 makePath <- function(path) {
     paste_path <- function(file=NULL) {
 

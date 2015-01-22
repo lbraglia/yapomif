@@ -30,10 +30,4 @@ Months(Sys.Date())
 Months(as.POSIXct(Sys.Date()))
 Months(as.POSIXlt(Sys.Date()))
 }
-\keyword{Date}
-\keyword{Month}
-\keyword{Months}
-\keyword{date}
-\keyword{month}
-\keyword{months}
 

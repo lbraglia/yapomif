@@ -8,8 +8,6 @@
 #' @param status Progression Date
 #' @param censor.time Death indicator
 #' @return A data frame to be used with \code{\link{cbind}}
-#' @keywords time event end-point censor cut censoring overall progression-free
-#' disease-free time to progression death oncology
 #' @examples
 #' 
 #' 

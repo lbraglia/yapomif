@@ -11,8 +11,7 @@
 #' @param round.digits number of rounding digits
 #' @param sorting sorting can be "\code{asc} or "\code{desc}"
 #' @return A matrix with frequencies.
-#' @keywords univariate table frequencies
-#' @export univTable
+#' @export
 univTable <- function(var=NULL,
                       totals=TRUE,
                       useNA="ifany",

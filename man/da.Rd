@@ -43,6 +43,4 @@ with(db, da(test=test, refstd=refstd))
 db <- dadb(tn=288 , fn=178 ,fp =87 , tp=240)
 with(db, da(test=test, refstd=refstd, ppv.npv.prev=.03))
 }
-\keyword{accuracy}
-\keyword{diagnostic}
 

@@ -6,7 +6,6 @@
 #' 
 #' @param days Numeric vector of days
 #' @return A numeric vector of months.
-#' @keywords day days month months
 #' @examples
 #' 
 #' days <- 1:30

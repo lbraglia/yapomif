@@ -10,7 +10,6 @@
 #' @param lty line type
 #' @param lwd line width
 #' @return The function adds a grid to a plot using \code{\link{abline}}.
-#' @keywords add grid plot
 #' @export
 addGrid <- function(at.x, at.y = at.x,
                     col = "lightgray", 

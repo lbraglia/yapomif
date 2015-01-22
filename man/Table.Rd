@@ -17,8 +17,4 @@ margins.
 This is a wrapper around which adds margins and
 \code{useNA="if"} by default.
 }
-\keyword{Table}
-\keyword{cross}
-\keyword{table}
-\keyword{tabulation}
 

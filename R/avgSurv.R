@@ -49,7 +49,6 @@
 #' @references Nieto, F.J., Coresh, J. (1996), Adjusting survival curves for
 #' confounders: a review and a new method, American Journal of Epidemiology,
 #' 143:10, 1059-1068.
-#' @keywords average survival corrected group prognosis
 #' @examples
 #' 
 #' ## Variables for fit should be defined prior to application of coxph

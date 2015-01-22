@@ -24,10 +24,4 @@ Days(Sys.Date())
 Days(as.POSIXct(Sys.Date()))
 Days(as.POSIXlt(Sys.Date()))
 }
-\keyword{Date}
-\keyword{Day}
-\keyword{Days}
-\keyword{date}
-\keyword{day}
-\keyword{days}
 

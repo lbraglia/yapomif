@@ -21,10 +21,4 @@ Years(Sys.Date())
 Years(as.POSIXct(Sys.Date()))
 Years(as.POSIXlt(Sys.Date()))
 }
-\keyword{Date}
-\keyword{Year}
-\keyword{Years}
-\keyword{date}
-\keyword{year}
-\keyword{years}
 

@@ -11,7 +11,6 @@
 #' @param cex numeric \code{cex}
 #' @param srt.rot degree inclination
 #' @return Nothing. As a side effect the plot of colors.
-#' @keywords colors color
 #' @examples
 #' 
 #' showCol()

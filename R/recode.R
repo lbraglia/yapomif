@@ -8,8 +8,7 @@
 #' @param rec.direct matrix containing 2 columns; first is "from", second is
 #' "to".
 #' @return A vector with new codes (if/where modified).
-#' @keywords recode replace
-#' @export recode
+#' @export
 recode <- function(from=NULL, rec.direct=NULL) {
 	
     

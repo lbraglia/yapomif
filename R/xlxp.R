@@ -9,7 +9,7 @@
 #' @param sheet name of the sheet to be created
 #' @param x object to be exported
 #' @param ... further arguments passed to writeData
-#' @export xlxp
+#' @export
 xlxp <- function(wb, sheet, x, ...) {
   openxlsx::addWorksheet(wb = wb, sheetName = sheet)
   openxlsx::writeData(wb = wb,

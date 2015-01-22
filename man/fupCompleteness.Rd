@@ -39,9 +39,4 @@ Clark T., Altman D., De Stavola B. (2002),
 Quantification of the completeness of follow-up. Lancet 2002;
 359: 1309-10
 }
-\keyword{completeness}
-\keyword{event}
-\keyword{follow}
-\keyword{time}
-\keyword{up}
 

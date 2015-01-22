@@ -10,7 +10,6 @@
 #' @param round.dig Rounding digits
 #' @param ... parameters passed to da
 #' @return A data.frame for diagnostic accuracy studies.
-#' @keywords diagnostic accuracy cutoff
 #' @export
 cutoffDA <- function(cutoffs = NULL, 
                      test = NULL,

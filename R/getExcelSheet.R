@@ -7,14 +7,13 @@
 #' @param sheet sheet name
 #' @param ... other arguments passed to \code{\link{sqlFetch}}
 #' @return The function return a data.frame with data from the specified sheet.
-#' @keywords Excel sheet get
 #' @examples
 #' 
 #'    \dontrun{
 #' getExcelSheet(file="C:/foo.xls", sheet="es_ps")
 #' }
 #' 
-#' @export getExcelSheet
+#' @export
 getExcelSheet <- function(file=NULL, sheet=NULL, ...) {
     on.exit( if (exists("con")) {
         RODBC::odbcClose(con)

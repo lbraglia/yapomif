@@ -7,7 +7,6 @@
 #' @param x Date, \code{\link{POSIXct}} or \code{\link{POSIXlt}}
 #' vector
 #' @return A numeric vector.
-#' @keywords day Day days Days date Date
 #' @examples
 #' 
 #' Sys.Date()

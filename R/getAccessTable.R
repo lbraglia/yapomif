@@ -11,12 +11,11 @@
 #' @param pw password (login to the file)
 #' @param ... other arguments passed to \code{\link{sqlFetch}}
 #' @return The function return a data.frame with data from the specified table.
-#' @keywords Access table get
 #' @examples   \dontrun{
 #'  getAccessTable(file="C:/prova.accdb", table="Tabella1")
 #' }
 #' 
-#' @export getAccessTable
+#' @export
 getAccessTable <- function(file=NULL, table=NULL, user="admin", pw=NULL, ...) {
     ## Funzione per semplificare l'accesso a dati access
     ## require(RODBC)

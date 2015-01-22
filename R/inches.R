@@ -6,8 +6,7 @@
 #' 
 #' @param cm Numeric vector of centimeter.
 #' @return A vector with inches.
-#' @keywords inches cm
-#' @export inches
+#' @export
 inches <- function(cm) {
     cm * 0.393700787
 }

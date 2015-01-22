@@ -21,7 +21,4 @@ Cut numeric x in quantile
 tertiles <- xtile(rnorm(1000),3)
 table(tertiles)
 }
-\keyword{cut}
-\keyword{quantiles}
-\keyword{xtile}
 

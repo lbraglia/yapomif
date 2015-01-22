@@ -9,7 +9,6 @@
 #' number and operator (= or <, default to FALSE).
 #' @param equal add = where needed?
 #' @return The function return a string with the pretty printed p-values.
-#' @keywords pretty print p-value p-values p value values
 #' @examples
 #'
 #' prettyPval(0.3)

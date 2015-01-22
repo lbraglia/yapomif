@@ -97,9 +97,4 @@ confounders: a review and a new method, American Journal of Epidemiology,
 \seealso{
 \code{\link[survival]{survfit.coxph}}
 }
-\keyword{average}
-\keyword{corrected}
-\keyword{group}
-\keyword{prognosis}
-\keyword{survival}
 

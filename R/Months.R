@@ -9,7 +9,6 @@
 #' @param abbreviate logical. Should the months in string format be
 #' abbreviated?
 #' @return A vector with extracted months.
-#' @keywords month Month months Months date Date
 #' @examples
 #' 
 #' Sys.Date()

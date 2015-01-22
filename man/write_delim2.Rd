@@ -31,9 +31,4 @@ Return write.table stuff
 This function is a wrapper around read.table to write tab separated files
 with "." as decimal separator.
 }
-\keyword{delimited}
-\keyword{file}
-\keyword{format}
-\keyword{output}
-\keyword{tab}
 

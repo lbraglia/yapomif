@@ -20,7 +20,4 @@ a <- rnorm(1000) > 0.2
 b <- gl(2,500)
 cramerV(table(a,b))
 }
-\keyword{Cramer}
-\keyword{Phi}
-\keyword{V}
 

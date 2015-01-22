@@ -13,6 +13,4 @@ dir.clean(directory)
 Remove all files in a directory, by deleting the directory and creating
 a new one with the same name.
 }
-\keyword{clean}
-\keyword{directory}
 

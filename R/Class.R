@@ -5,7 +5,6 @@
 #' 
 #' @param x an R object (data.frame or list)
 #' @return A vector of classes
-#' @keywords class typeof
 #' @examples
 #' 
 #' data(airquality)

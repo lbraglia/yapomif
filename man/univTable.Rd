@@ -26,7 +26,4 @@ A matrix with frequencies.
 \description{
 Univariate table with absolute, relative, cumulative frequencies.
 }
-\keyword{frequencies}
-\keyword{table}
-\keyword{univariate}
 

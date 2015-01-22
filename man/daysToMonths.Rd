@@ -19,8 +19,4 @@ Trivial function that converts number of days in number of months.
 days <- 1:30
 daysToMonths(days)
 }
-\keyword{day}
-\keyword{days}
-\keyword{month}
-\keyword{months}
 

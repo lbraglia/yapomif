@@ -19,8 +19,4 @@ Trivial function that converts number of days in number of years.
 days <- seq(1, 365.25*3, by = 60)
 daysToYears(days)
 }
-\keyword{day}
-\keyword{days}
-\keyword{year}
-\keyword{years}
 

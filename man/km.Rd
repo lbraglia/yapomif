@@ -55,7 +55,4 @@ Laplan-Meier statistics
 \description{
 This function plots a Kaplan-Meier plot.
 }
-\keyword{Kaplan}
-\keyword{Meier}
-\keyword{survival}
 

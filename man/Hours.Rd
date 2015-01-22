@@ -20,10 +20,4 @@ now <- Sys.time()
 Hours(now)
 Hours(as.POSIXlt(now))
 }
-\keyword{Date}
-\keyword{Hour}
-\keyword{Hours}
-\keyword{date}
-\keyword{hour}
-\keyword{hours}
 

@@ -27,5 +27,4 @@ tmp.dir <- makePath("/tmp")
 res.dir("my_results.csv")
 tmp.dir("graph.pdf")
 }
-\keyword{path}
 

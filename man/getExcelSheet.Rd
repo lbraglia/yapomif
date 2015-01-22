@@ -25,7 +25,4 @@ sheet from an \code{xls} or \code{xlsx} file.
 getExcelSheet(file="C:/foo.xls", sheet="es_ps")
 }
 }
-\keyword{Excel}
-\keyword{get}
-\keyword{sheet}
 

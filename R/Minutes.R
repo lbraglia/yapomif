@@ -6,7 +6,6 @@
 #' 
 #' @param x POSIXct or POSIXlt vector
 #' @return A numeric vector.
-#' @keywords hour Hour minutes Minutes date Date
 #' @examples
 #' 
 #' now <- Sys.time()

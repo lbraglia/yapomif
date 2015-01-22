@@ -8,6 +8,5 @@
 #' @param ... Arguments to be passed to table.
 #' @return The function return same results of table with NA (if present) and
 #' margins.
-#' @keywords table Table cross tabulation
-#' @export Table
+#' @export
 Table <- function(...) addmargins(base::table(useNA="if", ...))

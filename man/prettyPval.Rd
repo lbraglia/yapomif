@@ -26,11 +26,4 @@ prettyPval(0.3)
 pval1 <- c(3, NA, 1e-01, 1e-02, 1e-03, 1e-04, 1e-05)
 prettyPval(pval1, space = TRUE)
 }
-\keyword{p}
-\keyword{p-value}
-\keyword{p-values}
-\keyword{pretty}
-\keyword{print}
-\keyword{value}
-\keyword{values}
 

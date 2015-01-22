@@ -30,7 +30,4 @@ table from an \code{mdb} or \code{accdb} file.
  getAccessTable(file="C:/prova.accdb", table="Tabella1")
 }
 }
-\keyword{Access}
-\keyword{get}
-\keyword{table}
 

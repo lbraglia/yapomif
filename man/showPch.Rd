@@ -27,5 +27,4 @@ Show \code{pch} values.
 \examples{
 showPch()
 }
-\keyword{point}
 

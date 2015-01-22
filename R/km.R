@@ -27,8 +27,7 @@
 #' @param ... Further \code{\link{lines.survfit}} parameters
 #' @return The function plot the graph and return a list with
 #' Laplan-Meier statistics
-#' @keywords Kaplan Meier survival
-#' @export km
+#' @export
 km <- function(time=NULL,
                status=NULL,
                ## NULL = non stratified, otherwise stratifying variable

@@ -14,5 +14,4 @@ enSummary(x, ...)
 \description{
 This is a wrapper around summary which adds sd by default.
 }
-\keyword{summary}
 

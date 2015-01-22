@@ -4,7 +4,6 @@
 #' 
 #' @param x Vector to be passed to summary.
 #' @param ... Further arguments
-#' @keywords summary
 #' @export enSummary
 enSummary <- function(x, ...) UseMethod("enSummary")
 

@@ -37,16 +37,4 @@ A data frame to be used with \code{\link{cbind}}.
 This function calculates common oncology time to event end-points (Overall
 survival, Progression free survival, time to relapse).
 }
-\keyword{death}
-\keyword{disease-free}
-\keyword{end-point}
-\keyword{event}
-\keyword{oncology}
-\keyword{outcome}
-\keyword{overall}
-\keyword{progression}
-\keyword{progression-free}
-\keyword{survival}
-\keyword{time}
-\keyword{to}
 

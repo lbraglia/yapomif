@@ -26,6 +26,4 @@ from demo(colors).
 \examples{
 showCol()
 }
-\keyword{color}
-\keyword{colors}
 

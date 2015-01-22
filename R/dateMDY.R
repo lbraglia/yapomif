@@ -8,7 +8,6 @@
 #' @param day Numeric vector of days
 #' @param year Numeric vector of years
 #' @return A vector of \code{\link{Date}}.
-#' @keywords month day year date Date months days years
 #' @examples
 #' 
 #' db <- data.frame(month=10:12, day=15:17, year=1982:1984)

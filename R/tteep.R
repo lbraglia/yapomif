@@ -14,9 +14,7 @@
 #' @param TTP Calculate Time To Progression?
 #' @param visual.check View results
 #' @return A data frame to be used with \code{\link{cbind}}.
-#' @keywords time event end-point outcome survival overall progression-free
-#' disease-free time to progression death oncology
-#' @export tteep
+#' @export
 tteep <- function(prog =!is.na(prog.date), # Progression Indicator
                   prog.date=NULL, # Progression Date
                   death = !is.na(death.date), # Death indicator

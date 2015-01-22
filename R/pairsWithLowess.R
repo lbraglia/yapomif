@@ -6,7 +6,6 @@
 #' 
 #' @param data data.frame
 #' @return Plot
-#' @keywords pairs lowess scatterplot matrix
 #' @export 
 pairsWithLowess <- function(data) {
   pairs(data,

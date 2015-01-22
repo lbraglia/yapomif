@@ -9,13 +9,12 @@
 #' @param fn False negative
 #' @param fp False positive
 #' @return A data.frame for diagnostic accuracy studies.
-#' @keywords diagnostic accuracy
 #' @examples
 #' 
 #' db <- dadb(tn=720 , tp=190 , fn=10 , fp=80)
 #' with(db, table(test,refstd))
 #' 
-#' @export dadb
+#' @export
 dadb <- function(tn,tp,fn,fp) {
 
     test <- factor(rep(c("+","-"), c(tp+fp,tn+fn)), levels=c("-","+"))

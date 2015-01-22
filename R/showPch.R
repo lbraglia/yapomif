@@ -11,7 +11,6 @@
 #' @param bg character. Background color
 #' @param cextext \code{cex} for text
 #' @return Nothing. As a side effect the plot of \code{pch}.
-#' @keywords point
 #' @examples
 #' 
 #' showPch()
