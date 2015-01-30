@@ -11,3 +11,4 @@ License: GPL (>=2)
 URL: http://github.com/lbraglia/yapomif
 LazyLoad: yes
 LazyData: yes
+Suggests: testthat
