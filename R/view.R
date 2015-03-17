@@ -14,7 +14,7 @@
 view <- function(... , freezePane = TRUE, autoColWidth = TRUE )  {
   wb <- openxlsx::createWorkbook()
   objList <- list(...)
-  objNames <- as.character(match.call(expand.dots = TRUE))[-1]
+  objNames <- abbreviate(as.character(match.call(expand.dots = TRUE))[-1], 31)
   mapply(openxlsx::addWorksheet,
          sheetName = objNames,
          MoreArgs = list(wb = wb))
