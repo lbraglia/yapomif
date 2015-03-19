@@ -11,12 +11,8 @@
 #' @return The function return a string with the pretty printed p-values.
 #' @examples
 #'
-#' prettyPval(0.3)
-#' 
 #' pval1 <- c(3, NA, 1e-01, 1e-02, 1e-03, 1e-04, 1e-05)
 #' prettyPval(pval1, space = TRUE)
-#'
-#' 
 #' 
 #' @export
 prettyPval <- function(pvalue, space = FALSE, equal = TRUE) {
@@ -37,13 +33,8 @@ prettyPval <- function(pvalue, space = FALSE, equal = TRUE) {
             return(NA_character_)
         } else if (x < 0.0001) {
           return(paste0("<", ifelse(space, " ",""), "0.0001"))
-          ## if (space) {
-          ##       return("< 0.0001")
-          ##   } else {
-          ##       return("<0.0001")
-          ##   }
         } else if (x < 1) {
-            char <- as.character(round(x,4))
+            char <- format(x, digits = 4, nsmall = 4)
             return(paste0(ifelse(equal, "=",""), ifelse(space, " ",""), char)) 
         } else {
             return(paste0(ifelse(equal, "=",""), ifelse(space, " ",""),"1"))
