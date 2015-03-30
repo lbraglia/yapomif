@@ -4,7 +4,7 @@
 \alias{prettyPval}
 \title{Pretty print for p-values}
 \usage{
-prettyPval(pvalue, digits = 3, space = FALSE, equal = TRUE)
+prettyPval(pvalue, digits = 3L, space = FALSE, equal = TRUE)
 }
 \arguments{
 \item{pvalue}{A numeric vector of p-values.}

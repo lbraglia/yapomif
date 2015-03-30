@@ -14,7 +14,7 @@
 #' prettyPval(pval1, space = TRUE)
 #' 
 #' @export
-prettyPval <- function(pvalue, digits = 3, space = FALSE, equal = TRUE) {
+prettyPval <- function(pvalue, digits = 3L, space = FALSE, equal = TRUE) {
 
     old.scipen <- options("scipen")
     on.exit( options("scipen" = old.scipen) )
@@ -25,7 +25,11 @@ prettyPval <- function(pvalue, digits = 3, space = FALSE, equal = TRUE) {
         warning("Not all p-values in [0,1], ")
         pvalue[wrong] <- NA
     }
-
+    ## Digits should be at least 1L
+    digits <- as.integer(digits)
+    if (digits < 1L)
+      stop("Digits should be at least 1L")
+    
     ## implement this in C?
     worker <- function(x, space, equal) {
       if (is.na(x)) {
