@@ -1,10 +1,9 @@
 #' Pretty print for p-values
 #' 
-#' 
 #' Pretty print for p-values.
 #' 
-#' 
 #' @param pvalue A numeric vector of p-values.
+#' @param digits number of digits returned (3 by default).
 #' @param space Logical specifying whether a space should be inserted between
 #' number and operator (= or <, default to FALSE).
 #' @param equal add = where needed?
@@ -15,7 +14,7 @@
 #' prettyPval(pval1, space = TRUE)
 #' 
 #' @export
-prettyPval <- function(pvalue, space = FALSE, equal = TRUE) {
+prettyPval <- function(pvalue, digits = 3, space = FALSE, equal = TRUE) {
 
     old.scipen <- options("scipen")
     on.exit( options("scipen" = old.scipen) )
@@ -29,17 +28,19 @@ prettyPval <- function(pvalue, space = FALSE, equal = TRUE) {
 
     ## implement this in C?
     worker <- function(x, space, equal) {
-        if (is.na(x)) {
-            return(NA_character_)
-        } else if (x < 0.0001) {
-          return(paste0("<", ifelse(space, " ",""), "0.0001"))
-        } else if (x < 1) {
-            char <- format(x, digits = 4, nsmall = 4)
-            return(paste0(ifelse(equal, "=",""), ifelse(space, " ",""), char)) 
-        } else {
-            return(paste0(ifelse(equal, "=",""), ifelse(space, " ",""),"1"))
-        }
-
+      if (is.na(x)) {
+        return(NA_character_)
+      } else if (x < 10L^(-digits)) {
+        return(paste0("<", ifelse(space, " ",""),
+                      as.character(10L^(-digits))))
+      } else if (x < 1) {
+        fmt <- sprintf("%%.%df", digits)
+        char <- sprintf(fmt, x)
+        return(paste0(ifelse(equal, "=",""), ifelse(space, " ",""), char)) 
+      } else {
+        return(paste0(ifelse(equal, "=",""), ifelse(space, " ",""),"1"))
+      }
+      
     }
 
     unlist(lapply(pvalue, worker, space = space, equal = equal))

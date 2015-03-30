@@ -4,10 +4,12 @@
 \alias{prettyPval}
 \title{Pretty print for p-values}
 \usage{
-prettyPval(pvalue, space = FALSE, equal = TRUE)
+prettyPval(pvalue, digits = 3, space = FALSE, equal = TRUE)
 }
 \arguments{
 \item{pvalue}{A numeric vector of p-values.}
+
+\item{digits}{number of digits returned (3 by default).}
 
 \item{space}{Logical specifying whether a space should be inserted between
 number and operator (= or <, default to FALSE).}
@@ -21,8 +23,6 @@ The function return a string with the pretty printed p-values.
 Pretty print for p-values.
 }
 \examples{
-prettyPval(0.3)
-
 pval1 <- c(3, NA, 1e-01, 1e-02, 1e-03, 1e-04, 1e-05)
 prettyPval(pval1, space = TRUE)
 }
