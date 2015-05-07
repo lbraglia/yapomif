@@ -28,7 +28,10 @@ setup_errors(db$y, db$pt)
 }
 \references{
 Marcel van Herk, Errors and Margins in Radiotherapy,
-                           Seminars in Radiation Oncology, Vol 14, No 1
-                           (January), 2004
+Seminars in Radiation Oncology, Vol 14, No 1 (January), 2004
+
+Joep Stroom and Ben Heijmen, Geometrical uncertainties,
+radiotherapy planning margins, and the ICRU-62 report, Radiotherapy and
+Oncology 64 (2002) 75-83
 }
 
