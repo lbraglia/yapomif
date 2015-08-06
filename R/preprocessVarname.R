@@ -39,6 +39,10 @@ preprocessVarnames <- function(varnames, trim=NULL) {
     varnames <- gsub("'", "", varnames)
     varnames <- gsub("\U00B0", "", varnames)
 
+    ## remove starting or ending '_'
+    varnames <- gsub("_+$", "", varnames)
+    varnames <- gsub("^_+", "", varnames)
+    
     ## Trim to length specified
     if (!is.null(trim))
         varnames <- strtrim(varnames, trim)
