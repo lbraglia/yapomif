@@ -4,10 +4,10 @@
 \alias{preprocessVarnames}
 \title{Preprocess data.frame variable names}
 \usage{
-preprocessVarnames(varnames, trim = NULL)
+preprocessVarnames(varnames = NULL, trim = NULL)
 }
 \arguments{
-\item{varnames}{names of a data.frame}
+\item{varnames}{names of a data.frame (or the data.frame itself)}
 
 \item{trim}{character length of trimming. If \code{NULL}
 (default) trimming is disabled.}
