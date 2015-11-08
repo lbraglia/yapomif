@@ -8,6 +8,7 @@
 #' library(knitr)
 #' knit_engines$set(maxima = yapomif::eng_maxima)
 #' opts_chunk$set("engine" = "maxima")
+#' opts_chunk$set("echo" = FALSE)
 #' }
 eng_maxima <- function(options) {
 
