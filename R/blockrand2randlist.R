@@ -27,7 +27,13 @@ blockrand2randlist <- function(x, f = NULL, footer = "") {
 
     x <- normalize_x(x)
     sheet_names <- names(x)
+
+    if (!(is.character(footer) && length(footer) == 1L))
+        stop('footer must be a character of length 1')
     
+    if (!((is.character(f) && length(f) == 1L) || is.null(f)))
+        stop('f must be a character of length 1 or NULL')
+
     ## modify each data frame to a proper output format
     x <- lapply(x, function(rl){
         ## Add needed columns
@@ -129,6 +135,9 @@ blockrand2randlist <- function(x, f = NULL, footer = "") {
     ## Save or display
     if (is.null(f))
         openxlsx::openXL(wb)
-    else
+    else {
+        ## Trial Center List
         openxlsx::saveWorkbook(wb = wb, file = f, overwrite = TRUE)
+
+    }
 }
