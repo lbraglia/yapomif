@@ -86,16 +86,16 @@ blockrand2randlist2 <- function(x, f = NULL, footer = "") {
 
     ## Do for each sheet/dataset
     lapply(sheet_names, function(s){
-        
+
         openxlsx::pageSetup(wb = wb,
                             sheet = s,
-                            ## scale = 90, # per far stare tut
+                            scale = 83, # per far stare tutto
                             orientation = "landscape",
                             fitToWidth = TRUE, 
                             left = margins,
                             right = margins,
                             top = margins,
-                            bottom = margins)
+                            bottom = margins * 1.5)
 
         openxlsx::setColWidths(wb = wb,
                                sheet = s,
