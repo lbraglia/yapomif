@@ -128,16 +128,43 @@ blockrand2randlist <- function(x, f = NULL, footer = "") {
         openxlsx::mergeCells(wb = wb, sheet = s, cols =  10, rows = 1:2)
         ## Data
         openxlsx::writeData(wb = wb, sheet = s, x = header, colNames = FALSE)
-        openxlsx::writeData(wb = wb, sheet = s, x = x[[s]], startRow = 2)
 
     })
 
-    ## Save or display
-    if (is.null(f))
-        openxlsx::openXL(wb)
-    else {
-        ## Trial Center List
-        openxlsx::saveWorkbook(wb = wb, file = f, overwrite = TRUE)
+
+    ## -----------------------------
+    ## Trial Center List - full list
+    ## -----------------------------
+    wb_tc <- wb
+    lapply(sheet_names, function(s) {
+        openxlsx::writeData(wb = wb_tc,
+                            sheet = s,
+                            x = x[[s]],
+                            startRow = 2)
+    })
+    if (is.null(f)) {
+        openxlsx::openXL(wb_tc)
+    } else {
+        tc_file <- paste0(f, '_TRIAL_CENTER.xlsx')
+        openxlsx::saveWorkbook(wb = wb_tc, file = tc_file, overwrite = TRUE)
+    }
+
+    ## -----------------------------
+    ## Investigators - blanked list
+    ## -----------------------------
+    if (!is.null(f)) {
+        wb_inv <- wb
+        lapply(sheet_names, function(s) {
+            tmp <- x[[s]]
+            tmp$TRAT <- NA
+            openxlsx::writeData(wb = wb_inv,
+                                sheet = s,
+                                x = tmp,
+                                startRow = 2)
+        })
+        
+        inv_file <- paste0(f, '_INVESTIGATORS.xlsx')
+        openxlsx::saveWorkbook(wb = wb_inv, file = inv_file, overwrite = TRUE)
 
     }
 }
