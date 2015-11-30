@@ -2,37 +2,20 @@
 % Please edit documentation in R/blockrand2randlist.R
 \name{blockrand2randlist}
 \alias{blockrand2randlist}
-\title{Create a randomization list from a blockrand data.frame output}
+\title{Create a randomization list from a list of blockrand generated data.frame}
 \usage{
-blockrand2randlist(x, file = NULL, projectTitle = "")
+blockrand2randlist(x, f = NULL, footer = "")
 }
 \arguments{
-\item{x}{blockrand output}
+\item{x}{named list of blockrand data.frame (names will be used as
+sheet name)}
 
-\item{file}{path to file to save in (overwriting the contents). If NULL
+\item{f}{path to file to save in (overwriting the contents). If NULL
 the list is displayed.}
 
-\item{projectTitle}{a character used in the page footer}
+\item{footer}{a character vector used in the page footer (recicled)}
 }
 \description{
-Create a randomization list from a blockrand data.frame output
-}
-\examples{
-\dontrun{
-library(blockrand)
-set.seed(     6503529)
-sample.size <- 140
-Levels <- c("0","1")
-block.size <- 10
-randlist <- blockrand(n = sample.size,
-                      num.levels = length(Levels),
-                      levels = Levels,
-                      block.sizes = rep(block.size/2, 2)
-                      )
-blockrand2randlist(randlist,
-                   projectTitle = "PI - Project",
-                   file = "randlist.xlsx" )
-
-}
+Create a randomization list from a list of blockrand generated data.frame
 }
 
