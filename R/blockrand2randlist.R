@@ -57,15 +57,18 @@ blockrand2randlist <- function(x, f = NULL, footer = "") {
     })
 
     ## Sheets' header
-    header <- matrix(c("Dati del paziente",
-                       rep(NA,3),
-                       "Dati di chi chiama",
-                       NA,
-                       "Dati della chiamata",
-                       NA,
-                       "Sigla di chi risponde",
-                       "Note"
-                       ), nrow = 1)
+    header_inv <- header_tc <- matrix(c("Dati del paziente",
+                                        rep(NA,3),
+                                        "Dati di chi chiama",
+                                        NA,
+                                        "Dati della chiamata",
+                                        NA,
+                                        "Sigla di chi risponde",
+                                        "Note"
+                                        ), nrow = 1)
+    header_inv[1, c(5,9)] <- c("Dati di chi risponde",
+                               "Sigla di chi chiama")
+
     
     ## Setup the workbook
     wb <- openxlsx::createWorkbook()
@@ -129,9 +132,6 @@ blockrand2randlist <- function(x, f = NULL, footer = "") {
         openxlsx::mergeCells(wb = wb, sheet = s, cols = 7:8, rows = 1)
         openxlsx::mergeCells(wb = wb, sheet = s, cols =   9, rows = 1:2)
         openxlsx::mergeCells(wb = wb, sheet = s, cols =  10, rows = 1:2)
-        ## Data
-        openxlsx::writeData(wb = wb, sheet = s, x = header, colNames = FALSE)
-
     })
 
 
@@ -140,6 +140,12 @@ blockrand2randlist <- function(x, f = NULL, footer = "") {
     ## -----------------------------
     wb_tc <- wb
     lapply(sheet_names, function(s) {
+        ## header
+        openxlsx::writeData(wb = wb,
+                            sheet = s,
+                            x = header_tc,
+                            colNames = FALSE)
+        ## data
         openxlsx::writeData(wb = wb_tc,
                             sheet = s,
                             x = x[[s]],
@@ -158,6 +164,12 @@ blockrand2randlist <- function(x, f = NULL, footer = "") {
     if (!is.null(f)) {
         wb_inv <- wb
         lapply(sheet_names, function(s) {
+            ## header
+            openxlsx::writeData(wb = wb,
+                                sheet = s,
+                                x = header_inv,
+                                colNames = FALSE)
+            ## data
             tmp <- x[[s]]
             tmp$TRAT <- NA
             openxlsx::writeData(wb = wb_inv,
