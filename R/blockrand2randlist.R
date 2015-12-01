@@ -50,6 +50,9 @@ blockrand2randlist <- function(x, f = NULL, footer = "") {
                        "TRAT", "Cognome", "Nome",
                        "Ora", "Data", "Sigla di chi risponde", 
                        "Note" )
+        ## change to alfanumeric id
+        rl$ID <- to_00_char(rl$ID, floor(log10(max(rl$ID))) + 1)
+
         return(rl)
     })
 
