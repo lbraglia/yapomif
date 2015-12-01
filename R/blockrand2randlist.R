@@ -107,7 +107,8 @@ blockrand2randlist <- function(x, f = NULL, footer = "") {
                             left = margins,
                             right = margins,
                             top = margins,
-                            bottom = margins * 1.5)
+                            bottom = margins * 1.5,
+                            printTitleRows = 1:2)
 
         openxlsx::setColWidths(wb = wb,
                                sheet = s,
