@@ -9,6 +9,7 @@
 #' @docType package
 #' @import RODBC survival bdpv pROC grid openxlsx
 #' @importFrom knitr engine_output
+#' @importFrom xtable xtable
 #' @useDynLib yapomif
 NULL
 

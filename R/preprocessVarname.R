@@ -22,14 +22,19 @@ preprocessVarnames <- function(varnames = NULL, trim = NULL) {
         stop("lower case make them not unique; ",
              "are they such, in the original source?") 
     
+    ## rm parenthesis
+    varnames <- gsub('[\\(\\)]', '', varnames)
+
     ## Multiple spaces (eg Excel-from) to unique underscore
     varnames <- gsub(" +","_", varnames)
 
     ## change some math operators to equivalent words ("-" excluded)
+    varnames <- gsub("-","_", varnames)
     varnames <- gsub("\\/","_frac_", varnames)
     varnames <- gsub("\\*","_per_", varnames)
     varnames <- gsub("\\+","_plus_", varnames)
 
+    
     ## dot to underscore
     varnames <- gsub("\\.","_", varnames)
 

@@ -1,8 +1,8 @@
 Package: yapomif
 Type: Package
 Title: Yet another package of misc functions
-Version: 1.4.0
-Date: 2015-11-30
+Version: 1.4.1
+Date: 2015-12-15
 Author: Luca Braglia
 Maintainer: Luca Braglia <lbraglia@gmail.com>
 Imports:
@@ -11,7 +11,8 @@ Imports:
     bdpv,
     pROC,
     openxlsx,
-    knitr
+    knitr,
+    xtable
 Description: Useful functions of different kinds.
 License: GPL (>=2)
 URL: http://github.com/lbraglia/yapomif
