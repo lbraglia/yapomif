@@ -4,8 +4,8 @@
 \alias{quickROC}
 \title{A quick ROC plot.}
 \usage{
-quickROC(test, refstd, direction = c("auto", "<", ">"), plot.roc = TRUE,
-  main = "")
+quickROC(test = NULL, refstd = NULL, direction = c("auto", "<", ">"),
+  plot.roc = TRUE, main = "")
 }
 \arguments{
 \item{test}{Marker}
@@ -22,6 +22,8 @@ quickROC(test, refstd, direction = c("auto", "<", ">"), plot.roc = TRUE,
 The function plot the graph and return a list with ROC statistics
 }
 \description{
-A quick ROC plot. It's a simple wrapper around \code{pROC::roc}
+A quick ROC plot. It's a simple wrapper around \code{pROC::roc},
+which adds Youden's criterion optimal cutoff and conditional
+positioning for AUC (+CI) estimates.
 }
 
