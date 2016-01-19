@@ -1,0 +1,41 @@
+A few doubts:
+
+    chi_or_fisher.R
+    enSummary.R
+    fisherNeeded.R
+    pairsWithLowess.R
+    setup_errors.R
+    sirCI.R
+    smartyMRSplitter.R
+    Class.R
+    view.R
+    bmi.R
+    col2hex.R
+    commaChar2Numeric.R
+    xtile.R
+    cramerV.R
+    Days.R
+    daysToMonths.R
+    Hours.R
+    Years.R
+    Minutes.R
+    Months.R
+    inches.R
+    xtable_descriptives.R
+    eng_maxima.R
+    univTable.R
+    Table.R
+    write_delim2.R
+    write_delim.R
+    write_sas.R
+
+lbdiag:
+
+    cutoffDA.R
+    dadb.R
+    da.R
+    quickROC.R
+
+lbrct [??]
+
+    blockrand2randlist.R
