@@ -4,7 +4,7 @@ Title: Yet another package of misc functions
 Version: 1.4.1
 Date: 2015-12-15
 Author: Luca Braglia
-Maintainer: Luca Braglia <lbraglia@mailbox.org>
+Maintainer: Luca Braglia <lbraglia@gmail.com>
 Imports:
     RODBC,
     survival,
