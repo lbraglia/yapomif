@@ -28,4 +28,3 @@ Guidelines for Using
 confidence intervals for public healt assessment" - Washington State
 Department of Health, July 13, 2012
 }
-

@@ -25,4 +25,3 @@ A data.frame for diagnostic accuracy studies.
 Calculate diagnostic accuracy measures for several cutoffs of a quantitative
 marker.
 }
-

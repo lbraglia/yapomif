@@ -15,4 +15,3 @@ A vector with inches.
 \description{
 Translates from cm (centimeters) to inches.
 }
-

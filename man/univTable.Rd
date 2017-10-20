@@ -26,4 +26,3 @@ A matrix with frequencies.
 \description{
 Univariate table with absolute, relative, cumulative frequencies.
 }
-

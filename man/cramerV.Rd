@@ -21,4 +21,3 @@ b <- gl(2,500)
 cramerV(table(a,b))
 
 }
-

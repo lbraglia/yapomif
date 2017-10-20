@@ -12,4 +12,3 @@ hint(x = NULL)
 \description{
 Suggest some available methods about and object
 }
-

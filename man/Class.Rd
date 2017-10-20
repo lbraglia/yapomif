@@ -23,4 +23,3 @@ Class(airquality)
 
 
 }
-

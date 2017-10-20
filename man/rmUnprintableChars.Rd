@@ -12,4 +12,3 @@ rmUnprintableChars(string = NULL)
 \description{
 Remove unprintable chars
 }
-

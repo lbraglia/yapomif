@@ -28,4 +28,3 @@ db <- dadb(tn=720 , tp=190 , fn=10 , fp=80)
 with(db, table(test,refstd))
 
 }
-

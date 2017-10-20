@@ -34,4 +34,3 @@ Joep Stroom and Ben Heijmen, Geometrical uncertainties,
 radiotherapy planning margins, and the ICRU-62 report, Radiotherapy and
 Oncology 64 (2002) 75-83
 }
-

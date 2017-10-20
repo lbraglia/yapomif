@@ -10,4 +10,3 @@ Yet another package of misc functions: an R package with
 miscellaneous functions (wrappers for data input, data
 analysis, utilities and so on).
 }
-

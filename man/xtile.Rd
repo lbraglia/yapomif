@@ -23,4 +23,3 @@ tertiles <- xtile(rnorm(1000),3)
 table(tertiles)
 
 }
-

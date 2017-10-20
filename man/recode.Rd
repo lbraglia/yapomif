@@ -18,4 +18,3 @@ A vector with new codes (if/where modified).
 \description{
 Yet another recode utility
 }
-

@@ -22,4 +22,3 @@ openxlsx's \code{\link{writeData}} handled objects.
 view(Indometh, iris)
 }
 }
-

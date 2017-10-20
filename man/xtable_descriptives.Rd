@@ -19,4 +19,3 @@ from printing. If NULL (by default) all character variables removed.}
 \description{
 Pretty print data.frame summary in xtables
 }
-

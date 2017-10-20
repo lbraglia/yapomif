@@ -18,4 +18,3 @@ fisherNeeded(x, y, threshold = 5, fullReport = FALSE)
 \description{
 Is fisher test needed?
 }
-

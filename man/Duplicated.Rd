@@ -27,4 +27,3 @@ indicating which elements (rows) are duplicates.
 \details{
 This wrapper allows to find all duplicated obs.
 }
-

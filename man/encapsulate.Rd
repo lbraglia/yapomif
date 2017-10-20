@@ -27,4 +27,3 @@ encapsulate(letters)
 encapsulate(letters, sep=" ")[1:10]
 
 }
-

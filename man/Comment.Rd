@@ -18,4 +18,3 @@ be printed}
 Print a message inside an Ascii border; useful for working
 with \code{\link{sink}}, to leave messages in the output.
 }
-

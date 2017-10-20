@@ -12,4 +12,3 @@ rmAccents(string)
 \description{
 Remove accents from a character.
 }
-

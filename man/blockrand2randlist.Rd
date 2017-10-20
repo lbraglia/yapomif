@@ -18,4 +18,3 @@ the list is displayed.}
 \description{
 Create a randomization list from a list of blockrand generated data.frame
 }
-

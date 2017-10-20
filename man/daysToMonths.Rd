@@ -21,4 +21,3 @@ days <- 1:30
 daysToMonths(days)
 
 }
-

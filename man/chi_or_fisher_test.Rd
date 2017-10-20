@@ -16,4 +16,3 @@ perform Chi-square or Fisher test as appropriate. The function uses
 \code{\link{fisherNeeded}} to decide whether to perform chi or fisher
 test.
 }
-

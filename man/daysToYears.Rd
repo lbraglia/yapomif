@@ -21,4 +21,3 @@ days <- seq(1, 365.25*3, by = 60)
 daysToYears(days)
 
 }
-

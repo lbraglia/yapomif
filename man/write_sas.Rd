@@ -23,4 +23,3 @@ write_sas(df, datafile, codefile, dataname = "rdata", validvarname = c("V7",
 \description{
 This version manages factor labels (make.SAS.formats) differently
 }
-

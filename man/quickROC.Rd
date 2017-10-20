@@ -26,4 +26,3 @@ A quick ROC plot. It's a simple wrapper around \code{pROC::roc},
 which adds Youden's criterion optimal cutoff and conditional
 positioning for AUC (+CI) estimates.
 }
-

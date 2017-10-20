@@ -14,4 +14,3 @@ col2hex(col, alpha = 0.3)
 \description{
 Return an hex color
 }
-

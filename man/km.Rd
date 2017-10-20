@@ -55,4 +55,3 @@ Laplan-Meier statistics
 \description{
 This function plots a Kaplan-Meier plot.
 }
-

@@ -27,4 +27,3 @@ getExcelSheet(file="C:/foo.xls", sheet="es_ps")
 }
 
 }
-

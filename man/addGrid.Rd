@@ -24,4 +24,3 @@ The function adds a grid to a plot using \code{\link{abline}}.
 \description{
 Add grid to a plot using \code{\link{abline}}.
 }
-

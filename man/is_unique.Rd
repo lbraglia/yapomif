@@ -13,4 +13,3 @@ is.unique(x = NULL)
 check if a object is unique; this is a simple wrapper useful for code
 readability
 }
-

@@ -29,4 +29,3 @@ Show \code{pch} values.
 showPch()
 
 }
-

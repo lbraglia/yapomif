@@ -22,4 +22,3 @@ Add a period of time to a Date object
 (today <- Sys.Date())
 datePlus(today, years = 1, months = 1, days = 1)
 }
-

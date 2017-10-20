@@ -15,4 +15,3 @@ Plot
 \description{
 A Matrix of Scatterplot with a lowess smoother is produced.
 }
-

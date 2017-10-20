@@ -28,4 +28,3 @@ write.delim(x = NULL, file = "", row.names = FALSE, col.names = TRUE,
 This function is a wrapper around read.table to write tab separated files
 with "." as decimal separator.
 }
-

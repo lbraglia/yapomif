@@ -89,11 +89,6 @@ legend("topright",
 
 
 }
-\author{
-\href{http://stat.ubc.ca/~rollin/stats/S/surv.html}{Original S code} of
-\code{avg_surv.coxph} by Rollin Brant. R porting and development by
-Luca Braglia.
-}
 \references{
 Nieto, F.J., Coresh, J. (1996), Adjusting survival curves for
 confounders: a review and a new method, American Journal of Epidemiology,
@@ -102,4 +97,8 @@ confounders: a review and a new method, American Journal of Epidemiology,
 \seealso{
 \code{\link[survival]{survfit.coxph}}
 }
-
+\author{
+\href{http://stat.ubc.ca/~rollin/stats/S/surv.html}{Original S code} of
+\code{avg_surv.coxph} by Rollin Brant. R porting and development by
+Luca Braglia.
+}

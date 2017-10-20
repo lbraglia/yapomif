@@ -20,4 +20,3 @@ Convert a char with comma to a numeric
 commaChar2Numeric(c("2,456", "1,234"))
 
 }
-

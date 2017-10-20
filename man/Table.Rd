@@ -17,4 +17,3 @@ margins.
 This is a wrapper around which adds margins and
 \code{useNA="if"} by default.
 }
-

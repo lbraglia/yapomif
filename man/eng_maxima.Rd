@@ -21,4 +21,3 @@ opts_chunk$set("engine" = "maxima")
 opts_chunk$set("echo" = FALSE)
 }
 }
-
